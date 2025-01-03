@@ -1,0 +1,22 @@
+Backend/
+├── api/            # Endpointi (prijava, registracija, vijesti, itd.)
+│   ├── auth.php    # Autentifikacija
+│   ├── users.php   # CRUD za korisnike
+│   ├── news.php    # CRUD za vijesti
+│
+├── config/         # Konfiguracija
+│   └── db.php      # Povezivanje s bazom
+│
+├── models/         # Modeli za entitete (npr. korisnik, vijest)
+│   ├── User.php    # Model za korisnike
+│   └── News.php    # Model za vijesti
+│
+├── services/       # Poslovna logika (validacija, obrade podataka)
+│   ├── AuthService.php
+│   └── NewsService.php
+│
+├── utils/          # Pomoćne funkcije (npr. validacija email-a)
+│   └── helpers.php
+│
+└── public/         # Javni resursi (npr. statičke slike, favicon, itd.)
+Frontend/
