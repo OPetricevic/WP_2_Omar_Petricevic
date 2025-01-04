@@ -1,0 +1,31 @@
+[Sat Jan  4 12:22:13 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sat Jan  4 12:22:17 2025] 127.0.0.1:50088 Accepted
+[Sat Jan  4 12:22:17 2025] Connected to the database successfully.
+[Sat Jan  4 12:22:17 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+[Sat Jan  4 12:22:17 2025] 127.0.0.1:50088 [500]: PATCH /roles/change
+[Sat Jan  4 12:22:17 2025] 127.0.0.1:50088 Closing
+[Sat Jan  4 12:22:18 2025] 127.0.0.1:50102 Accepted
+[Sat Jan  4 12:22:18 2025] Connected to the database successfully.
+[Sat Jan  4 12:22:18 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+[Sat Jan  4 12:22:18 2025] 127.0.0.1:50102 [500]: PATCH /roles/change
+[Sat Jan  4 12:22:18 2025] 127.0.0.1:50102 Closing
+[Sat Jan  4 12:22:24 2025] 127.0.0.1:51664 Accepted
+[Sat Jan  4 12:22:24 2025] Connected to the database successfully.
+[Sat Jan  4 12:22:24 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+[Sat Jan  4 12:22:24 2025] 127.0.0.1:51664 [500]: PATCH /roles/change
+[Sat Jan  4 12:22:24 2025] 127.0.0.1:51664 Closing
+[Sat Jan  4 12:22:25 2025] 127.0.0.1:51676 Accepted
+[Sat Jan  4 12:22:25 2025] Connected to the database successfully.
+[Sat Jan  4 12:22:25 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+[Sat Jan  4 12:22:25 2025] 127.0.0.1:51676 [500]: PATCH /roles/change
+[Sat Jan  4 12:22:25 2025] 127.0.0.1:51676 Closing
+[Sat Jan  4 12:22:25 2025] 127.0.0.1:51688 Accepted
+[Sat Jan  4 12:22:25 2025] Connected to the database successfully.
+[Sat Jan  4 12:22:25 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+[Sat Jan  4 12:22:25 2025] 127.0.0.1:51688 [500]: PATCH /roles/change
+[Sat Jan  4 12:22:25 2025] 127.0.0.1:51688 Closing
+[Sat Jan  4 12:22:31 2025] 127.0.0.1:57272 Accepted
+[Sat Jan  4 12:22:31 2025] Connected to the database successfully.
+[Sat Jan  4 12:22:31 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+[Sat Jan  4 12:22:31 2025] 127.0.0.1:57272 [500]: PATCH /roles/change
+[Sat Jan  4 12:22:31 2025] 127.0.0.1:57272 Closing

@@ -1,7 +1,10 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
 # Backend
 Backend/.env
+
+# Frontend specific
+/Frontend/node_modules
+/Frontend/.angular/cache
+/Frontend/dist
 
 # Compiled output
 /dist
