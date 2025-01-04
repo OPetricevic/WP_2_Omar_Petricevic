@@ -7,7 +7,9 @@ include_once __DIR__ . '/../utils/JwtUtils.php';
 class AuthService {
     public function register($data) {
         try {
-            // Validate input
+            error_log("Starting user registration: " . json_encode($data));
+    
+            // Validacija podataka
             if (empty($data['first_name']) || empty($data['last_name']) || empty($data['email']) || empty($data['password']) || empty($data['date_of_birth'])) {
                 error_log("Validation failed: Missing required fields.");
                 return ['status' => 400, 'message' => 'All fields are required.'];
@@ -18,48 +20,57 @@ class AuthService {
                 return ['status' => 400, 'message' => 'Invalid email format.'];
             }
     
-            // Check if the user exists
+            // Provjera da li korisnik već postoji putem emaila
             $userModel = new User();
             if ($userModel->existsByEmail($data['email'])) {
                 error_log("Conflict: User with email {$data['email']} already exists.");
-                return ['status' => 409, 'message' => 'User with this email already exists.'];
+                return ['status' => 409, 'message' => 'A user with this email already exists.'];
             }
     
-            // Generate a UUID for the user
+            // Provjera da li korisničko ime već postoji
+            if ($userModel->existsByUsername($data['username'])) {
+                error_log("Conflict: Username {$data['username']} already exists.");
+                return ['status' => 409, 'message' => 'This username is already taken.'];
+            }
+    
+            // Generisanje UUID-a
             $userUuid = generateUuid();
             error_log("Generated UUID for user: $userUuid");
     
-            // Create the user
+            // Kreiranje korisnika
             $userModel->createUser([
                 'uuid' => $userUuid,
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
-                'username' => $data['username'],
+                'username' => $data['username'] ?? null,
                 'email' => $data['email'],
                 'date_of_birth' => $data['date_of_birth'],
                 'role' => 1, // Default role = user
                 'created_at' => date('Y-m-d H:i:s')
             ]);
+            error_log("User created successfully: $userUuid");
     
-            // Hash the password
+            // Hashovanje lozinke
             $hashedPassword = password_hash($data['password'], PASSWORD_BCRYPT);
+            error_log("Password hashed successfully.");
     
-            // Store the hashed password
+            // Čuvanje hash-a lozinke
             $userModel->storePasswordHash([
                 'uuid' => generateUuid(),
                 'user_uuid' => $userUuid,
                 'password_hash' => $hashedPassword,
                 'created_at' => date('Y-m-d H:i:s')
             ]);
+            error_log("Password hash stored successfully.");
     
-            // Generate a JWT token
+            // Generisanje JWT tokena
             $jwt = JwtUtils::generateToken([
                 'uuid' => $userUuid,
                 'role' => 1
             ]);
-            error_log("JWT generated for user: $userUuid");
+            error_log("JWT generated successfully.");
     
-            // Store the JWT token in the tokens table
+            // Čuvanje JWT tokena
             $userModel->storeToken([
                 'uuid' => generateUuid(),
                 'user_uuid' => $userUuid,
@@ -68,18 +79,38 @@ class AuthService {
                 'expires_at' => date('Y-m-d H:i:s', time() + 3600),
                 'created_at' => date('Y-m-d H:i:s')
             ]);
+            error_log("JWT token stored successfully.");
     
             return [
                 'status' => 201,
                 'message' => 'User registered successfully.',
                 'user_uuid' => $userUuid,
-                'token' => $jwt // Include the token here
+                'token' => $jwt
             ];
+        } catch (PDOException $e) {
+            // Rukovanje greškama baze podataka
+            if ($e->getCode() === '23000') { // SQLSTATE kod za duplicirane unose
+                error_log("Database constraint violation: " . $e->getMessage());
+    
+                if (strpos($e->getMessage(), 'users.email') !== false) {
+                    return ['status' => 409, 'message' => 'A user with this email already exists.'];
+                }
+    
+                if (strpos($e->getMessage(), 'users.username') !== false) {
+                    return ['status' => 409, 'message' => 'This username is already taken.'];
+                }
+    
+                return ['status' => 409, 'message' => 'Conflict: Duplicate entry.'];
+            }
+    
+            error_log("Exception in register(): " . $e->getMessage());
+            return ['status' => 500, 'message' => 'Internal server error.'];
         } catch (Exception $e) {
             error_log("Exception in register(): " . $e->getMessage());
             return ['status' => 500, 'message' => 'Internal server error.'];
         }
     }
+    
     
     
 

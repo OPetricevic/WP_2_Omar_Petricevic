@@ -25,17 +25,19 @@ class User {
 
     public function createUser($userData) {
         try {
+            error_log("Attempting to insert user: " . json_encode($userData));
             $stmt = $this->conn->prepare("
                 INSERT INTO users (uuid, first_name, last_name, username, email, date_of_birth, role, created_at)
                 VALUES (:uuid, :first_name, :last_name, :username, :email, :date_of_birth, :role, :created_at)
             ");
             $stmt->execute($userData);
-            error_log("User Inserted: " . json_encode($userData));
+            error_log("User successfully inserted.");
         } catch (PDOException $e) {
             error_log("Error in createUser(): " . $e->getMessage());
             throw $e;
         }
     }
+   
     
     public function storePasswordHash($tokenData) {
         try {
@@ -143,6 +145,17 @@ class User {
         }
     }
     
-     
+    public function existsByUsername($username) {
+        try {
+            $stmt = $this->conn->prepare("SELECT COUNT(*) FROM users WHERE username = :username");
+            $stmt->bindParam(':username', $username);
+            $stmt->execute();
+            return $stmt->fetchColumn() > 0;
+        } catch (PDOException $e) {
+            error_log("Error in existsByUsername(): " . $e->getMessage());
+            return false;
+        }
+    }
+    
 }
 ?>
