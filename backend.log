@@ -1,12 +1,40 @@
-[Sat Jan  4 18:25:46 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Sat Jan  4 18:26:04 2025] 127.0.0.1:47208 Accepted
-[Sat Jan  4 18:26:04 2025] Connected to MySQL server (without database) successfully.
-[Sat Jan  4 18:26:04 2025] Database `wp_project` ensured to exist.
-[Sat Jan  4 18:26:04 2025] Connected to the database `wp_project` successfully.
-[Sat Jan  4 18:26:04 2025] Generated UUID for user: b9c38447-bc94-4aa6-8723-a98d36790424
-[Sat Jan  4 18:26:04 2025] User Inserted: {"uuid":"b9c38447-bc94-4aa6-8723-a98d36790424","first_name":"Amela","last_name":"Petricevic","username":"apetricevic","email":"amela@example.com","date_of_birth":"1995-05-11","role":1,"created_at":"2025-01-04 17:26:04"}
-[Sat Jan  4 18:26:04 2025] Password hash stored: {"uuid":"82cc18cf-c7a7-4308-954b-1f18eb6594c2","user_uuid":"b9c38447-bc94-4aa6-8723-a98d36790424","password_hash":"$2y$10$iXQKX38SeUxoUo4MRSdnG.CaZfH\/DOdCPf5VX55Zz35zIwoBbFBSe","created_at":"2025-01-04 17:26:04"}
-[Sat Jan  4 18:26:04 2025] JWT generated for user: b9c38447-bc94-4aa6-8723-a98d36790424
-[Sat Jan  4 18:26:04 2025] JWT token stored: {"uuid":"2e0aa67a-0770-43da-8d44-64dea45192f9","user_uuid":"b9c38447-bc94-4aa6-8723-a98d36790424","user_email":"amela@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYjljMzg0NDctYmM5NC00YWE2LTg3MjMtYTk4ZDM2NzkwNDI0Iiwicm9sZSI6MSwiaWF0IjoxNzM2MDExNTY0LCJleHAiOjE3MzYwMTUxNjR9.a5N2x-ETKkszAebWZ1XkyYP_KWLGAKfwh0geeoG4nKU","expires_at":"2025-01-04 18:26:04","created_at":"2025-01-04 17:26:04"}
-[Sat Jan  4 18:26:04 2025] 127.0.0.1:47208 [201]: POST /auth/register
-[Sat Jan  4 18:26:04 2025] 127.0.0.1:47208 Closing
+[Sat Jan  4 20:27:04 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sat Jan  4 20:27:22 2025] 127.0.0.1:34834 Accepted
+[Sat Jan  4 20:27:22 2025] Connected to MySQL server (without database) successfully.
+[Sat Jan  4 20:27:22 2025] Database `wp_project` ensured to exist.
+[Sat Jan  4 20:27:22 2025] Connected to the database `wp_project` successfully.
+[Sat Jan  4 20:27:22 2025] 127.0.0.1:34834 [401]: POST /auth/logout
+[Sat Jan  4 20:27:22 2025] 127.0.0.1:34834 Closing
+[Sat Jan  4 20:27:31 2025] 127.0.0.1:57914 Accepted
+[Sat Jan  4 20:27:31 2025] Connected to MySQL server (without database) successfully.
+[Sat Jan  4 20:27:31 2025] Database `wp_project` ensured to exist.
+[Sat Jan  4 20:27:31 2025] Connected to the database `wp_project` successfully.
+[Sat Jan  4 20:27:31 2025] Token revoked: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiMjMwYTg2ZWQtYmRhNi00ZjdmLWExZjAtMmE5MTdlYThiZGYxIiwicm9sZSI6MywiaWF0IjoxNzM2MDE3OTAxLCJleHAiOjE3MzYwMjE1MDF9.5LjGmd8lHS_sMX6Q5dcninz1OvzTKAPLIaSy6AUV8Os
+[Sat Jan  4 20:27:31 2025] 127.0.0.1:57914 [200]: POST /auth/logout
+[Sat Jan  4 20:27:31 2025] 127.0.0.1:57914 Closing
+[Sat Jan  4 20:27:35 2025] 127.0.0.1:59076 Accepted
+[Sat Jan  4 20:27:35 2025] Connected to MySQL server (without database) successfully.
+[Sat Jan  4 20:27:35 2025] Database `wp_project` ensured to exist.
+[Sat Jan  4 20:27:35 2025] Connected to the database `wp_project` successfully.
+[Sat Jan  4 20:27:35 2025] 127.0.0.1:59076 [401]: POST /auth/logout
+[Sat Jan  4 20:27:35 2025] 127.0.0.1:59076 Closing
+[Sat Jan  4 20:27:59 2025] 127.0.0.1:54306 Accepted
+[Sat Jan  4 20:27:59 2025] Connected to MySQL server (without database) successfully.
+[Sat Jan  4 20:27:59 2025] Database `wp_project` ensured to exist.
+[Sat Jan  4 20:27:59 2025] Connected to the database `wp_project` successfully.
+[Sat Jan  4 20:27:59 2025] 127.0.0.1:54306 [200]: POST /auth/login
+[Sat Jan  4 20:27:59 2025] 127.0.0.1:54306 Closing
+[Sat Jan  4 20:28:23 2025] 127.0.0.1:51378 Accepted
+[Sat Jan  4 20:28:23 2025] Connected to MySQL server (without database) successfully.
+[Sat Jan  4 20:28:23 2025] Database `wp_project` ensured to exist.
+[Sat Jan  4 20:28:23 2025] Connected to the database `wp_project` successfully.
+[Sat Jan  4 20:28:23 2025] JWT Validation Error: Signature verification failed
+[Sat Jan  4 20:28:23 2025] 127.0.0.1:51378 [401]: POST /images
+[Sat Jan  4 20:28:23 2025] 127.0.0.1:51378 Closing
+[Sat Jan  4 20:32:12 2025] 127.0.0.1:58800 Accepted
+[Sat Jan  4 20:32:12 2025] Connected to MySQL server (without database) successfully.
+[Sat Jan  4 20:32:12 2025] Database `wp_project` ensured to exist.
+[Sat Jan  4 20:32:12 2025] Connected to the database `wp_project` successfully.
+[Sat Jan  4 20:32:12 2025] JWT Validation Error: Signature verification failed
+[Sat Jan  4 20:32:12 2025] 127.0.0.1:58800 [401]: POST /images
+[Sat Jan  4 20:32:12 2025] 127.0.0.1:58800 Closing

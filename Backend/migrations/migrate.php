@@ -49,6 +49,7 @@ function rollbackMigration($migrationName) {
         'create_password_tokens_table' => 'password_tokens', // Renamed for clarity
         'create_role_permissions_table' => 'role_permissions',
         'create_tokens_table' => 'tokens', // Added the new tokens table
+        'create_system_images_table' => 'system_images', // Added system_images table
     ];
 
     if (isset($tables[$migrationName])) {
@@ -74,6 +75,7 @@ include_once __DIR__ . '/create_news_table.php';
 include_once __DIR__ . '/create_password_tokens_table.php'; // Renamed for clarity
 include_once __DIR__ . '/create_role_permissions.php';
 include_once __DIR__ . '/create_tokens_table.php'; // Added for JWT tokens
+include_once __DIR__ . '/create_system_images_table.php'; // Added for system_images table
 
 function runMigrations() {
     echo "Pokretanje migracija...\n";
@@ -84,6 +86,7 @@ function runMigrations() {
         'create_password_tokens_table' => 'migratePasswordTokensTable', // Renamed
         'create_role_permissions_table' => 'migrateRolePermissionsTable',
         'create_tokens_table' => 'migrateTokensTable', // Added
+        'create_system_images_table' => 'migrateSystemImagesTable', // Added
     ];
 
     foreach ($migrations as $migrationName => $migrationFunction) {
@@ -103,6 +106,7 @@ function rollbackAllMigrations() {
     echo "Pokretanje rollback-a za sve migracije...\n";
 
     $migrations = [
+        'create_system_images_table', // Added
         'create_tokens_table',
         'create_role_permissions_table',
         'create_password_tokens_table',
@@ -123,3 +127,4 @@ if (php_sapi_name() === 'cli' && isset($argv[1]) && $argv[1] === 'rollback') {
 } else {
     runMigrations();
 }
+?>

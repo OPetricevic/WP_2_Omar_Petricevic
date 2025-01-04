@@ -1,7 +1,8 @@
 <?php
 include_once __DIR__ . '/../services/RoleService.php';
-include_once __DIR__ . '/../Middleware/AuthMiddleware.php';
-include_once __DIR__ . '/../Middleware/RoleMiddleware.php';
+include_once __DIR__ . '/../middleware/AuthMiddleware.php';
+include_once __DIR__ . '/../middleware/RoleMiddleware.php';
+
 
 // Inicijalizacija middleware-a
 $authMiddleware = new AuthMiddleware();

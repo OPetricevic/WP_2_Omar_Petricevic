@@ -48,6 +48,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/
     exit;
 }
 
+// Endpoint for logout
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/logout') {
+    // Extract the token from the Authorization header
+    $headers = apache_request_headers();
+    if (empty($headers['Authorization'])) {
+        http_response_code(401);
+        echo json_encode(['message' => 'Unauthorized. Token is missing.']);
+        exit;
+    }
+
+    $token = str_replace('Bearer ', '', $headers['Authorization']);
+
+    // Use the AuthService to revoke the token
+    $authService = new AuthService();
+    $response = $authService->logout($token);
+
+    http_response_code($response['status']);
+    echo json_encode(['message' => $response['message']]);
+    exit;
+}
+
+
 // Ako ruta nije pronađena
 http_response_code(404);
 echo json_encode(['message' => 'Not Found']);

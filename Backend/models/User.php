@@ -81,7 +81,12 @@ class User {
 
     public function getUserByEmail($email) {
         try {
-            $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = :email");
+            $stmt = $this->conn->prepare("
+                SELECT users.*, pt.password_hash
+                FROM users
+                JOIN password_tokens pt ON users.uuid = pt.user_uuid
+                WHERE users.email = :email
+            ");
             $stmt->bindParam(':email', $email);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -89,6 +94,55 @@ class User {
             error_log("Error in getUserByEmail(): " . $e->getMessage());
             return null;
         }
-    }    
+    }
+
+    public function getActiveToken($userUuid) {
+        try {
+            $stmt = $this->conn->prepare("
+                SELECT value FROM tokens
+                WHERE user_uuid = :user_uuid AND expires_at > NOW() AND revoked_at IS NULL
+                ORDER BY expires_at DESC LIMIT 1
+            ");
+            $stmt->bindParam(':user_uuid', $userUuid);
+            $stmt->execute();
+            return $stmt->fetchColumn(); // Return the token value if it exists
+        } catch (PDOException $e) {
+            error_log("Error in getActiveToken(): " . $e->getMessage());
+            return null;
+        }
+    }  
+    
+    public function isTokenValid($token) {
+        try {
+            $stmt = $this->conn->prepare("
+                SELECT COUNT(*) FROM tokens
+                WHERE value = :token AND expires_at > NOW() AND revoked_at IS NULL
+            ");
+            $stmt->bindParam(':token', $token);
+            $stmt->execute();
+            return $stmt->fetchColumn() > 0;
+        } catch (PDOException $e) {
+            error_log("Error in isTokenValid(): " . $e->getMessage());
+            return false;
+        }
+    }
+    
+    public function revokeToken($token) {
+        try {
+            $stmt = $this->conn->prepare("
+                UPDATE tokens
+                SET revoked_at = NOW()
+                WHERE value = :token
+            ");
+            $stmt->bindParam(':token', $token);
+            $stmt->execute();
+            error_log("Token revoked: $token");
+        } catch (PDOException $e) {
+            error_log("Error in revokeToken(): " . $e->getMessage());
+            throw $e;
+        }
+    }
+    
+     
 }
 ?>

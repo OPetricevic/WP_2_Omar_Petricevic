@@ -99,13 +99,24 @@ class AuthService {
             return ['status' => 401, 'message' => 'Invalid password.'];
         }
     
-        // Generate a JWT token
+        // Check if an active token already exists
+        $activeToken = $userModel->getActiveToken($user['uuid']);
+    
+        if ($activeToken) {
+            return [
+                'status' => 200,
+                'message' => 'Login successful.',
+                'token' => $activeToken
+            ];
+        }
+    
+        // Generate a new token if none exists
         $jwt = JwtUtils::generateToken([
             'uuid' => $user['uuid'],
             'role' => $user['role']
         ]);
     
-        // Store the JWT token in the tokens table
+        // Store the new token in the tokens table
         $userModel->storeToken([
             'uuid' => generateUuid(),
             'user_uuid' => $user['uuid'],
@@ -119,6 +130,26 @@ class AuthService {
             'status' => 200,
             'message' => 'Login successful.',
             'token' => $jwt
+        ];
+    } 
+
+    public function logout($token) {
+        $userModel = new User();
+    
+        // Check if the token exists and is valid
+        if (!$userModel->isTokenValid($token)) {
+            return [
+                'status' => 401,
+                'message' => 'Unauthorized. Token is invalid or already revoked.'
+            ];
+        }
+    
+        // Revoke the token
+        $userModel->revokeToken($token);
+    
+        return [
+            'status' => 200,
+            'message' => 'Logout successful. Token has been revoked.'
         ];
     }
     
