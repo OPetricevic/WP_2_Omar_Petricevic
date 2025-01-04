@@ -2,19 +2,17 @@
 include_once __DIR__ . '/../config/db.php';
 include_once __DIR__ . '/../utils/helpers.php';
 
-// Funkcija za kreiranje baze podataka
 function createDatabase($dbName) {
     global $conn;
     try {
         $conn->exec("CREATE DATABASE IF NOT EXISTS $dbName");
-        echo "Baza `$dbName` je uspješno kreirana.\n";
+        echo "Baza `$dbName` je uspešno kreirana.\n";
     } catch (PDOException $e) {
         echo "Greška pri kreiranju baze: " . $e->getMessage() . "\n";
         exit;
     }
 }
 
-// Funkcija za praćenje migracija
 function trackMigration($migrationName) {
     global $conn;
     $stmt = $conn->prepare("INSERT INTO migrations (name) VALUES (:migrationName)");
@@ -45,24 +43,17 @@ function createMigrationsTable() {
 function rollbackMigration($migrationName) {
     global $conn;
 
-    if ($migrationName === 'create_users_table') {
-        echo "Rollback: Brisanje tabele `users`...\n";
-        $conn->exec("DROP TABLE IF EXISTS users");
-    }
+    $tables = [
+        'create_users_table' => 'users',
+        'create_news_table' => 'news',
+        'create_password_tokens_table' => 'password_tokens', // Renamed for clarity
+        'create_role_permissions_table' => 'role_permissions',
+        'create_tokens_table' => 'tokens', // Added the new tokens table
+    ];
 
-    if ($migrationName === 'create_news_table') {
-        echo "Rollback: Brisanje tabele `news`...\n";
-        $conn->exec("DROP TABLE IF EXISTS news");
-    }
-
-    if ($migrationName === 'create_user_tokens_table') {
-        echo "Rollback: Brisanje tabele `user_tokens`...\n";
-        $conn->exec("DROP TABLE IF EXISTS user_tokens");
-    }
-
-    if ($migrationName === 'create_role_permissions_table') {
-        echo "Rollback: Brisanje tabele `role_permissions`...\n";
-        $conn->exec("DROP TABLE IF EXISTS role_permissions");
+    if (isset($tables[$migrationName])) {
+        echo "Rollback: Brisanje tabele `" . $tables[$migrationName] . "`...\n";
+        $conn->exec("DROP TABLE IF EXISTS " . $tables[$migrationName]);
     }
 
     $stmt = $conn->prepare("DELETE FROM migrations WHERE name = :migrationName");
@@ -80,48 +71,55 @@ createMigrationsTable();
 // Uvezi migracije
 include_once __DIR__ . '/create_users_table.php';
 include_once __DIR__ . '/create_news_table.php';
-include_once __DIR__ . '/create_user_tokens_table.php';
-include_once __DIR__ . '/create_role_permissions.php'; // Dodano
+include_once __DIR__ . '/create_password_tokens_table.php'; // Renamed for clarity
+include_once __DIR__ . '/create_role_permissions.php';
+include_once __DIR__ . '/create_tokens_table.php'; // Added for JWT tokens
 
-// Pokretanje svih migracija
 function runMigrations() {
     echo "Pokretanje migracija...\n";
 
-    if (!isMigrationExecuted('create_users_table')) {
-        migrateUsersTable();
-        trackMigration('create_users_table');
-        echo "Migracija `create_users_table` je izvršena.\n";
-    } else {
-        echo "Migracija `create_users_table` je već izvršena.\n";
+    $migrations = [
+        'create_users_table' => 'migrateUsersTable',
+        'create_news_table' => 'migrateNewsTable',
+        'create_password_tokens_table' => 'migratePasswordTokensTable', // Renamed
+        'create_role_permissions_table' => 'migrateRolePermissionsTable',
+        'create_tokens_table' => 'migrateTokensTable', // Added
+    ];
+
+    foreach ($migrations as $migrationName => $migrationFunction) {
+        if (!isMigrationExecuted($migrationName)) {
+            $migrationFunction();
+            trackMigration($migrationName);
+            echo "Migracija `$migrationName` je izvršena.\n";
+        } else {
+            echo "Migracija `$migrationName` je već izvršena.\n";
+        }
     }
 
-    if (!isMigrationExecuted('create_news_table')) {
-        migrateNewsTable();
-        trackMigration('create_news_table');
-        echo "Migracija `create_news_table` je izvršena.\n";
-    } else {
-        echo "Migracija `create_news_table` je već izvršena.\n";
-    }
-
-    if (!isMigrationExecuted('create_user_tokens_table')) {
-        migrateUserTokensTable();
-        trackMigration('create_user_tokens_table');
-        echo "Migracija `create_user_tokens_table` je izvršena.\n";
-    } else {
-        echo "Migracija `create_user_tokens_table` je već izvršena.\n";
-    }
-
-    if (!isMigrationExecuted('create_role_permissions_table')) {
-        migrateRolePermissionsTable(); // Pokreni migraciju za `role_permissions`
-        trackMigration('create_role_permissions_table');
-        echo "Migracija `create_role_permissions_table` je izvršena.\n";
-    } else {
-        echo "Migracija `create_role_permissions_table` je već izvršena.\n";
-    }
-
-    echo "Sve migracije su uspješno završene.\n";
+    echo "Sve migracije su uspešno završene.\n";
 }
 
-// Pokreni migracije
-runMigrations();
-?>
+function rollbackAllMigrations() {
+    echo "Pokretanje rollback-a za sve migracije...\n";
+
+    $migrations = [
+        'create_tokens_table',
+        'create_role_permissions_table',
+        'create_password_tokens_table',
+        'create_news_table',
+        'create_users_table',
+    ];
+
+    foreach ($migrations as $migrationName) {
+        rollbackMigration($migrationName);
+    }
+
+    echo "Rollback svih migracija je završen.\n";
+}
+
+// Provera komandne linije za rollback
+if (php_sapi_name() === 'cli' && isset($argv[1]) && $argv[1] === 'rollback') {
+    rollbackAllMigrations();
+} else {
+    runMigrations();
+}

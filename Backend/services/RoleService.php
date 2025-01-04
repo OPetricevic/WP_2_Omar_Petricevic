@@ -14,17 +14,17 @@ class RoleService {
 
     public function changeRole($userUuid, $newRole) {
         try {
-            // Proveri da li korisnik postoji
+            // Provjera da li korisnik postoji
             if (!$this->userModel->existsByUuid($userUuid)) {
                 return ['status' => 404, 'message' => 'User not found.'];
             }
 
-            // Proveri da li role postoji u role_permissions tabeli
+            // Provjera da li role postoji u `role_permissions` tabeli
             if (!$this->roleExists($newRole)) {
                 return ['status' => 400, 'message' => 'Invalid role specified.'];
             }
 
-            // Ažuriraj rolu korisnika
+            // Ažuriranje role korisnika
             $this->userModel->updateUserRole($userUuid, $newRole);
             return ['status' => 200, 'message' => 'User role updated successfully.'];
         } catch (Exception $e) {
@@ -34,10 +34,10 @@ class RoleService {
     }
 
     private function roleExists($roleId) {
-        $stmt = $this->conn->prepare("SELECT COUNT(*) FROM role_permissions WHERE id = :roleId");
+        $stmt = $this->conn->prepare("SELECT COUNT(*) FROM role_permissions WHERE role_id = :roleId");
         $stmt->bindParam(':roleId', $roleId, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchColumn() > 0;
-    }
+    }    
 }
 ?>

@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
 // Osnovni fajl koji rutira sve zahtjeve prema odgovarajućim endpointima
 
 $requestUri = $_SERVER['REQUEST_URI'];

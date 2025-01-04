@@ -1,23 +1,38 @@
 <?php
 include_once __DIR__ . '/../services/RoleService.php';
+include_once __DIR__ . '/../Middleware/AuthMiddleware.php';
+include_once __DIR__ . '/../Middleware/RoleMiddleware.php';
+
+// Inicijalizacija middleware-a
+$authMiddleware = new AuthMiddleware();
+$roleMiddleware = new RoleMiddleware();
 
 if ($_SERVER['REQUEST_METHOD'] === 'PATCH' && $_SERVER['REQUEST_URI'] === '/roles/change') {
-    // Učitavanje podataka iz zahteva
+    // Validacija JWT tokena
+    $decodedToken = $authMiddleware->requireAuth(); // Osigurava da je korisnik prijavljen
+
+    // Provjera uloge
+    $roleMiddleware->requireRole($decodedToken, [3]); // Dozvoljeno samo adminima (rola 3)
+
     $data = json_decode(file_get_contents('php://input'), true);
 
-    // Provera da li su svi potrebni podaci poslati
-    if (empty($data['user_uuid']) || empty($data['new_role'])) {
+    // Provjera potrebnih polja
+    if (empty($data['user_uuid']) || !isset($data['new_role'])) {
         http_response_code(400);
         echo json_encode(['message' => 'Missing required fields: user_uuid or new_role']);
         exit;
     }
 
+    // Validacija tipa za `new_role`
+    if (!is_int($data['new_role'])) {
+        http_response_code(400);
+        echo json_encode(['message' => 'Invalid new_role type. Must be an integer.']);
+        exit;
+    }
+
     try {
-        // Pozivanje servisa za promenu role
         $roleService = new RoleService();
         $response = $roleService->changeRole($data['user_uuid'], $data['new_role']);
-
-        // Postavljanje HTTP status koda i vraćanje odgovora
         http_response_code($response['status']);
         echo json_encode([
             'status' => $response['status'],
@@ -26,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH' && $_SERVER['REQUEST_URI'] === '/role
             'new_role' => $data['new_role']
         ], JSON_PRETTY_PRINT);
     } catch (Exception $e) {
-        // Upravljanje greškom
         http_response_code(500);
         echo json_encode([
             'status' => 500,
@@ -38,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH' && $_SERVER['REQUEST_URI'] === '/role
     exit;
 }
 
-// Ako ruta nije pronađena
 http_response_code(404);
 echo json_encode(['message' => 'Endpoint not found.']);
 ?>

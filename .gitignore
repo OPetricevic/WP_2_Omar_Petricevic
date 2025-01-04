@@ -1,6 +1,17 @@
 # Backend
 Backend/.env
 
+# Ignore vendor directory
+/vendor/
+
+# Ignore Composer files that are generated or unnecessary
+composer.lock
+composer.phar
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
 # Frontend specific
 /Frontend/node_modules
 /Frontend/.angular/cache

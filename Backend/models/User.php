@@ -40,16 +40,31 @@ class User {
     public function storePasswordHash($tokenData) {
         try {
             $stmt = $this->conn->prepare("
-                INSERT INTO user_tokens (uuid, user_uuid, password_hash, created_at)
+                INSERT INTO password_tokens (uuid, user_uuid, password_hash, created_at)
                 VALUES (:uuid, :user_uuid, :password_hash, :created_at)
             ");
             $stmt->execute($tokenData);
-            error_log("Password Hash Inserted: " . json_encode($tokenData));
+            error_log("Password hash stored: " . json_encode($tokenData));
         } catch (PDOException $e) {
-            error_log("Error in storePasswordHash(): " . $e->getMessage());
+            error_log("Database error in storePasswordHash(): " . $e->getMessage());
             throw $e;
         }
-    }   
+    }
+    
+    public function storeToken($tokenData) {
+        try {
+            $stmt = $this->conn->prepare("
+                INSERT INTO tokens (uuid, user_uuid, user_email, value, expires_at, created_at)
+                VALUES (:uuid, :user_uuid, :user_email, :value, :expires_at, :created_at)
+            ");
+            $stmt->execute($tokenData);
+            error_log("JWT token stored: " . json_encode($tokenData));
+        } catch (PDOException $e) {
+            error_log("Database error in storeToken(): " . $e->getMessage());
+            throw $e;
+        }
+    }
+    
     
     public function updateUserRole($uuid, $role) {
         try {
@@ -63,5 +78,17 @@ class User {
             throw $e;
         }
     }
+
+    public function getUserByEmail($email) {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = :email");
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error in getUserByEmail(): " . $e->getMessage());
+            return null;
+        }
+    }    
 }
 ?>

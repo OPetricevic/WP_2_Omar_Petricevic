@@ -1,31 +1,12 @@
-[Sat Jan  4 12:22:13 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Sat Jan  4 12:22:17 2025] 127.0.0.1:50088 Accepted
-[Sat Jan  4 12:22:17 2025] Connected to the database successfully.
-[Sat Jan  4 12:22:17 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
-[Sat Jan  4 12:22:17 2025] 127.0.0.1:50088 [500]: PATCH /roles/change
-[Sat Jan  4 12:22:17 2025] 127.0.0.1:50088 Closing
-[Sat Jan  4 12:22:18 2025] 127.0.0.1:50102 Accepted
-[Sat Jan  4 12:22:18 2025] Connected to the database successfully.
-[Sat Jan  4 12:22:18 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
-[Sat Jan  4 12:22:18 2025] 127.0.0.1:50102 [500]: PATCH /roles/change
-[Sat Jan  4 12:22:18 2025] 127.0.0.1:50102 Closing
-[Sat Jan  4 12:22:24 2025] 127.0.0.1:51664 Accepted
-[Sat Jan  4 12:22:24 2025] Connected to the database successfully.
-[Sat Jan  4 12:22:24 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
-[Sat Jan  4 12:22:24 2025] 127.0.0.1:51664 [500]: PATCH /roles/change
-[Sat Jan  4 12:22:24 2025] 127.0.0.1:51664 Closing
-[Sat Jan  4 12:22:25 2025] 127.0.0.1:51676 Accepted
-[Sat Jan  4 12:22:25 2025] Connected to the database successfully.
-[Sat Jan  4 12:22:25 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
-[Sat Jan  4 12:22:25 2025] 127.0.0.1:51676 [500]: PATCH /roles/change
-[Sat Jan  4 12:22:25 2025] 127.0.0.1:51676 Closing
-[Sat Jan  4 12:22:25 2025] 127.0.0.1:51688 Accepted
-[Sat Jan  4 12:22:25 2025] Connected to the database successfully.
-[Sat Jan  4 12:22:25 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
-[Sat Jan  4 12:22:25 2025] 127.0.0.1:51688 [500]: PATCH /roles/change
-[Sat Jan  4 12:22:25 2025] 127.0.0.1:51688 Closing
-[Sat Jan  4 12:22:31 2025] 127.0.0.1:57272 Accepted
-[Sat Jan  4 12:22:31 2025] Connected to the database successfully.
-[Sat Jan  4 12:22:31 2025] Error in changeRole: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
-[Sat Jan  4 12:22:31 2025] 127.0.0.1:57272 [500]: PATCH /roles/change
-[Sat Jan  4 12:22:31 2025] 127.0.0.1:57272 Closing
+[Sat Jan  4 18:25:46 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sat Jan  4 18:26:04 2025] 127.0.0.1:47208 Accepted
+[Sat Jan  4 18:26:04 2025] Connected to MySQL server (without database) successfully.
+[Sat Jan  4 18:26:04 2025] Database `wp_project` ensured to exist.
+[Sat Jan  4 18:26:04 2025] Connected to the database `wp_project` successfully.
+[Sat Jan  4 18:26:04 2025] Generated UUID for user: b9c38447-bc94-4aa6-8723-a98d36790424
+[Sat Jan  4 18:26:04 2025] User Inserted: {"uuid":"b9c38447-bc94-4aa6-8723-a98d36790424","first_name":"Amela","last_name":"Petricevic","username":"apetricevic","email":"amela@example.com","date_of_birth":"1995-05-11","role":1,"created_at":"2025-01-04 17:26:04"}
+[Sat Jan  4 18:26:04 2025] Password hash stored: {"uuid":"82cc18cf-c7a7-4308-954b-1f18eb6594c2","user_uuid":"b9c38447-bc94-4aa6-8723-a98d36790424","password_hash":"$2y$10$iXQKX38SeUxoUo4MRSdnG.CaZfH\/DOdCPf5VX55Zz35zIwoBbFBSe","created_at":"2025-01-04 17:26:04"}
+[Sat Jan  4 18:26:04 2025] JWT generated for user: b9c38447-bc94-4aa6-8723-a98d36790424
+[Sat Jan  4 18:26:04 2025] JWT token stored: {"uuid":"2e0aa67a-0770-43da-8d44-64dea45192f9","user_uuid":"b9c38447-bc94-4aa6-8723-a98d36790424","user_email":"amela@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYjljMzg0NDctYmM5NC00YWE2LTg3MjMtYTk4ZDM2NzkwNDI0Iiwicm9sZSI6MSwiaWF0IjoxNzM2MDExNTY0LCJleHAiOjE3MzYwMTUxNjR9.a5N2x-ETKkszAebWZ1XkyYP_KWLGAKfwh0geeoG4nKU","expires_at":"2025-01-04 18:26:04","created_at":"2025-01-04 17:26:04"}
+[Sat Jan  4 18:26:04 2025] 127.0.0.1:47208 [201]: POST /auth/register
+[Sat Jan  4 18:26:04 2025] 127.0.0.1:47208 Closing

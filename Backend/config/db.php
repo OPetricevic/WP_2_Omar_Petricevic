@@ -10,7 +10,7 @@ try {
     // Učitaj `.env` fajl
     loadEnv(__DIR__ . '/../.env');
 
-    // Proveri da li su potrebne promenljive iz `.env` postavljene
+    // Proveri da li su potrebne promenljive iz `.env`
     $requiredEnv = ['DB_HOST', 'DB_PORT', 'DB_NAME', 'DB_USER', 'DB_PASS'];
     foreach ($requiredEnv as $envVar) {
         if (empty($_ENV[$envVar])) {
@@ -25,13 +25,21 @@ try {
     $user = $_ENV['DB_USER'];
     $password = $_ENV['DB_PASS'];
 
-    // Povezivanje na MySQL server
-    $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
-    $conn = new PDO($dsn, $user, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Povezivanje na MySQL server bez baze (za kreiranje baze ako ne postoji)
+    $dsnWithoutDb = "mysql:host=$host;port=$port;charset=utf8mb4";
+    $connWithoutDb = new PDO($dsnWithoutDb, $user, $password);
+    $connWithoutDb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    error_log("Connected to MySQL server (without database) successfully.");
 
-    // Logovanje uspešne konekcije (opcionalno za debug)
-    error_log("Connected to the database successfully.");
+    // Kreiranje baze ako ne postoji
+    $connWithoutDb->exec("CREATE DATABASE IF NOT EXISTS `$dbname`");
+    error_log("Database `$dbname` ensured to exist.");
+
+    // Povezivanje na konkretnu bazu
+    $dsnWithDb = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
+    $conn = new PDO($dsnWithDb, $user, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    error_log("Connected to the database `$dbname` successfully.");
 } catch (PDOException $e) {
     // Loguj grešku i prikaži prijateljsku poruku korisniku
     error_log("Database Connection Failed: " . $e->getMessage());
