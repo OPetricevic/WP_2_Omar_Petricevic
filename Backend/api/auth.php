@@ -1,8 +1,11 @@
 <?php
 include_once __DIR__ . '/../services/AuthService.php';
+include_once __DIR__ . '/../services/PasswordService.php';
+include_once __DIR__ . '/../config/db.php';
 
 // Inicijalizacija AuthService
 $authService = new AuthService();
+$passwordService = new PasswordService($conn); 
 
 // Endpoint za registraciju
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/register') {
@@ -74,6 +77,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/
     http_response_code($response['status']);
     echo json_encode(['message' => $response['message']]);
     exit;
+}
+
+// Password Request: Send reset email
+// Password Request: Send reset email
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/request-password-reset') {
+    $email = json_decode(file_get_contents('php://input'), true)['email'];
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        http_response_code(400);
+        echo json_encode(['message' => 'Invalid email address.']);
+        exit;
+    }
+
+    $response = $passwordService->requestPasswordReset($email);
+    http_response_code($response['status']);
+    echo json_encode(['message' => $response['message']]);
+    exit;
+}
+
+
+// Reset Password: Update password using token
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/reset-password') {
+    $data = json_decode(file_get_contents('php://input'), true);
+    $token = $data['token'];
+    $newPassword = $data['password'];
+    $confirmPassword = $data['confirm_password'];
+
+    if ($newPassword !== $confirmPassword) {
+        http_response_code(400);
+        echo json_encode(['message' => 'Passwords do not match.']);
+        exit;
+    }
+
+    $response = $passwordService->resetPassword($token, $newPassword);
+    http_response_code($response['status']);
+    echo json_encode(['message' => $response['message']]);
 }
 
 

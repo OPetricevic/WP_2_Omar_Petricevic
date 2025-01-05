@@ -1,13 +1,4 @@
-[Sun Jan  5 10:41:32 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Sun Jan  5 10:41:45 2025] 127.0.0.1:43604 Accepted
-[Sun Jan  5 10:41:45 2025] 127.0.0.1:43604 [400]: POST /auth/register
-[Sun Jan  5 10:41:45 2025] 127.0.0.1:43604 Closing
-[Sun Jan  5 10:42:05 2025] 127.0.0.1:51006 Accepted
-[Sun Jan  5 10:42:05 2025] 127.0.0.1:51006 [409]: POST /auth/register
-[Sun Jan  5 10:42:05 2025] 127.0.0.1:51006 Closing
-[Sun Jan  5 10:42:37 2025] 127.0.0.1:59186 Accepted
-[Sun Jan  5 10:42:37 2025] 127.0.0.1:59186 [201]: POST /auth/register
-[Sun Jan  5 10:42:37 2025] 127.0.0.1:59186 Closing
-[Sun Jan  5 10:42:55 2025] 127.0.0.1:57948 Accepted
-[Sun Jan  5 10:42:55 2025] 127.0.0.1:57948 [400]: POST /auth/register
-[Sun Jan  5 10:42:55 2025] 127.0.0.1:57948 Closing
+[Sun Jan  5 12:42:12 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sun Jan  5 12:42:17 2025] 127.0.0.1:56398 Accepted
+[Sun Jan  5 12:42:19 2025] 127.0.0.1:56398 [200]: POST /auth/request-password-reset
+[Sun Jan  5 12:42:19 2025] 127.0.0.1:56398 Closing

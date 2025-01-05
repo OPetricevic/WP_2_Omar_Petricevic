@@ -86,3 +86,61 @@
 [05-Jan-2025 09:41:32 UTC] Connected to MySQL server (without database) successfully.
 [05-Jan-2025 09:41:32 UTC] Database `wp_project` ensured to exist.
 [05-Jan-2025 09:41:32 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:29:49 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:29:49 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:29:49 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:31:35 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:31:35 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:31:35 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:33:13 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:33:13 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:33:13 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:34:54 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:34:54 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:34:54 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:50:13 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:50:13 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:50:13 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:51:41 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:51:41 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:51:41 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:52:11 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:52:11 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:52:11 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:53:12 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:53:12 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:53:12 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 10:59:12 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 10:59:12 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 10:59:12 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:03:38 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:03:38 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:03:38 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:14:44 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:14:44 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:14:44 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:18:59 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:18:59 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:18:59 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:23:39 UTC] PHP Warning:  Undefined array key "DB_HOST" in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/config/db.php on line 9
+[05-Jan-2025 11:23:39 UTC] PHP Warning:  Undefined array key "DB_PORT" in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/config/db.php on line 10
+[05-Jan-2025 11:23:39 UTC] PHP Warning:  Undefined array key "DB_NAME" in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/config/db.php on line 11
+[05-Jan-2025 11:23:39 UTC] PHP Warning:  Undefined array key "DB_USER" in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/config/db.php on line 12
+[05-Jan-2025 11:23:39 UTC] PHP Warning:  Undefined array key "DB_PASS" in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/config/db.php on line 13
+[05-Jan-2025 11:23:39 UTC] Database Connection Failed: SQLSTATE[HY000] [2002] No such file or directory
+[05-Jan-2025 11:23:39 UTC] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/config/db.php:9) in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/config/db.php on line 33
+[05-Jan-2025 11:26:06 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:26:06 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:26:06 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:28:55 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:28:55 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:28:55 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:32:20 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:32:20 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:32:20 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:38:50 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:38:50 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:38:50 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 11:42:12 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 11:42:12 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 11:42:12 UTC] Connected to the database `wp_project` successfully.
