@@ -1012,3 +1012,29 @@ Stack trace:
 [05-Jan-2025 09:36:30 UTC] Access granted. User role 3 has the required role.
 [05-Jan-2025 09:36:30 UTC] Deleted file: /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/services/../uploads/677a526fa0e3f-firebase.png
 [05-Jan-2025 09:36:30 UTC] Slika sa uuid 1f2003c4-5aff-484c-8ef3-344a04b84121 je obrisana.
+[05-Jan-2025 09:41:45 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:41:45 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:41:45 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:42:05 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:42:05 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:42:05 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:42:05 UTC] Starting user registration: {"first_name":"Teste2r","last_name":"Petricevic","username":"BombonxTester","email":"test22@example.com","password":"securePassword123","confirm_password":"securePassword123","date_of_birth":"1995-05-15"}
+[05-Jan-2025 09:42:05 UTC] Conflict: User with email test22@example.com already exists.
+[05-Jan-2025 09:42:05 UTC] Register failed: {"status":409,"message":"A user with this email already exists."}
+[05-Jan-2025 09:42:37 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:42:37 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:42:37 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:42:37 UTC] Starting user registration: {"first_name":"Ranko","last_name":"Petricevic","username":"RPetrice","email":"ranko@example.com","password":"securePassword123","confirm_password":"securePassword123","date_of_birth":"1968-6-10"}
+[05-Jan-2025 09:42:37 UTC] Generated UUID for user: 00539757-fa8e-4d63-8a03-2654e9dfeb76
+[05-Jan-2025 09:42:37 UTC] Attempting to insert user: {"uuid":"00539757-fa8e-4d63-8a03-2654e9dfeb76","first_name":"Ranko","last_name":"Petricevic","username":"RPetrice","email":"ranko@example.com","date_of_birth":"1968-6-10","role":1,"created_at":"2025-01-05 09:42:37"}
+[05-Jan-2025 09:42:37 UTC] User successfully inserted.
+[05-Jan-2025 09:42:37 UTC] User created successfully: 00539757-fa8e-4d63-8a03-2654e9dfeb76
+[05-Jan-2025 09:42:37 UTC] Password hashed successfully.
+[05-Jan-2025 09:42:37 UTC] Password hash stored: {"uuid":"cc4fb0aa-27aa-4509-bee3-3de9b928005b","user_uuid":"00539757-fa8e-4d63-8a03-2654e9dfeb76","password_hash":"$2y$10$odppndW2FyL2z4iP8p8KJuJbpu4SezBXcnSW9CCLa579QcqDcNlwq","created_at":"2025-01-05 09:42:37"}
+[05-Jan-2025 09:42:37 UTC] Password hash stored successfully.
+[05-Jan-2025 09:42:37 UTC] JWT generated successfully.
+[05-Jan-2025 09:42:37 UTC] JWT token stored: {"uuid":"5256daa9-5ac8-4fd5-9d50-001bac007297","user_uuid":"00539757-fa8e-4d63-8a03-2654e9dfeb76","user_email":"ranko@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiMDA1Mzk3NTctZmE4ZS00ZDYzLThhMDMtMjY1NGU5ZGZlYjc2Iiwicm9sZSI6MSwiaWF0IjoxNzM2MDcwMTU3LCJleHAiOjE3MzYwNzM3NTd9.WpXpfdBiv9tu8-RezaTcaQ0vzBAhILWnY8G7icx_2tI","expires_at":"2025-01-05 10:42:37","created_at":"2025-01-05 09:42:37"}
+[05-Jan-2025 09:42:37 UTC] JWT token stored successfully.
+[05-Jan-2025 09:42:55 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:42:55 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:42:55 UTC] Connected to the database `wp_project` successfully.

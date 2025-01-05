@@ -9,8 +9,8 @@ class AuthService {
         try {
             error_log("Starting user registration: " . json_encode($data));
     
-            // Validacija podataka
-            if (empty($data['first_name']) || empty($data['last_name']) || empty($data['email']) || empty($data['password']) || empty($data['date_of_birth'])) {
+            // Validate required fields
+            if (empty($data['first_name']) || empty($data['last_name']) || empty($data['email']) || empty($data['password']) || empty($data['confirm_password']) || empty($data['date_of_birth'])) {
                 error_log("Validation failed: Missing required fields.");
                 return ['status' => 400, 'message' => 'All fields are required.'];
             }
@@ -20,24 +20,30 @@ class AuthService {
                 return ['status' => 400, 'message' => 'Invalid email format.'];
             }
     
-            // Provjera da li korisnik već postoji putem emaila
+            // Check if passwords match
+            if (!passwordsMatch($data['password'], $data['confirm_password'])) {
+                error_log("Validation failed: Passwords do not match.");
+                return ['status' => 400, 'message' => 'Passwords do not match.'];
+            }
+    
+            // Check if the user already exists by email
             $userModel = new User();
             if ($userModel->existsByEmail($data['email'])) {
                 error_log("Conflict: User with email {$data['email']} already exists.");
                 return ['status' => 409, 'message' => 'A user with this email already exists.'];
             }
     
-            // Provjera da li korisničko ime već postoji
+            // Check if the username already exists
             if ($userModel->existsByUsername($data['username'])) {
                 error_log("Conflict: Username {$data['username']} already exists.");
                 return ['status' => 409, 'message' => 'This username is already taken.'];
             }
     
-            // Generisanje UUID-a
+            // Generate UUID
             $userUuid = generateUuid();
             error_log("Generated UUID for user: $userUuid");
     
-            // Kreiranje korisnika
+            // Create user
             $userModel->createUser([
                 'uuid' => $userUuid,
                 'first_name' => $data['first_name'],
@@ -50,11 +56,11 @@ class AuthService {
             ]);
             error_log("User created successfully: $userUuid");
     
-            // Hashovanje lozinke
+            // Hash password
             $hashedPassword = password_hash($data['password'], PASSWORD_BCRYPT);
             error_log("Password hashed successfully.");
     
-            // Čuvanje hash-a lozinke
+            // Store password hash
             $userModel->storePasswordHash([
                 'uuid' => generateUuid(),
                 'user_uuid' => $userUuid,
@@ -63,14 +69,14 @@ class AuthService {
             ]);
             error_log("Password hash stored successfully.");
     
-            // Generisanje JWT tokena
+            // Generate JWT token
             $jwt = JwtUtils::generateToken([
                 'uuid' => $userUuid,
                 'role' => 1
             ]);
             error_log("JWT generated successfully.");
     
-            // Čuvanje JWT tokena
+            // Store JWT token
             $userModel->storeToken([
                 'uuid' => generateUuid(),
                 'user_uuid' => $userUuid,
@@ -88,8 +94,8 @@ class AuthService {
                 'token' => $jwt
             ];
         } catch (PDOException $e) {
-            // Rukovanje greškama baze podataka
-            if ($e->getCode() === '23000') { // SQLSTATE kod za duplicirane unose
+            // Handle database errors
+            if ($e->getCode() === '23000') { // SQLSTATE code for duplicate entries
                 error_log("Database constraint violation: " . $e->getMessage());
     
                 if (strpos($e->getMessage(), 'users.email') !== false) {
@@ -110,6 +116,7 @@ class AuthService {
             return ['status' => 500, 'message' => 'Internal server error.'];
         }
     }
+    
     
     
     

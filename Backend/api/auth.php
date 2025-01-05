@@ -8,6 +8,13 @@ $authService = new AuthService();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/register') {
     $input = json_decode(file_get_contents('php://input'), true);
 
+    // Check if password and confirm_password match
+    if (empty($input['password']) || empty($input['confirm_password']) || !passwordsMatch($input['password'], $input['confirm_password'])) {
+        http_response_code(400);
+        echo json_encode(['message' => 'Passwords do not match.']);
+        exit;
+    }
+
     $response = $authService->register($input);
 
     // Log debug info

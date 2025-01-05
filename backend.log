@@ -1,16 +1,13 @@
-[Sun Jan  5 10:35:28 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Sun Jan  5 10:35:33 2025] 127.0.0.1:40406 Accepted
-[Sun Jan  5 10:35:33 2025] 127.0.0.1:40406 [400]: POST /images
-[Sun Jan  5 10:35:33 2025] 127.0.0.1:40406 Closing
-[Sun Jan  5 10:35:43 2025] 127.0.0.1:53380 Accepted
-[Sun Jan  5 10:35:43 2025] 127.0.0.1:53380 [201]: POST /images
-[Sun Jan  5 10:35:43 2025] 127.0.0.1:53380 Closing
-[Sun Jan  5 10:35:54 2025] 127.0.0.1:54982 Accepted
-[Sun Jan  5 10:35:54 2025] 127.0.0.1:54982 [200]: GET /images?module_uuid=a034a5c5-7685-4053-8b21-309474382294&module_for=user
-[Sun Jan  5 10:35:54 2025] 127.0.0.1:54982 Closing
-[Sun Jan  5 10:36:09 2025] 127.0.0.1:34854 Accepted
-[Sun Jan  5 10:36:09 2025] 127.0.0.1:34854 [200]: GET /images?module_uuid=230a86ed-bda6-4f7f-a1f0-2a917ea8bdf1&module_for=user
-[Sun Jan  5 10:36:09 2025] 127.0.0.1:34854 Closing
-[Sun Jan  5 10:36:30 2025] 127.0.0.1:57626 Accepted
-[Sun Jan  5 10:36:30 2025] 127.0.0.1:57626 [200]: DELETE /images?uuid=1f2003c4-5aff-484c-8ef3-344a04b84121
-[Sun Jan  5 10:36:30 2025] 127.0.0.1:57626 Closing
+[Sun Jan  5 10:41:32 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sun Jan  5 10:41:45 2025] 127.0.0.1:43604 Accepted
+[Sun Jan  5 10:41:45 2025] 127.0.0.1:43604 [400]: POST /auth/register
+[Sun Jan  5 10:41:45 2025] 127.0.0.1:43604 Closing
+[Sun Jan  5 10:42:05 2025] 127.0.0.1:51006 Accepted
+[Sun Jan  5 10:42:05 2025] 127.0.0.1:51006 [409]: POST /auth/register
+[Sun Jan  5 10:42:05 2025] 127.0.0.1:51006 Closing
+[Sun Jan  5 10:42:37 2025] 127.0.0.1:59186 Accepted
+[Sun Jan  5 10:42:37 2025] 127.0.0.1:59186 [201]: POST /auth/register
+[Sun Jan  5 10:42:37 2025] 127.0.0.1:59186 Closing
+[Sun Jan  5 10:42:55 2025] 127.0.0.1:57948 Accepted
+[Sun Jan  5 10:42:55 2025] 127.0.0.1:57948 [400]: POST /auth/register
+[Sun Jan  5 10:42:55 2025] 127.0.0.1:57948 Closing
