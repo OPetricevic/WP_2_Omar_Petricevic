@@ -7,6 +7,7 @@ function migrateSystemImagesTable() {
             CREATE TABLE IF NOT EXISTS system_images (
                 uuid VARCHAR(255) NOT NULL,
                 module_uuid VARCHAR(255) NOT NULL,
+                module_for VARCHAR(50) NOT NULL,
                 url VARCHAR(255) NOT NULL UNIQUE,
                 description LONGTEXT,
                 date_created DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),

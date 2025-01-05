@@ -4,20 +4,35 @@ include_once __DIR__ . '/../config/db.php';
 class RoleMiddleware {
     public function requireRole($decodedToken, $requiredRole) {
         $userRole = $decodedToken->role;
-        error_log("User role from token: $userRole. Required role: $requiredRole.");
+
+        // Check if $requiredRole is an array or a single value and log accordingly
+        error_log("User role from token: $userRole. Required role: " . (is_array($requiredRole) ? json_encode($requiredRole) : $requiredRole) . ".");
 
         // Fetch inherited roles
         $allowedRoles = $this->getInheritedRoles($userRole);
         error_log("Allowed roles for user: " . json_encode($allowedRoles));
 
-        if (!in_array($requiredRole, $allowedRoles)) {
-            error_log("Error: User role $userRole does not have the required role $requiredRole.");
-            http_response_code(403);
-            echo json_encode(['message' => 'Forbidden. You do not have access to this resource.']);
-            exit;
+        // Handle single role or multiple roles
+        if (is_array($requiredRole)) {
+            // Check if any of the required roles are in the allowed roles
+            $hasAccess = array_intersect($requiredRole, $allowedRoles);
+            if (empty($hasAccess)) {
+                error_log("Access denied. User role $userRole does not match required roles: " . json_encode($requiredRole));
+                http_response_code(403);
+                echo json_encode(['message' => 'Forbidden. You do not have access to this resource.']);
+                exit;
+            }
+        } else {
+            // Check if the single required role is in the allowed roles
+            if (!in_array($requiredRole, $allowedRoles)) {
+                error_log("Access denied. User role $userRole does not have the required role $requiredRole.");
+                http_response_code(403);
+                echo json_encode(['message' => 'Forbidden. You do not have access to this resource.']);
+                exit;
+            }
         }
 
-        error_log("Access granted. User role $userRole has the required role $requiredRole.");
+        error_log("Access granted. User role $userRole has the required role.");
     }
 
     private function getInheritedRoles($roleId) {

@@ -2,6 +2,7 @@
 include_once __DIR__ . '/../middleware/AuthMiddleware.php';
 include_once __DIR__ . '/../middleware/RoleMiddleware.php';
 include_once __DIR__ . '/../services/ImageService.php';
+include_once __DIR__ . '/../models/User.php';
 
 // Middleware for authentication
 $authMiddleware = new AuthMiddleware();
@@ -13,37 +14,55 @@ $roleMiddleware = new RoleMiddleware();
 // Service for image operations
 $imageService = new ImageService();
 
-// Endpoint for creating an image
+// Endpoint for uploading an image
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/images') {
     error_log("POST /images endpoint hit.");
 
     // Check minimum role: user
     $roleMiddleware->requireRole($decodedToken, [1]);
 
-    $input = json_decode(file_get_contents('php://input'), true);
-    error_log("Request payload: " . json_encode($input));
-
-    // Validate input
-    if (empty($input['module_uuid']) || empty($input['url'])) {
-        error_log("Validation failed: module_uuid or url is missing.");
+    // Check if a file is uploaded
+    $uploadedFile = $_FILES['image'] ?? null;
+    if (!$uploadedFile || $uploadedFile['error'] !== UPLOAD_ERR_OK) {
+        error_log("File upload failed or no file provided.");
         http_response_code(400);
-        echo json_encode(['message' => 'module_uuid and url are required.']);
+        echo json_encode(['message' => 'Image file is required and must be valid.']);
         exit;
     }
 
-    // Delete old image (if exists)
-    $imageService->deleteOldImage($input['module_uuid']);
+    // Validate other input fields
+    $moduleUuid = $_POST['module_uuid'] ?? null;
+    $moduleFor = $_POST['module_for'] ?? null;
+    $description = $_POST['description'] ?? null;
 
-    // Add new image
-    $response = $imageService->addImage([
-        'module_uuid' => $input['module_uuid'],
-        'url' => $input['url'],
-        'description' => $input['description'] ?? null
-    ]);
+    if (!$moduleUuid) {
+        error_log("Validation failed: module_uuid is missing.");
+        http_response_code(400);
+        echo json_encode(['message' => 'module_uuid is required.']);
+        exit;
+    }
 
-    // Set response
+    if (!$moduleFor) {
+        error_log("Validation failed: module_for is missing.");
+        http_response_code(400);
+        echo json_encode(['message' => 'module_for is required.']);
+        exit;
+    }
+
+    // Add the image using the ImageService
+    $response = $imageService->addImage(
+        $uploadedFile,
+        $moduleUuid,
+        $moduleFor,
+        $description
+    );
+
+    // Check response and set the appropriate status
     http_response_code($response['status']);
-    echo json_encode(['message' => $response['message']]);
+    echo json_encode([
+        'message' => $response['message'],
+        'url' => $response['file_url'] ?? null // Return the uploaded file URL if available
+    ]);
     exit;
 }
 
@@ -52,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['module_uuid'])) {
     error_log("GET /images?module_uuid endpoint hit.");
 
     // Check minimum role: user
-    $roleMiddleware->requireRole($decodedToken, 1);
+    $roleMiddleware->requireRole($decodedToken, [1]);
 
     $moduleUuid = $_GET['module_uuid'];
     $images = $imageService->getAllImages($moduleUuid);
@@ -67,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['uuid'])) {
     error_log("GET /images?uuid endpoint hit.");
 
     // Check minimum role: user
-    $roleMiddleware->requireRole($decodedToken, 1);
+    $roleMiddleware->requireRole($decodedToken, [1]);
 
     $uuid = $_GET['uuid'];
     $image = $imageService->getImageByUuid($uuid);
@@ -89,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH' && isset($_GET['uuid'])) {
     error_log("PATCH /images?uuid endpoint hit.");
 
     // Check minimum role: user
-    $roleMiddleware->requireRole($decodedToken, 1);
+    $roleMiddleware->requireRole($decodedToken, [1]);
 
     $uuid = $_GET['uuid'];
     $input = json_decode(file_get_contents('php://input'), true);

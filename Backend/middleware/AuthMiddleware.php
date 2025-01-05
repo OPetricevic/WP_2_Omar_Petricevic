@@ -2,6 +2,8 @@
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 include_once __DIR__ . '/../utils/JwtUtils.php';
+include_once __DIR__ . '/../models/User.php'; 
+
 
 class AuthMiddleware {
     public function requireAuth() {

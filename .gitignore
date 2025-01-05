@@ -23,6 +23,10 @@ composer.phar
 /out-tsc
 /bazel-out
 
+# Ignore stderr logs
+stderr
+Backend/stderr
+
 # Node
 /node_modules
 npm-debug.log
