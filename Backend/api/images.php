@@ -66,20 +66,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/image
     exit;
 }
 
-// Endpoint for getting all images by module_uuid
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['module_uuid'])) {
-    error_log("GET /images?module_uuid endpoint hit.");
+// Endpoint for getting all images by module_uuid and module_for
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['module_uuid']) && isset($_GET['module_for'])) {
+    error_log("GET /images?module_uuid&module_for endpoint hit.");
 
     // Check minimum role: user
     $roleMiddleware->requireRole($decodedToken, [1]);
 
     $moduleUuid = $_GET['module_uuid'];
-    $images = $imageService->getAllImages($moduleUuid);
+    $moduleFor = $_GET['module_for'];
+
+    // Fetch images using the ImageService
+    $images = $imageService->getAllImages($moduleUuid, $moduleFor);
 
     http_response_code(200);
     echo json_encode(['images' => $images]);
     exit;
 }
+
 
 // Endpoint for getting a single image by uuid
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['uuid'])) {
@@ -142,6 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['uuid'])) {
     echo json_encode(['message' => $response['message']]);
     exit;
 }
+
 
 // If route is not found
 error_log("Route not found.");

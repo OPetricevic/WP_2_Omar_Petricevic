@@ -96,13 +96,32 @@ class ImageService {
 
     public function deleteImage($uuid) {
         try {
+            // Retrieve the image details to get the file path
+            $image = $this->imageModel->getImageByUuid($uuid);
+    
+            if (!$image) {
+                error_log("Image not found for UUID: $uuid.");
+                return ['status' => 404, 'message' => 'Image not found.'];
+            }
+    
+            // Delete the file from the filesystem
+            $filePath = __DIR__ . '/../' . ltrim($image['url'], '/');
+            if (file_exists($filePath)) {
+                unlink($filePath);
+                error_log("Deleted file: $filePath");
+            } else {
+                error_log("File not found: $filePath");
+            }
+    
+            // Delete the image from the database
             $this->imageModel->deleteImage($uuid);
-
+    
             return ['status' => 200, 'message' => 'Image deleted successfully.'];
         } catch (Exception $e) {
             error_log("Error in deleteImage(): " . $e->getMessage());
             return ['status' => 500, 'message' => 'Internal server error.'];
         }
     }
+    
 }
 ?>

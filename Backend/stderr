@@ -863,3 +863,152 @@ Stack trace:
 [05-Jan-2025 09:22:35 UTC] Deleted all images for module_uuid a034a5c5-7685-4053-8b21-309474382294.
 [05-Jan-2025 09:22:35 UTC] Old image for module_uuid a034a5c5-7685-4053-8b21-309474382294 and module_for user deleted successfully.
 [05-Jan-2025 09:22:35 UTC] Nova slika dodana za module_uuid a034a5c5-7685-4053-8b21-309474382294 i module_for user.
+[05-Jan-2025 09:27:38 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:27:38 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:27:38 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:27:38 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:27:38 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:27:38 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:27:38 UTC] Using secret key: kljuc
+[05-Jan-2025 09:27:38 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:27:38 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:27:38 UTC] Route not found.
+[05-Jan-2025 09:28:04 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:28:04 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:28:04 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:28:04 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:28:04 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:28:04 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:28:04 UTC] Using secret key: kljuc
+[05-Jan-2025 09:28:04 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:28:04 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:28:04 UTC] GET /images?module_uuid endpoint hit.
+[05-Jan-2025 09:28:04 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:28:04 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:28:04 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:28:04 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:28:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ImageService::getAllImages(), 1 passed in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/images.php on line 77 and exactly 2 expected in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/services/ImageService.php:78
+Stack trace:
+#0 /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/images.php(77): ImageService->getAllImages()
+#1 /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/index.php(23): include_once('...')
+#2 {main}
+  thrown in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/services/ImageService.php on line 78
+[05-Jan-2025 09:29:40 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:29:40 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:29:40 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:29:40 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:29:40 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:29:40 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:29:40 UTC] Using secret key: kljuc
+[05-Jan-2025 09:29:40 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:29:40 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:29:40 UTC] GET /images?module_uuid&module_for endpoint hit.
+[05-Jan-2025 09:29:40 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:29:40 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:29:40 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:29:40 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:30:22 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:30:22 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:30:22 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:30:22 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:30:22 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:30:22 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:30:22 UTC] Using secret key: kljuc
+[05-Jan-2025 09:30:22 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:30:22 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:30:22 UTC] GET /images?uuid endpoint hit.
+[05-Jan-2025 09:30:22 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:30:22 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:30:22 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:30:22 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:33:35 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:33:35 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:33:35 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:33:35 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:33:35 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:33:35 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:33:35 UTC] Using secret key: kljuc
+[05-Jan-2025 09:33:35 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:33:35 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:33:35 UTC] DELETE /images?uuid endpoint hit.
+[05-Jan-2025 09:33:35 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:33:35 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:33:35 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:33:35 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:33:35 UTC] Slika sa uuid dacb251a-0e85-4df5-9711-16ed744b34f8 je obrisana.
+[05-Jan-2025 09:35:33 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:35:33 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:35:33 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:35:33 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:35:33 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:35:33 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:35:33 UTC] Using secret key: kljuc
+[05-Jan-2025 09:35:33 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:35:33 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:35:33 UTC] POST /images endpoint hit.
+[05-Jan-2025 09:35:33 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:35:33 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:35:33 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:35:33 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:35:33 UTC] Validation failed: module_for is missing.
+[05-Jan-2025 09:35:43 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:35:43 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:35:43 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:35:43 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:35:43 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:35:43 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:35:43 UTC] Using secret key: kljuc
+[05-Jan-2025 09:35:43 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:35:43 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:35:43 UTC] POST /images endpoint hit.
+[05-Jan-2025 09:35:43 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:35:43 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:35:43 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:35:43 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:35:43 UTC] Deleted all images for module_uuid 230a86ed-bda6-4f7f-a1f0-2a917ea8bdf1.
+[05-Jan-2025 09:35:43 UTC] Old image for module_uuid 230a86ed-bda6-4f7f-a1f0-2a917ea8bdf1 and module_for user deleted successfully.
+[05-Jan-2025 09:35:43 UTC] Nova slika dodana za module_uuid 230a86ed-bda6-4f7f-a1f0-2a917ea8bdf1 i module_for user.
+[05-Jan-2025 09:35:54 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:35:54 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:35:54 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:35:54 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:35:54 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:35:54 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:35:54 UTC] Using secret key: kljuc
+[05-Jan-2025 09:35:54 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:35:54 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:35:54 UTC] GET /images?module_uuid&module_for endpoint hit.
+[05-Jan-2025 09:35:54 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:35:54 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:35:54 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:35:54 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:36:09 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:36:09 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:36:09 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:36:09 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:36:09 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:36:09 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:36:09 UTC] Using secret key: kljuc
+[05-Jan-2025 09:36:09 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:36:09 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:36:09 UTC] GET /images?module_uuid&module_for endpoint hit.
+[05-Jan-2025 09:36:09 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:36:09 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:36:09 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:36:09 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:36:30 UTC] Connected to MySQL server (without database) successfully.
+[05-Jan-2025 09:36:30 UTC] Database `wp_project` ensured to exist.
+[05-Jan-2025 09:36:30 UTC] Connected to the database `wp_project` successfully.
+[05-Jan-2025 09:36:30 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ"
+[05-Jan-2025 09:36:30 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:36:30 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MDY3NTc0LCJleHAiOjE3MzYwNzExNzR9.Tmy8V2QGNtGlBAX2It81LhCGdKcQoCtssn3F04529rQ
+[05-Jan-2025 09:36:30 UTC] Using secret key: kljuc
+[05-Jan-2025 09:36:30 UTC] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:36:30 UTC] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736067574,"exp":1736071174}
+[05-Jan-2025 09:36:30 UTC] DELETE /images?uuid endpoint hit.
+[05-Jan-2025 09:36:30 UTC] User role from token: 3. Required role: [1].
+[05-Jan-2025 09:36:30 UTC] Inherited roles for role_id 3: ["1","2",3]
+[05-Jan-2025 09:36:30 UTC] Allowed roles for user: [1,2,3]
+[05-Jan-2025 09:36:30 UTC] Access granted. User role 3 has the required role.
+[05-Jan-2025 09:36:30 UTC] Deleted file: /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/services/../uploads/677a526fa0e3f-firebase.png
+[05-Jan-2025 09:36:30 UTC] Slika sa uuid 1f2003c4-5aff-484c-8ef3-344a04b84121 je obrisana.
