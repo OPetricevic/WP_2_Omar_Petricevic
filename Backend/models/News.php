@@ -12,7 +12,7 @@ class News {
 
     public function getAllNews() {
         $stmt = $this->conn->prepare("
-            SELECT uuid, title, body, category, image_url, created_at, author_uuid 
+            SELECT uuid, title, body, category, created_at, author_uuid 
             FROM news 
             ORDER BY created_at DESC
         ");
@@ -20,37 +20,56 @@ class News {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getPaginatedNews($offset, $limit, $search = null) {
-        $query = "
-            SELECT SQL_CALC_FOUND_ROWS uuid, title, body, category, image_url, created_at, author_uuid
-            FROM news
-        ";
+    public function getPaginatedNews($page, $pageSize, $search = null) {
+        try {
+            $offset = ($page - 1) * $pageSize; // Calculate offset based on the current page
+            
+            $query = "
+                SELECT uuid, title, body, category, created_at, author_uuid 
+                FROM news 
+            ";
     
-        if ($search) {
-            $query .= " WHERE title LIKE :search ";
+            if ($search) {
+                $query .= "WHERE title LIKE :search ";
+            }
+    
+            $query .= "ORDER BY created_at DESC LIMIT :limit OFFSET :offset";
+    
+            $stmt = $this->conn->prepare($query);
+    
+            if ($search) {
+                $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+            }
+    
+            $stmt->bindValue(':limit', $pageSize, PDO::PARAM_INT);
+            $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+    
+            $stmt->execute();
+            $newsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+            foreach ($newsList as &$news) {
+                $news['image'] = $this->getNewsImage($news['uuid']);
+            }
+    
+            $totalCount = $this->getTotalCount($search);
+    
+            return [
+                'total_records' => $totalCount,
+                'page_size' => $pageSize,
+                'current_page' => $page,
+                'news' => $newsList
+            ];
+        } catch (Exception $e) {
+            error_log("Error in getPaginatedNews: " . $e->getMessage());
+            return ['error' => 'Internal server error.'];
         }
-    
-        $query .= " ORDER BY created_at DESC LIMIT :offset, :limit";
-    
-        $stmt = $this->conn->prepare($query);
-        if ($search) {
-            $stmt->bindValue(':search', '%' . $search . '%');
-        }
-        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
-        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
-    
-        $stmt->execute();
-        $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        $totalRecords = $this->conn->query("SELECT FOUND_ROWS()")->fetchColumn();
-    
-        return ['news' => $news, 'total_records' => $totalRecords];
     }
+    
     
 
     public function getNewsByUuid($uuid) {
         $stmt = $this->conn->prepare("
-            SELECT uuid, title, body, category, image_url, created_at, author_uuid 
+            SELECT uuid, title, body, category, created_at, author_uuid 
             FROM news 
             WHERE uuid = :uuid
         ");
@@ -61,8 +80,8 @@ class News {
     public function createNews($newsData) {
         try {
             $stmt = $this->conn->prepare("
-                INSERT INTO news (uuid, title, body, category, image_url, created_at, author_uuid)
-                VALUES (:uuid, :title, :body, :category, :image_url, NOW(), :author_uuid)
+                INSERT INTO news (uuid, title, body, category, created_at, author_uuid)
+                VALUES (:uuid, :title, :body, :category, NOW(), :author_uuid)
             ");
             $stmt->execute($newsData);
             return true;
@@ -71,6 +90,8 @@ class News {
             return false;
         }
     }
+   
+    
 
     public function deleteNews($uuid, $authorUuid) {
         try {

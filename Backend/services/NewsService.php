@@ -65,6 +65,42 @@ class NewsService {
         }
     }
     
+    
+
+    public function createNews($authorUuid, $title, $body, $category) {
+        try {
+            // Use the generateUuid function to create a proper UUID
+            $uuid = generateUuid(); 
+            $newsData = [
+                ':uuid' => $uuid,
+                ':title' => $title,
+                ':body' => $body,
+                ':category' => $category,
+                ':author_uuid' => $authorUuid,
+            ];
+    
+            // Call the News model to insert the news
+            if ($this->newsModel->createNews($newsData)) {
+                return [
+                    'uuid' => $uuid,
+                    'message' => 'News created successfully.'
+                ];
+            }
+    
+            return [
+                'status' => 500,
+                'message' => 'Failed to create news.'
+            ];
+        } catch (Exception $e) {
+            error_log("Error in createNews: " . $e->getMessage());
+            return [
+                'status' => 500,
+                'message' => 'Internal server error.'
+            ];
+        }
+    }
+    
+    
 
     private function getTotalCount($search = null) {
         $query = "SELECT COUNT(*) FROM news ";

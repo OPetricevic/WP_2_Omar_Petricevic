@@ -9,9 +9,13 @@ $authMiddleware = new AuthMiddleware();
 $roleMiddleware = new RoleMiddleware();
 
 // GET: Dohvati sve vijesti sa paginacijom i pretragom
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === '/news') {
+// Parse URI path (exclude query parameters)
+$requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+// GET: Dohvati sve vijesti sa paginacijom i pretragom
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && $requestUri === '/news') {
     try {
-        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $page = isset($_GET['current_page']) ? (int)$_GET['current_page'] : 1;
         $pageSize = isset($_GET['page_size']) ? (int)$_GET['page_size'] : 10;
         $search = isset($_GET['search']) ? $_GET['search'] : null;
 
@@ -24,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === '/news')
     }
     exit;
 }
+
 
 // GET: Dohvati vijest po UUID-u
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && preg_match('/^\/news\/([^\/]+)$/', $_SERVER['REQUEST_URI'], $matches)) {
@@ -50,11 +55,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && preg_match('/^\/news\/([^\/]+)$/', $
 
 // POST: Kreiraj novu vijest (samo kreatori)
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/news') {
-    $decodedToken = $authMiddleware->requireAuth(); // Validacija JWT
-    $roleMiddleware->requireRole($decodedToken, [2]); // Samo kreatori (role 2)
+    $decodedToken = $authMiddleware->requireAuth(); // Validate JWT
+    $roleMiddleware->requireRole($decodedToken, [2]); // Allow only creators (role 2)
 
     $data = json_decode(file_get_contents('php://input'), true);
 
+    // Validate required fields
     if (empty($data['title']) || empty($data['body']) || empty($data['category'])) {
         http_response_code(400);
         echo json_encode(['message' => 'Missing required fields: title, body, or category']);
@@ -62,20 +68,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/news'
     }
 
     try {
-        $response = $newsService->createNews($decodedToken->uuid, $data['title'], $data['body'], $data['category'], $data['image_url'] ?? null);
+        $response = $newsService->createNews(
+            $decodedToken->uuid, 
+            $data['title'], 
+            $data['body'], 
+            $data['category']
+        );
         http_response_code(201);
         echo json_encode($response, JSON_PRETTY_PRINT);
     } catch (Exception $e) {
         http_response_code(500);
-        echo json_encode([
-            'status' => 500,
-            'message' => 'Internal server error.',
-            'error' => $e->getMessage()
-        ], JSON_PRETTY_PRINT);
+        echo json_encode(['message' => 'Internal server error.', 'error' => $e->getMessage()], JSON_PRETTY_PRINT);
     }
-
     exit;
 }
+
 
 // DELETE: Obriši vijest po UUID-u (samo kreatori)
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && preg_match('/^\/news\/([^\/]+)$/', $_SERVER['REQUEST_URI'], $matches)) {

@@ -32,21 +32,30 @@ $parsedUrl = parse_url($requestUri);
 $path = $parsedUrl['path'];
 
 // Route requests
-if (strpos($path, '/auth') === 0) {
-    include_once __DIR__ . '/api/auth.php';
-} elseif (strpos($path, '/news') === 0) {
-    include_once __DIR__ . '/api/news.php';
-} elseif (strpos($path, '/users') === 0) {
-    include_once __DIR__ . '/api/users.php';
-} elseif (strpos($path, '/roles') === 0) {
-    include_once __DIR__ . '/api/roles.php';
-} elseif (strpos($path, '/images') === 0) {
-    include_once __DIR__ . '/api/images.php';
-} else {
-    // Default 404 handler
-    error_log("404 Not Found: " . $requestUri);
+switch (true) {
+    case strpos($path, '/auth') === 0:
+        include_once __DIR__ . '/api/auth.php';
+        break;
+    case strpos($path, '/news') === 0:
+        include_once __DIR__ . '/api/news.php';
+        break;
+    case strpos($path, '/users') === 0:
+        include_once __DIR__ . '/api/users.php';
+        break;
+    case strpos($path, '/roles') === 0:
+        include_once __DIR__ . '/api/roles.php';
+        break;
+    case strpos($path, '/images') === 0:
+        include_once __DIR__ . '/api/images.php';
+        break;
+    default:
+        routeNotFound($requestUri);
+}
+
+// Handle undefined routes
+function routeNotFound($requestUri) {
+    error_log("404 Not Found: $requestUri");
     http_response_code(404);
     echo json_encode(['message' => 'Endpoint not found']);
     exit;
 }
-?>
