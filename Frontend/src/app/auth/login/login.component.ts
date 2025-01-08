@@ -9,30 +9,36 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   standalone: true,
-  imports: [CommonModule, FormsModule], // Dodaj CommonModule ovde
+  imports: [CommonModule, FormsModule],
 })
 export class LoginComponent {
-  username: string = '';
+  email: string = '';
   password: string = '';
   errorMessage: string = '';
 
   constructor(private http: HttpClient, private router: Router) {}
 
   onSubmit(): void {
-    const loginData = { username: this.username, password: this.password };
+    if (!this.email || !this.password) {
+      this.errorMessage = 'Please fill in both email and password.';
+      return;
+    }
 
-    // API poziv prema backendu
+    const loginData = { email: this.email, password: this.password };
+
     this.http.post('http://localhost:8000/auth/login', loginData).subscribe(
       (response: any) => {
-        // Spremanje JWT tokena u localStorage
         localStorage.setItem('token', response.token);
-
-        // Preusmjeravanje na dashboard nakon prijave
-        this.router.navigate(['/tools']);
+        this.router.navigate(['/']); // Preusmjeravanje na home page
       },
       (error) => {
-        // Prikaz greške ako prijava nije uspjela
-        this.errorMessage = 'Login failed. Please check your credentials.';
+        if (error.status === 404) {
+          this.errorMessage = 'User not found. Please check your credentials.';
+        } else if (error.status === 401) {
+          this.errorMessage = 'Invalid password. Please try again.';
+        } else {
+          this.errorMessage = 'An unexpected error occurred. Please try again.';
+        }
       }
     );
   }

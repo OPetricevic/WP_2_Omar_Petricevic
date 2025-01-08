@@ -1,1 +1,46 @@
-[Wed Jan  8 21:09:07 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Wed Jan  8 22:14:06 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Wed Jan  8 22:14:19 2025] 127.0.0.1:44232 Accepted
+[Wed Jan  8 22:14:19 2025] 127.0.0.1:44232 [200]: OPTIONS /auth/login
+[Wed Jan  8 22:14:19 2025] 127.0.0.1:44232 Closing
+[Wed Jan  8 22:14:19 2025] 127.0.0.1:44244 Accepted
+[Wed Jan  8 22:14:19 2025] 127.0.0.1:44244 [404]: POST /auth/login
+[Wed Jan  8 22:14:19 2025] 127.0.0.1:44244 Closing
+[Wed Jan  8 22:14:34 2025] 127.0.0.1:45778 Accepted
+[Wed Jan  8 22:14:34 2025] 127.0.0.1:45778 [404]: POST /auth/login
+[Wed Jan  8 22:14:34 2025] 127.0.0.1:45778 Closing
+[Wed Jan  8 22:14:45 2025] 127.0.0.1:57770 Accepted
+[Wed Jan  8 22:14:45 2025] 127.0.0.1:57770 [200]: POST /auth/login
+[Wed Jan  8 22:14:45 2025] 127.0.0.1:57770 Closing
+[Wed Jan  8 22:14:53 2025] 127.0.0.1:57778 Accepted
+[Wed Jan  8 22:14:53 2025] 127.0.0.1:57778 [200]: OPTIONS /auth/login
+[Wed Jan  8 22:14:53 2025] 127.0.0.1:57778 Closing
+[Wed Jan  8 22:14:53 2025] 127.0.0.1:57790 Accepted
+[Wed Jan  8 22:14:53 2025] 127.0.0.1:57790 [200]: POST /auth/login
+[Wed Jan  8 22:14:53 2025] 127.0.0.1:57790 Closing
+[Wed Jan  8 22:16:11 2025] 127.0.0.1:45442 Accepted
+[Wed Jan  8 22:16:11 2025] 127.0.0.1:45442 [200]: OPTIONS /auth/login
+[Wed Jan  8 22:16:11 2025] 127.0.0.1:45442 Closing
+[Wed Jan  8 22:16:11 2025] 127.0.0.1:45454 Accepted
+[Wed Jan  8 22:16:11 2025] 127.0.0.1:45454 [400]: POST /auth/login
+[Wed Jan  8 22:16:11 2025] 127.0.0.1:45454 Closing
+[Wed Jan  8 22:16:12 2025] 127.0.0.1:45456 Accepted
+[Wed Jan  8 22:16:12 2025] 127.0.0.1:45456 [400]: POST /auth/login
+[Wed Jan  8 22:16:12 2025] 127.0.0.1:45456 Closing
+[Wed Jan  8 22:16:15 2025] 127.0.0.1:46236 Accepted
+[Wed Jan  8 22:16:15 2025] 127.0.0.1:46236 [400]: POST /auth/login
+[Wed Jan  8 22:16:15 2025] 127.0.0.1:46236 Closing
+[Wed Jan  8 22:16:16 2025] 127.0.0.1:46238 Accepted
+[Wed Jan  8 22:16:16 2025] 127.0.0.1:46238 [400]: POST /auth/login
+[Wed Jan  8 22:16:16 2025] 127.0.0.1:46238 Closing
+[Wed Jan  8 22:18:49 2025] 127.0.0.1:53470 Accepted
+[Wed Jan  8 22:18:49 2025] 127.0.0.1:53470 [200]: OPTIONS /auth/login
+[Wed Jan  8 22:18:49 2025] 127.0.0.1:53470 Closing
+[Wed Jan  8 22:18:49 2025] 127.0.0.1:53484 Accepted
+[Wed Jan  8 22:18:49 2025] 127.0.0.1:53484 [200]: POST /auth/login
+[Wed Jan  8 22:18:49 2025] 127.0.0.1:53484 Closing
+[Wed Jan  8 22:18:55 2025] 127.0.0.1:50258 Accepted
+[Wed Jan  8 22:18:55 2025] 127.0.0.1:50258 [200]: OPTIONS /auth/login
+[Wed Jan  8 22:18:55 2025] 127.0.0.1:50258 Closing
+[Wed Jan  8 22:18:55 2025] 127.0.0.1:50264 Accepted
+[Wed Jan  8 22:18:55 2025] 127.0.0.1:50264 [200]: POST /auth/login
+[Wed Jan  8 22:18:55 2025] 127.0.0.1:50264 Closing
