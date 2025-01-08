@@ -157,9 +157,6 @@ class User {
         }
     }
 
-    public function updatePassword($userUuid, $hashedPassword) {
-        $stmt = $this->conn->prepare("UPDATE users SET password = :password WHERE uuid = :uuid");
-        $stmt->execute([':password' => $hashedPassword, ':uuid' => $userUuid]);
-    }   
+
 }
 ?>

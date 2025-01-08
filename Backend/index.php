@@ -7,23 +7,44 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Base router to direct requests to appropriate endpoints
+// Set default timezone
+date_default_timezone_set('Europe/Sarajevo');
+
+// Set CORS headers
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+header('Content-Type: application/json');
+
+// Handle OPTIONS preflight requests
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
+// Log incoming request
 $requestUri = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD'];
+error_log("Request: $method $requestUri");
+
+// Parse URI path (exclude query parameters)
+$parsedUrl = parse_url($requestUri);
+$path = $parsedUrl['path'];
 
 // Route requests
-if (strpos($requestUri, '/auth') === 0) {
+if (strpos($path, '/auth') === 0) {
     include_once __DIR__ . '/api/auth.php';
-} elseif (strpos($requestUri, '/news') === 0) {
+} elseif (strpos($path, '/news') === 0) {
     include_once __DIR__ . '/api/news.php';
-} elseif (strpos($requestUri, '/users') === 0) {
+} elseif (strpos($path, '/users') === 0) {
     include_once __DIR__ . '/api/users.php';
-} elseif (strpos($requestUri, '/roles') === 0) {
+} elseif (strpos($path, '/roles') === 0) {
     include_once __DIR__ . '/api/roles.php';
-} elseif (strpos($requestUri, '/images') === 0) {
+} elseif (strpos($path, '/images') === 0) {
     include_once __DIR__ . '/api/images.php';
 } else {
     // Default 404 handler
+    error_log("404 Not Found: " . $requestUri);
     http_response_code(404);
     echo json_encode(['message' => 'Endpoint not found']);
     exit;

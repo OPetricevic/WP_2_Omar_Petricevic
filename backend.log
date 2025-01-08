@@ -1,4 +1,25 @@
-[Sun Jan  5 12:42:12 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Sun Jan  5 12:42:17 2025] 127.0.0.1:56398 Accepted
-[Sun Jan  5 12:42:19 2025] 127.0.0.1:56398 [200]: POST /auth/request-password-reset
-[Sun Jan  5 12:42:19 2025] 127.0.0.1:56398 Closing
+[Tue Jan  7 21:14:46 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Tue Jan  7 21:14:48 2025] 127.0.0.1:46736 Accepted
+[Tue Jan  7 21:14:48 2025] 127.0.0.1:46736 [200]: GET /news
+[Tue Jan  7 21:14:48 2025] 127.0.0.1:46736 Closing
+[Tue Jan  7 21:14:49 2025] 127.0.0.1:46742 Accepted
+[Tue Jan  7 21:14:49 2025] 127.0.0.1:46742 [200]: GET /news
+[Tue Jan  7 21:14:49 2025] 127.0.0.1:46742 Closing
+[Tue Jan  7 21:14:50 2025] 127.0.0.1:46758 Accepted
+[Tue Jan  7 21:14:50 2025] 127.0.0.1:46758 [200]: GET /news
+[Tue Jan  7 21:14:50 2025] 127.0.0.1:46758 Closing
+[Tue Jan  7 21:14:56 2025] 127.0.0.1:47826 Accepted
+[Tue Jan  7 21:14:56 2025] 127.0.0.1:47826 [400]: POST /auth/login
+[Tue Jan  7 21:14:56 2025] 127.0.0.1:47826 Closing
+[Tue Jan  7 21:14:59 2025] 127.0.0.1:47828 Accepted
+[Tue Jan  7 21:14:59 2025] 127.0.0.1:47828 [400]: POST /auth/login
+[Tue Jan  7 21:14:59 2025] 127.0.0.1:47828 Closing
+[Tue Jan  7 21:15:05 2025] 127.0.0.1:39300 Accepted
+[Tue Jan  7 21:15:05 2025] 127.0.0.1:39300 [200]: POST /auth/login
+[Tue Jan  7 21:15:05 2025] 127.0.0.1:39300 Closing
+[Tue Jan  7 21:15:15 2025] 127.0.0.1:38904 Accepted
+[Tue Jan  7 21:15:15 2025] 127.0.0.1:38904 [400]: POST /auth/login
+[Tue Jan  7 21:15:15 2025] 127.0.0.1:38904 Closing
+[Tue Jan  7 21:15:17 2025] 127.0.0.1:38914 Accepted
+[Tue Jan  7 21:15:17 2025] 127.0.0.1:38914 [400]: POST /auth/login
+[Tue Jan  7 21:15:17 2025] 127.0.0.1:38914 Closing

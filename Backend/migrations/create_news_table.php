@@ -9,7 +9,6 @@ function migrateNewsTable() {
             title VARCHAR(255) NOT NULL,
             body TEXT NOT NULL,
             category ENUM('Technology', 'Sports', 'Lifestyle', 'Business', 'Entertainment') NOT NULL,
-            image_url VARCHAR(255), -- Putanja do slike
             created_at DATETIME(3) NOT NULL,
             author_uuid VARCHAR(255), -- FK prema `users.uuid`, dozvoljava NULL
             FOREIGN KEY (author_uuid) REFERENCES users(uuid) ON DELETE SET NULL
@@ -18,4 +17,5 @@ function migrateNewsTable() {
     $conn->exec($sql);
     echo "Migracija: Tabela `news` je kreirana.\n";
 }
+
 ?>

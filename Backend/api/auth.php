@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/
 
 
 // Reset Password: Update password using token
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/reset-password') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) === '/auth/reset-password') {
     $data = json_decode(file_get_contents('php://input'), true);
     $token = $data['token'];
     $newPassword = $data['password'];
@@ -113,6 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/
     $response = $passwordService->resetPassword($token, $newPassword);
     http_response_code($response['status']);
     echo json_encode(['message' => $response['message']]);
+    exit;
 }
 
 

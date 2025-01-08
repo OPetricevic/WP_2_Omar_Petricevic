@@ -52,3 +52,415 @@ Stack trace:
 [05-Jan-2025 11:42:18 UTC] DEBUG: SMTP_EMAIL is omarep33@gmail.com
 [05-Jan-2025 11:42:18 UTC] DEBUG: SMTP_PASSWORD is frotniphuniwsqmy
 [05-Jan-2025 11:42:19 UTC] Password reset email sent to omar.petricevic@gmail.com.
+[07-Jan-2025 17:57:44 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 17:57:44 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 17:57:44 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 17:57:44 UTC] DEBUG: SMTP_EMAIL is omarep33@gmail.com
+[07-Jan-2025 17:57:44 UTC] DEBUG: SMTP_PASSWORD is frotniphuniwsqmy
+[07-Jan-2025 17:57:46 UTC] Password reset email sent to omar.petricevic@gmail.com.
+[07-Jan-2025 17:59:18 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 17:59:18 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 17:59:18 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:00:31 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:00:31 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:00:31 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:01:11 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:01:11 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:01:11 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:02:22 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:02:22 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:02:22 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:02:22 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:03:12 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:03:12 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:03:12 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:03:12 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:03:18 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:03:18 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:03:18 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:03:18 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:03:33 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:03:33 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:03:33 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:03:33 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:03:49 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:03:49 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:03:49 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:03:49 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:05:59 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:05:59 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:05:59 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:05:59 UTC] DEBUG: SMTP_EMAIL is omarep33@gmail.com
+[07-Jan-2025 18:05:59 UTC] DEBUG: SMTP_PASSWORD is frotniphuniwsqmy
+[07-Jan-2025 18:06:01 UTC] Password reset email sent to omar.petricevic@gmail.com.
+[07-Jan-2025 18:07:44 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:07:44 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:07:44 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:07:44 UTC] DEBUG: SMTP_EMAIL is omarep33@gmail.com
+[07-Jan-2025 18:07:44 UTC] DEBUG: SMTP_PASSWORD is frotniphuniwsqmy
+[07-Jan-2025 18:07:45 UTC] Password reset email sent to omar.petricevic@gmail.com.
+[07-Jan-2025 18:09:43 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:09:43 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:09:43 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:09:43 UTC] DEBUG: SMTP_EMAIL is omarep33@gmail.com
+[07-Jan-2025 18:09:43 UTC] DEBUG: SMTP_PASSWORD is frotniphuniwsqmy
+[07-Jan-2025 18:09:44 UTC] Password reset email sent to omar.petricevic@gmail.com.
+[07-Jan-2025 18:10:06 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:10:06 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:10:06 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:10:06 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:13:35 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:13:35 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:13:35 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:13:35 UTC] JWT token stored: {"uuid":"50047dc3-d612-4b3f-8d04-86198e193f52","user_uuid":"a034a5c5-7685-4053-8b21-309474382294","user_email":"omar@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2MjczNjE1LCJleHAiOjE3MzYyNzcyMTV9.E4owCYGac7KvalIY3B-ojT_Kk9bmtEtqAqUGI0s8fMo","expires_at":"2025-01-07 19:13:35","created_at":"2025-01-07 18:13:35"}
+[07-Jan-2025 18:13:41 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:13:41 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:13:41 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:13:41 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:13:51 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:13:51 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:13:51 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:13:51 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:15:49 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:15:49 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:15:49 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:15:49 UTC] Starting password reset with token: 4677d4f9b5d5e18f6b5859f8f971e44f
+[07-Jan-2025 18:15:49 UTC] Token found: {"id":17,"user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","token":"4677d4f9b5d5e18f6b5859f8f971e44f","expires_at":"2025-01-08 04:09:43","created_at":"2025-01-07 19:09:43"}
+[07-Jan-2025 18:15:49 UTC] Password hashed successfully.
+[07-Jan-2025 18:15:49 UTC] Error in resetPassword(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[07-Jan-2025 18:21:30 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:21:30 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:21:30 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 19:21:30 Europe/Sarajevo] DEBUG: SMTP_EMAIL is omarep33@gmail.com
+[07-Jan-2025 19:21:30 Europe/Sarajevo] DEBUG: SMTP_PASSWORD is frotniphuniwsqmy
+[07-Jan-2025 19:21:32 Europe/Sarajevo] Password reset email sent to omar.petricevic@gmail.com.
+[07-Jan-2025 18:21:40 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:21:40 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:21:40 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:21:40 UTC] Password hash stored: {"uuid":"893f52cfd460c20dde8d21693bcd207a","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","password_hash":"$2y$10$5th.VtqQDQQvNw7Jtf2UhOcRr7W65BqU\/tGoaDxmgZgVlzStLAK3q","created_at":"2025-01-07 18:21:40"}
+[07-Jan-2025 18:21:56 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:21:56 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:21:56 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:21:56 UTC] JWT token stored: {"uuid":"dc97b5fc-591c-4d21-8ac8-f514901acc87","user_uuid":"a034a5c5-7685-4053-8b21-309474382294","user_email":"omar@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc0MTE2LCJleHAiOjE3MzYyNzc3MTZ9.FrDjcoFQwMa2nIsJyup2Mi3GYIChH7hEe1nHazjrLgc","expires_at":"2025-01-07 19:21:56","created_at":"2025-01-07 18:21:56"}
+[07-Jan-2025 18:22:07 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:22:07 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:22:07 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:22:23 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:22:23 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:22:23 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:22:24 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:22:24 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:22:24 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:22:36 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:22:36 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:22:36 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:22:36 UTC] JWT token stored: {"uuid":"2ad07acd-0507-4bc5-8e3e-cab9decc16dc","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc0MTU2LCJleHAiOjE3MzYyNzc3NTZ9.V2C2ajtq-vOA1T-pHr1gVx4nJTUz-u0sR-mXB8a9lD0","expires_at":"2025-01-07 19:22:36","created_at":"2025-01-07 18:22:36"}
+[07-Jan-2025 18:22:41 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:22:41 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:22:41 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:22:42 UTC] JWT token stored: {"uuid":"ebc0b567-f934-4508-baba-1c1292893d91","user_uuid":"a034a5c5-7685-4053-8b21-309474382294","user_email":"omar@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc0MTYyLCJleHAiOjE3MzYyNzc3NjJ9.9sbNceJWHSOq-30_JxpjDlLROmPmS3Hkf05URHIMQd0","expires_at":"2025-01-07 19:22:42","created_at":"2025-01-07 18:22:42"}
+[07-Jan-2025 18:45:09 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:45:09 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:45:09 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:45:09 UTC] JWT token stored: {"uuid":"66f2748c-a882-4c00-bac3-b4b0d9b948b5","user_uuid":"a034a5c5-7685-4053-8b21-309474382294","user_email":"omar@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc1NTA5LCJleHAiOjE3MzYyNzkxMDl9.PELU3YanDR_6jbyv7iWKB-6dOars0fnvOO6pVJVWz9c","expires_at":"2025-01-07 19:45:09","created_at":"2025-01-07 18:45:09"}
+[07-Jan-2025 18:45:27 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:45:27 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:45:27 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:45:28 UTC] JWT token stored: {"uuid":"522dcd7d-b020-4e17-ab69-f1bc36b449d2","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTI4LCJleHAiOjE3MzYyNzkxMjh9.6hiTUCgt3FvVtf9VKFpMypEhhthtjGJtU6jIf64Rkw4","expires_at":"2025-01-07 19:45:28","created_at":"2025-01-07 18:45:28"}
+[07-Jan-2025 18:46:09 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:46:09 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:46:09 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:46:09 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTI4LCJleHAiOjE3MzYyNzkxMjh9.6hiTUCgt3FvVtf9VKFpMypEhhthtjGJtU6jIf64Rkw4"
+[07-Jan-2025 18:46:09 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTI4LCJleHAiOjE3MzYyNzkxMjh9.6hiTUCgt3FvVtf9VKFpMypEhhthtjGJtU6jIf64Rkw4
+[07-Jan-2025 18:46:09 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTI4LCJleHAiOjE3MzYyNzkxMjh9.6hiTUCgt3FvVtf9VKFpMypEhhthtjGJtU6jIf64Rkw4
+[07-Jan-2025 18:46:09 UTC] Using secret key: kljuc
+[07-Jan-2025 18:46:09 UTC] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736275528,"exp":1736279128}
+[07-Jan-2025 18:46:09 UTC] Error: Token invalid or expired in database.
+[07-Jan-2025 18:46:20 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:46:20 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:46:20 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:46:20 UTC] JWT token stored: {"uuid":"5810e939-aea9-4088-b5b7-fd4014506a0e","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTgwLCJleHAiOjE3MzYyNzkxODB9.z9zdxHHLRllRHkit8hrcp5wc-Zt75ePA37SzF56aVpU","expires_at":"2025-01-07 19:46:20","created_at":"2025-01-07 18:46:20"}
+[07-Jan-2025 18:46:28 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:46:28 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:46:28 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:46:28 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTgwLCJleHAiOjE3MzYyNzkxODB9.z9zdxHHLRllRHkit8hrcp5wc-Zt75ePA37SzF56aVpU"
+[07-Jan-2025 18:46:28 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTgwLCJleHAiOjE3MzYyNzkxODB9.z9zdxHHLRllRHkit8hrcp5wc-Zt75ePA37SzF56aVpU
+[07-Jan-2025 18:46:28 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1NTgwLCJleHAiOjE3MzYyNzkxODB9.z9zdxHHLRllRHkit8hrcp5wc-Zt75ePA37SzF56aVpU
+[07-Jan-2025 18:46:28 UTC] Using secret key: kljuc
+[07-Jan-2025 18:46:28 UTC] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736275580,"exp":1736279180}
+[07-Jan-2025 18:46:28 UTC] Error: Token invalid or expired in database.
+[07-Jan-2025 18:50:41 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:50:41 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:50:41 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:50:41 UTC] JWT token stored: {"uuid":"332c24cc-07d1-462f-8c29-144a4ad64142","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90","expires_at":"2025-01-07 19:50:41","created_at":"2025-01-07 18:50:41"}
+[07-Jan-2025 18:50:47 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:50:47 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:50:47 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:50:47 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90"
+[07-Jan-2025 18:50:47 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90
+[07-Jan-2025 18:50:47 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90
+[07-Jan-2025 18:50:47 UTC] Using secret key: kljuc
+[07-Jan-2025 18:50:47 UTC] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736275841,"exp":1736311841}
+[07-Jan-2025 18:50:47 UTC] Error: Token invalid or expired in database.
+[07-Jan-2025 18:50:49 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:50:49 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:50:49 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:50:49 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90"
+[07-Jan-2025 18:50:49 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90
+[07-Jan-2025 18:50:49 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90
+[07-Jan-2025 18:50:49 UTC] Using secret key: kljuc
+[07-Jan-2025 18:50:49 UTC] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736275841,"exp":1736311841}
+[07-Jan-2025 18:50:49 UTC] Error: Token invalid or expired in database.
+[07-Jan-2025 18:50:52 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:50:52 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:50:52 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:50:52 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90"
+[07-Jan-2025 18:50:52 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90
+[07-Jan-2025 18:50:52 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1ODQxLCJleHAiOjE3MzYzMTE4NDF9.Hl16hew_DbKBZAaurIiKtGYebCupa8lUrUSMm31Dn90
+[07-Jan-2025 18:50:52 UTC] Using secret key: kljuc
+[07-Jan-2025 18:50:52 UTC] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736275841,"exp":1736311841}
+[07-Jan-2025 18:50:52 UTC] Error: Token invalid or expired in database.
+[07-Jan-2025 18:52:57 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:52:57 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:52:57 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:52:57 UTC] JWT token stored: {"uuid":"8993df70-18a2-425e-b96f-baca3c5790e7","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1OTc3LCJleHAiOjE3MzYyODMxNzd9.9wa1YdMLBvEGFtxxZh-qL3A7fvu7ZYHqEywE8PTjWBw","expires_at":"2025-01-07 19:52:57","created_at":"2025-01-07 18:52:57"}
+[07-Jan-2025 18:53:05 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:53:05 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:53:05 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:53:05 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1OTc3LCJleHAiOjE3MzYyODMxNzd9.9wa1YdMLBvEGFtxxZh-qL3A7fvu7ZYHqEywE8PTjWBw"
+[07-Jan-2025 18:53:05 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1OTc3LCJleHAiOjE3MzYyODMxNzd9.9wa1YdMLBvEGFtxxZh-qL3A7fvu7ZYHqEywE8PTjWBw
+[07-Jan-2025 18:53:05 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc1OTc3LCJleHAiOjE3MzYyODMxNzd9.9wa1YdMLBvEGFtxxZh-qL3A7fvu7ZYHqEywE8PTjWBw
+[07-Jan-2025 18:53:05 UTC] Using secret key: kljuc
+[07-Jan-2025 18:53:05 UTC] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736275977,"exp":1736283177}
+[07-Jan-2025 18:53:05 UTC] Error: Token invalid or expired in database.
+[07-Jan-2025 18:53:32 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:53:32 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:53:32 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:53:32 UTC] JWT token stored: {"uuid":"7d3d7af1-436d-4c7d-8e25-889994a69515","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MDEyLCJleHAiOjE3MzYyODMyMTJ9.ywsZ0vmDlzY2aY0ZHZjaIofQmMAcMfqN6zVZxjmqtaA","expires_at":"2025-01-07 19:53:32","created_at":"2025-01-07 18:53:32"}
+[07-Jan-2025 18:53:38 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:53:38 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:53:38 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:53:38 UTC] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MDEyLCJleHAiOjE3MzYyODMyMTJ9.ywsZ0vmDlzY2aY0ZHZjaIofQmMAcMfqN6zVZxjmqtaA"
+[07-Jan-2025 18:53:38 UTC] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MDEyLCJleHAiOjE3MzYyODMyMTJ9.ywsZ0vmDlzY2aY0ZHZjaIofQmMAcMfqN6zVZxjmqtaA
+[07-Jan-2025 18:53:38 UTC] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MDEyLCJleHAiOjE3MzYyODMyMTJ9.ywsZ0vmDlzY2aY0ZHZjaIofQmMAcMfqN6zVZxjmqtaA
+[07-Jan-2025 18:53:38 UTC] Using secret key: kljuc
+[07-Jan-2025 18:53:38 UTC] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276012,"exp":1736283212}
+[07-Jan-2025 18:53:38 UTC] Error: Token invalid or expired in database.
+[07-Jan-2025 18:55:22 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:55:22 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:55:22 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:55:22 UTC] JWT token stored: {"uuid":"b109b098-fe57-4b19-af0f-cf8a0c363e4e","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MTIyLCJleHAiOjE3MzYyODMzMjJ9.gmM3RBrSHyOD8WtYmfbN_9YdKN1TekRukZhAEPssA7g","expires_at":"2025-01-07 19:55:22","created_at":"2025-01-07 18:55:22"}
+[07-Jan-2025 18:55:40 UTC] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 18:55:40 UTC] Database `wp_project` ensured to exist.
+[07-Jan-2025 18:55:40 UTC] Connected to the database `wp_project` successfully.
+[07-Jan-2025 18:55:40 UTC] JWT token stored: {"uuid":"4bc068bc-b7fd-4297-8a99-8c8c1ba47b06","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MTQwLCJleHAiOjE3MzYzNDgxNDB9.jQULXr4tp-ObgJtx0F-kNlpjFBoMtypl0hgSnxha11g","expires_at":"2025-01-07 19:55:40","created_at":"2025-01-07 18:55:40"}
+[07-Jan-2025 19:57:22 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 19:57:22 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 19:57:22 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 19:57:22 Europe/Sarajevo] JWT token stored: {"uuid":"2f8aac19-e06c-4f6e-a6b1-08cde6b98de8","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU","expires_at":"2025-01-07 20:57:22","created_at":"2025-01-07 19:57:22"}
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU"
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 19:58:07 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 19:58:07 Europe/Sarajevo] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/roles.php:83
+Stack trace:
+#0 /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/index.php(24): include_once()
+#1 {main}
+  thrown in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/roles.php on line 83
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU"
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU"
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:01:25 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:01:25 Europe/Sarajevo] PHP Warning:  Undefined variable $roleService in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/roles.php on line 83
+[07-Jan-2025 20:01:25 Europe/Sarajevo] PHP Fatal error:  Uncaught Error: Call to a member function submitRoleChangeRequest() on null in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/roles.php:83
+Stack trace:
+#0 /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/index.php(24): include_once()
+#1 {main}
+  thrown in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/roles.php on line 83
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU"
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU"
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:03:29 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:06:36 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:06:36 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:06:36 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU"
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:13:28 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU"
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MSwiaWF0IjoxNzM2Mjc2MjQyLCJleHAiOjE3MzYzNDgyNDJ9.V7BR6qYPpgDsYEsk3Se7hmgeQtzbNYiYmZGrwAtx3qU
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Decoded token: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:13:46 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"ed47413a-f662-4535-a813-32f2c8fce975","role":1,"iat":1736276242,"exp":1736348242}
+[07-Jan-2025 20:15:32 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:15:32 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:15:32 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:15:32 Europe/Sarajevo] JWT token stored: {"uuid":"f33caa38-a24c-41e4-b660-6134206b0910","user_uuid":"a034a5c5-7685-4053-8b21-309474382294","user_email":"omar@example.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8","expires_at":"2025-01-07 21:15:32","created_at":"2025-01-07 20:15:32"}
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8"
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736277332,"exp":1736280932}
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736277332,"exp":1736280932}
+[07-Jan-2025 20:15:47 Europe/Sarajevo] User role from token: 3. Required role: [3].
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Inherited roles for role_id 3: ["1","2",3]
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Allowed roles for user: [1,2,3]
+[07-Jan-2025 20:15:47 Europe/Sarajevo] Access granted. User role 3 has the required role.
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8"
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736277332,"exp":1736280932}
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736277332,"exp":1736280932}
+[07-Jan-2025 20:17:49 Europe/Sarajevo] User role from token: 3. Required role: [3].
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Inherited roles for role_id 3: ["1","2",3]
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Allowed roles for user: [1,2,3]
+[07-Jan-2025 20:17:49 Europe/Sarajevo] Access granted. User role 3 has the required role.
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Authorization header: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8"
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Received token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Validating token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYTAzNGE1YzUtNzY4NS00MDUzLThiMjEtMzA5NDc0MzgyMjk0Iiwicm9sZSI6MywiaWF0IjoxNzM2Mjc3MzMyLCJleHAiOjE3MzYyODA5MzJ9.MEEADtpnKCaHxhehq0K7n9f6ZcXgs7ZKQ_57Kvtczj8
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Using secret key: kljuc
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Decoded token: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736277332,"exp":1736280932}
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Token validated successfully. Decoded payload: {"uuid":"a034a5c5-7685-4053-8b21-309474382294","role":3,"iat":1736277332,"exp":1736280932}
+[07-Jan-2025 20:19:30 Europe/Sarajevo] User role from token: 3. Required role: [3].
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Inherited roles for role_id 3: ["1","2",3]
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Allowed roles for user: [1,2,3]
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Access granted. User role 3 has the required role.
+[07-Jan-2025 20:19:30 Europe/Sarajevo] Role Updated: User UUID ed47413a-f662-4535-a813-32f2c8fce975, New Role 2
+[07-Jan-2025 20:35:26 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:35:26 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:35:26 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:35:42 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:35:42 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:35:42 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:36:07 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:36:07 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:36:07 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:36:12 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:36:12 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:36:12 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:56:51 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:56:51 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:56:51 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:56:56 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:56:56 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:56:56 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 20:57:37 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 20:57:37 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 20:57:37 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:00:25 Europe/Sarajevo] Request: GET /news?page=1&page_size=5
+[07-Jan-2025 21:00:25 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:00:25 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:00:25 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:00:27 Europe/Sarajevo] Request: GET /news?page=1&page_size=5
+[07-Jan-2025 21:00:27 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:00:27 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:00:27 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:01:25 Europe/Sarajevo] Request: GET /news?page=1&page_size=5
+[07-Jan-2025 21:01:25 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:01:25 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:01:25 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:01:34 Europe/Sarajevo] Request: GET /news
+[07-Jan-2025 21:01:34 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:01:34 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:01:34 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:01:34 Europe/Sarajevo] PHP Warning:  Undefined property: NewsService::$conn in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/services/NewsService.php on line 121
+[07-Jan-2025 21:01:34 Europe/Sarajevo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/services/NewsService.php:121
+Stack trace:
+#0 /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/api/news.php(18): NewsService->getPaginatedNews()
+#1 /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/index.php(38): include_once('...')
+#2 {main}
+  thrown in /home/opc/faks/web/WP_2_Omar_Petricevic/Backend/services/NewsService.php on line 121
+[07-Jan-2025 21:09:03 Europe/Sarajevo] Request: GET /news
+[07-Jan-2025 21:09:03 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:09:03 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:09:03 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:09:03 Europe/Sarajevo] Error in getPaginatedNews: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wp_project.news' doesn't exist
+[07-Jan-2025 21:09:05 Europe/Sarajevo] Request: GET /news
+[07-Jan-2025 21:09:05 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:09:05 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:09:05 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:09:05 Europe/Sarajevo] Error in getPaginatedNews: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'wp_project.news' doesn't exist
+[07-Jan-2025 21:10:02 Europe/Sarajevo] Request: GET /news
+[07-Jan-2025 21:10:02 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:10:02 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:10:02 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:14:48 Europe/Sarajevo] Request: GET /news
+[07-Jan-2025 21:14:48 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:14:48 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:14:48 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:14:49 Europe/Sarajevo] Request: GET /news
+[07-Jan-2025 21:14:49 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:14:49 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:14:49 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:14:50 Europe/Sarajevo] Request: GET /news
+[07-Jan-2025 21:14:50 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:14:50 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:14:50 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:14:56 Europe/Sarajevo] Request: POST /auth/login
+[07-Jan-2025 21:14:56 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:14:56 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:14:56 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:14:59 Europe/Sarajevo] Request: POST /auth/login
+[07-Jan-2025 21:14:59 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:14:59 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:14:59 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:15:05 Europe/Sarajevo] Request: POST /auth/login
+[07-Jan-2025 21:15:05 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:15:05 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:15:05 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:15:05 Europe/Sarajevo] JWT token stored: {"uuid":"2fe8c1e8-d58d-47ea-ae77-7f6f78dc5996","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omar.petricevic@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MiwiaWF0IjoxNzM2MjgwOTA1LCJleHAiOjE3MzYyODQ1MDV9.Pyv9HGvrmHR9AMc2355JOYZshvFO8puuHpBffY2choE","expires_at":"2025-01-07 22:15:05","created_at":"2025-01-07 21:15:05"}
+[07-Jan-2025 21:15:15 Europe/Sarajevo] Request: POST /auth/login
+[07-Jan-2025 21:15:15 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:15:15 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:15:15 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[07-Jan-2025 21:15:17 Europe/Sarajevo] Request: POST /auth/login
+[07-Jan-2025 21:15:17 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[07-Jan-2025 21:15:17 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[07-Jan-2025 21:15:17 Europe/Sarajevo] Connected to the database `wp_project` successfully.

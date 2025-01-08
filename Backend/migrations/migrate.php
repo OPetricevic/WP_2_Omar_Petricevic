@@ -2,6 +2,7 @@
 include_once __DIR__ . '/../config/db.php';
 include_once __DIR__ . '/../utils/helpers.php';
 
+
 function createDatabase($dbName) {
     global $conn;
     try {
@@ -47,7 +48,7 @@ function rollbackMigration($migrationName) {
         'create_users_table' => 'users',
         'create_news_table' => 'news',
         'create_password_tokens_table' => 'password_tokens',
-        'create_password_resets_table' => 'password_resets', // Added password_resets
+        'create_password_resets_table' => 'password_resets', 
         'create_role_permissions_table' => 'role_permissions',
         'create_tokens_table' => 'tokens',
         'create_system_images_table' => 'system_images',
@@ -74,10 +75,12 @@ createMigrationsTable();
 include_once __DIR__ . '/create_users_table.php';
 include_once __DIR__ . '/create_news_table.php';
 include_once __DIR__ . '/create_password_tokens_table.php';
-include_once __DIR__ . '/create_password_resets_table.php'; // Added password_resets
+include_once __DIR__ . '/create_password_resets_table.php'; 
 include_once __DIR__ . '/create_role_permissions_table.php';
 include_once __DIR__ . '/create_tokens_table.php';
 include_once __DIR__ . '/create_system_images_table.php';
+include_once __DIR__ . '/create_role_permission_requests.php';
+
 
 function runMigrations() {
     echo "Running migrations...\n";
@@ -86,11 +89,13 @@ function runMigrations() {
         'create_users_table' => 'migrateUsersTable',
         'create_news_table' => 'migrateNewsTable',
         'create_password_tokens_table' => 'migratePasswordTokensTable',
-        'create_password_resets_table' => 'migratePasswordResetsTable', // Added
+        'create_password_resets_table' => 'migratePasswordResetsTable',
         'create_role_permissions_table' => 'migrateRolePermissionsTable',
+        'create_role_permission_requests_table' => 'migrateRolePermissionRequestsTable', 
         'create_tokens_table' => 'migrateTokensTable',
         'create_system_images_table' => 'migrateSystemImagesTable',
     ];
+    
 
     foreach ($migrations as $migrationName => $migrationFunction) {
         if (!isMigrationExecuted($migrationName)) {
@@ -108,16 +113,17 @@ function runMigrations() {
 function rollbackAllMigrations() {
     echo "Running rollback for all migrations...\n";
 
-    $migrations = [
-        'create_system_images_table',
-        'create_tokens_table',
-        'create_role_permissions_table',
-        'create_password_resets_table', // Added
-        'create_password_tokens_table',
-        'create_news_table',
-        'create_users_table',
+    $tables = [
+        'create_users_table' => 'users',
+        'create_news_table' => 'news',
+        'create_password_tokens_table' => 'password_tokens',
+        'create_password_resets_table' => 'password_resets',
+        'create_role_permissions_table' => 'role_permissions',
+        'create_role_permission_requests_table' => 'role_permission_requests',
+        'create_tokens_table' => 'tokens',
+        'create_system_images_table' => 'system_images',
     ];
-
+    
     foreach ($migrations as $migrationName) {
         rollbackMigration($migrationName);
     }
