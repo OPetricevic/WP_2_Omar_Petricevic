@@ -1,0 +1,100 @@
+/* Stilovi za sekciju "Dobrodošli" */
+.welcome-container {
+  background-color: #34495e; /* Tamnoplava pozadina */
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  display: flex; /* Fleksibilan raspored */
+  flex-direction: column; /* Vertikalni raspored */
+  justify-content: flex-start; /* Poravnaj sadržaj pri vrhu */
+  align-items: center; /* Horizontalno centriranje */
+  min-height: calc(100vh - 120px); /* Visina prilagođena footeru */
+}
+
+
+.welcome-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-container .intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.welcome-footer h3 {
+  color: #e67e22; /* Naglasak za naslov sekcije */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Kartice projekata */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap; /* Omogućava prelamanje na nove redove ako nema dovoljno prostora */
+  justify-content: center; /* Centriraj kartice horizontalno */
+  gap: 20px; /* Razmak između kartica */
+  align-items: flex-start; /* Poravnanje kartica pri vrhu */
+  padding: 20px;
+}
+
+.project-card {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje slike i teksta */
+  background-color: #2c3e50; /* Tamnoplava pozadina */
+  border: 1px solid #1a252f; /* Obrub */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px; /* Maksimalna širina kartice */
+  width: calc(33.33% - 20px); /* Prilagođavanje za tri kartice po redu uz razmak */
+  box-sizing: border-box; /* Uključi padding i margine u širinu */
+  color: white; /* Tekst u bijeloj boji */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga sjenka */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left; /* Poravnanje teksta na lijevu stranu */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sjenka na hover */
+}
+
+.project-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Okrugle slike */
+  object-fit: cover;
+  margin-right: 15px; /* Razmak između slike i teksta */
+}
+
+.project-details h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #ffffff; /* Bijeli naslov */
+}
+
+.project-details p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #b0bec5; /* Sivi opis */
+}
+
+.project-details a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.project-details a:hover {
+  text-decoration: underline;
+}
+
+
+/* Media query za manje ekrane */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%; 
+  }
+}

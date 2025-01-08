@@ -82,7 +82,7 @@ class AuthService {
                 'user_uuid' => $userUuid,
                 'user_email' => $data['email'],
                 'value' => $jwt,
-                'expires_at' => date('Y-m-d H:i:s', time() + 3600),
+                'expires_at' => date('Y-m-d H:i:s', time() + 36000),
                 'created_at' => date('Y-m-d H:i:s')
             ]);
             error_log("JWT token stored successfully.");
@@ -160,7 +160,7 @@ class AuthService {
             'user_uuid' => $user['uuid'],
             'user_email' => $user['email'],
             'value' => $jwt,
-            'expires_at' => date('Y-m-d H:i:s', time() + 3600),
+            'expires_at' => date('Y-m-d H:i:s', time() + 36000),
             'created_at' => date('Y-m-d H:i:s')
         ]);
     

@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Osigurava visinu */
+    display: flex;
+    flex-direction: column; /* Vertikalni fleksboks */
+}
+
+main {
+    flex: 1; /* Prostor za glavni sadržaj */
+    display: flex;
+    flex-direction: column; /* Vertikalni sadržaj */
+    justify-content: center; /* Vertikalno centriranje */
+    align-items: center; /* Horizontalno centriranje */
+}

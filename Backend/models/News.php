@@ -76,6 +76,7 @@ class News {
         $stmt->execute([':uuid' => $uuid]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    
 
     public function createNews($newsData) {
         try {
@@ -93,28 +94,20 @@ class News {
    
     
 
-    public function deleteNews($uuid, $authorUuid) {
+    public function deleteNews($newsUuid, $authorUuid) {
         try {
-            // Provjera vlasništva nad vijesti
             $stmt = $this->conn->prepare("
-                SELECT COUNT(*) 
-                FROM news 
+                DELETE FROM news
                 WHERE uuid = :uuid AND author_uuid = :author_uuid
             ");
-            $stmt->execute([':uuid' => $uuid, ':author_uuid' => $authorUuid]);
-            if ($stmt->fetchColumn() === 0) {
-                return false; // Nije vlasnik
-            }
-
-            // Brisanje vijesti
-            $stmt = $this->conn->prepare("DELETE FROM news WHERE uuid = :uuid");
-            $stmt->execute([':uuid' => $uuid]);
-            return true;
+            $stmt->execute([':uuid' => $newsUuid, ':author_uuid' => $authorUuid]);
+            return $stmt->rowCount() > 0; // Return true if a row was deleted
         } catch (PDOException $e) {
             error_log("Error in deleteNews: " . $e->getMessage());
-            return false;
+            throw $e;
         }
     }
+    
 
     public function newsExists($uuid) {
         $stmt = $this->conn->prepare("

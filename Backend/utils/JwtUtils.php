@@ -30,7 +30,7 @@ class JwtUtils {
      */
     public static function generateToken(array $data): string {
         $issuedAt = time();
-        $expiration = $issuedAt + 3600; // Token is valid for 1 hour
+        $expiration = $issuedAt + 36000; // Token is valid for 1 hour
 
         $payload = array_merge($data, [
             'iat' => $issuedAt,

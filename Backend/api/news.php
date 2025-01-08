@@ -31,7 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $requestUri === '/news') {
 
 
 // GET: Dohvati vijest po UUID-u
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && preg_match('/^\/news\/([^\/]+)$/', $_SERVER['REQUEST_URI'], $matches)) {
+// GET: Fetch news by UUID
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && preg_match('/^\/news\/([^\/]+)$/', $requestUri, $matches)) {
     $newsUuid = $matches[1];
     try {
         $news = $newsService->getNewsByUuid($newsUuid);
@@ -40,18 +41,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && preg_match('/^\/news\/([^\/]+)$/', $
             echo json_encode(['message' => 'News not found']);
             exit;
         }
+
         http_response_code(200);
         echo json_encode($news, JSON_PRETTY_PRINT);
     } catch (Exception $e) {
         http_response_code(500);
         echo json_encode([
-            'status' => 500,
             'message' => 'Internal server error.',
             'error' => $e->getMessage()
         ], JSON_PRETTY_PRINT);
     }
     exit;
 }
+
+
 
 // POST: Kreiraj novu vijest (samo kreatori)
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/news') {
@@ -84,6 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/news'
 }
 
 
+
+
 // DELETE: Obriši vijest po UUID-u (samo kreatori)
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && preg_match('/^\/news\/([^\/]+)$/', $_SERVER['REQUEST_URI'], $matches)) {
     $newsUuid = $matches[1];
@@ -105,6 +110,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && preg_match('/^\/news\/([^\/]+)$/'
 
     exit;
 }
+
+
 
 // Ako ruta nije pronađena
 http_response_code(404);

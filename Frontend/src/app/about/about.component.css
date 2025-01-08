@@ -1,0 +1,109 @@
+.about-container {
+  background-color: #34495e; /* Tamnoplava pozadina */
+  color: white;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  min-height: calc(100vh - 120px); /* Visina prilagođena footeru */
+  display: flex; /* Fleksibilan raspored */
+  flex-direction: column; /* Vertikalni raspored */
+  justify-content: flex-start; /* Poravnaj sadržaj pri vrhu */
+}
+
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.about-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.about-header .role {
+  font-size: 1.2em;
+  color: #ecf0f1;
+}
+
+.about-description p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-footer {
+  margin-top: 40px;
+}
+
+.about-footer h3 {
+  color: #e67e22;
+  margin-bottom: 20px;
+}
+
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap; /* Omogućava prelazak u novi red */
+  gap: 20px; /* Jednaki razmak između kartica */
+  margin: 0 auto; /* Centriraj kartice unutar sekcije */
+  padding: 20px; /* Unutrašnji razmak sekcije */
+  justify-content: flex-start; /* Poravnanje kartica prema lijevo */
+}
+
+.experience-card {
+  display: flex; /* Horizontalni raspored unutar kartice */
+  align-items: center; /* Centriranje slike i teksta vertikalno */
+  background-color: #2c3e50; /* Tamnoplava pozadina */
+  border: 1px solid #1a252f; /* Obrub */
+  border-radius: 8px; /* Zaobljeni uglovi */
+  padding: 20px;
+  width: 300px; /* Fiksna širina kartice */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga sjenka */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: white; /* Bijeli tekst */
+}
+
+.experience-card:hover {
+  transform: translateY(-5px); /* Efekat podizanja */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Pojačana sjenka */
+}
+
+.experience-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Okrugle slike */
+  object-fit: cover;
+  margin-right: 15px; /* Razmak između slike i teksta */
+}
+
+.experience-details {
+  flex: 1; /* Omogućava tekstu da zauzme preostali prostor */
+}
+
+.experience-details h4 {
+  font-size: 1.1rem; /* Manji naslov za proporcionalniji izgled */
+  margin-bottom: 5px;
+  color: #ffffff;
+  text-align: left; /* Poravnanje naslova lijevo */
+}
+
+.experience-details p {
+  font-size: 0.9rem;
+  color: #b0bec5;
+  text-align: left; /* Poravnanje opisa lijevo */
+}
+
+/* Dodana sekcija za bolji prikaz na manjim ekranima */
+@media (max-width: 768px) {
+  .experience-card {
+    width: 100%; /* Kartice zauzimaju cijeli red na manjim ekranima */
+  }
+}

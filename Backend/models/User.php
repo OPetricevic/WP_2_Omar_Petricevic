@@ -9,6 +9,22 @@ class User {
         $this->conn = $conn;
     }
 
+    public function updateUser($uuid, $fields) {
+        $setClause = [];
+        $params = [':uuid' => $uuid];
+    
+        foreach ($fields as $column => $value) {
+            $setClause[] = "$column = :$column";
+            $params[":$column"] = $value;
+        }
+    
+        $query = "UPDATE users SET " . implode(', ', $setClause) . " WHERE uuid = :uuid";
+    
+        $stmt = $this->conn->prepare($query);
+        return $stmt->execute($params);
+    }
+    
+
     public function existsByEmail($email) {
         $stmt = $this->conn->prepare("SELECT COUNT(*) FROM users WHERE email = :email");
         $stmt->bindParam(':email', $email);
@@ -156,7 +172,23 @@ class User {
             return false;
         }
     }
-
+    
+    public function getUserByUuid($uuid) {
+        $stmt = $this->conn->prepare("SELECT uuid, first_name, last_name, username, email FROM users WHERE uuid = :uuid");
+        $stmt->execute([':uuid' => $uuid]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    
+    public function deleteUser($uuid) {
+        try {
+            $stmt = $this->conn->prepare("DELETE FROM users WHERE uuid = :uuid");
+            return $stmt->execute([':uuid' => $uuid]);
+        } catch (PDOException $e) {
+            error_log("Error in deleteUser(): " . $e->getMessage());
+            return false;
+        }
+    }
+    
 
 }
 ?>
