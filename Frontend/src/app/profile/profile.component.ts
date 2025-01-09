@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-profile',
   standalone: true,
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class ProfileComponent implements OnInit {
   user: any;
   showDeleteConfirmation: boolean = false;
+  roleChangeRequests: any[] = []; 
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -43,7 +45,9 @@ export class ProfileComponent implements OnInit {
               ? "Admin"
               : "Unknown Role";
   
-          this.fetchUserImage();
+          if (this.user.role === 3) {
+            this.fetchRoleChangeRequests(); // Fetch role requests only if Admin
+          }
         },
         error: (err) => {
           if (err.status === 401) {
@@ -207,18 +211,29 @@ export class ProfileComponent implements OnInit {
   }
 
   requestRoleChange(): void {
+    if (!this.user) {
+      alert("User information not loaded. Please try again later.");
+      return;
+    }
+  
     const availableRoles = [2, 3]; // Example roles: 2 = Creator, 3 = Admin
     const currentRole = this.user.role;
   
     const requestedRole = parseInt(
       prompt(
-        `Enter the role you want to request (${availableRoles.filter(r => r !== currentRole).join(", ")}):`,
+        `Enter the role you want to request (${availableRoles.filter(
+          (r) => r !== currentRole
+        ).join(", ")}):`,
         ""
       ) || "",
       10
     );
   
-    if (!requestedRole || !availableRoles.includes(requestedRole) || requestedRole === currentRole) {
+    if (
+      !requestedRole ||
+      !availableRoles.includes(requestedRole) ||
+      requestedRole === currentRole
+    ) {
       alert("Invalid role selection or you are already in this role.");
       return;
     }
@@ -238,18 +253,26 @@ export class ProfileComponent implements OnInit {
       })
       .subscribe({
         next: (response: any) => {
-          alert(response.message || "Role change request submitted successfully.");
+          alert(
+            response.message || "Role change request submitted successfully."
+          );
         },
         error: (err) => {
-          if (err.status === 401) {
+          if (err.status === 409) {
+            alert("A role change request has already been submitted.");
+          } else if (err.status === 401) {
             alert("Unauthorized: Please log in again.");
             this.router.navigate(["/login"]);
           } else {
-            alert("An error occurred while submitting the role change request.");
+            alert(
+              "An error occurred while submitting the role change request."
+            );
           }
         },
       });
   }
+  
+  
  
   
   requestPasswordReset(): void {
@@ -277,5 +300,46 @@ export class ProfileComponent implements OnInit {
         },
       });
   }
+
+
+  //Admin dio ako je osoba admin:
+  fetchRoleChangeRequests(): void {
+    const token = localStorage.getItem("token");
+    this.http.get("http://localhost:8000/roles/requests", {
+      headers: { Authorization: `Bearer ${token}` },
+    }).subscribe({
+      next: (response: any) => {
+        this.roleChangeRequests = response; // Store role change requests
+      },
+      error: (err) => {
+        if (err.status === 403) {
+          console.log("Forbidden: User does not have access.");
+        } else {
+          console.error("Error fetching role change requests:", err);
+        }
+      },
+    });
+  }
+  
+  reviewRequest(uuid: string, action: string): void {
+    const token = localStorage.getItem("token");
+    const requestData = { request_uuid: uuid, status: action };
+  
+    this.http.post("http://localhost:8000/roles/review-request", requestData, {
+      headers: { Authorization: `Bearer ${token}` },
+    }).subscribe({
+      next: () => {
+        alert(`Request ${action} successfully.`);
+        this.fetchRoleChangeRequests(); // Refresh the list
+      },
+      error: (err) => {
+        console.error("Error reviewing request:", err);
+      },
+    });
+  }
+  
+  getRoleName(role: number): string {
+    return role === 1 ? "User" : role === 2 ? "Creator" : role === 3 ? "Admin" : "Unknown";
+  } 
   
 }

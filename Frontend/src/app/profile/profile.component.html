@@ -20,6 +20,32 @@
     <button (click)="requestRoleChange()">Request Role Change</button>
     <button (click)="requestPasswordReset()">Request Password Reset</button>
   </div>
+
+  <!-- Admin Panel: Role Change Requests -->
+  <div *ngIf="user.role === 3" class="admin-requests">
+    <h2>Role Change Requests</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>User UUID</th>
+          <th>Requested Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of roleChangeRequests">
+          <td>{{ request.user_uuid }}</td>
+          <td>{{ getRoleName(request.requested_role) }}</td>
+          <td>{{ request.status }}</td>
+          <td>
+            <button (click)="reviewRequest(request.uuid, 'approved')">Approve</button>
+            <button (click)="reviewRequest(request.uuid, 'rejected')">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <!-- Popup za potvrdu brisanja -->
