@@ -2,12 +2,77 @@
 ✔ Building...
 Initial chunk files | Names         |  Raw size
 polyfills.js        | polyfills     |  90.20 kB | 
-main.js             | main          |  41.84 kB | 
+main.js             | main          |  39.97 kB | 
 styles.css          | styles        |   1.29 kB | 
 
-                    | Initial total | 133.33 kB
+                    | Initial total | 131.46 kB
 
-Application bundle generation complete. [1.754 seconds]
+Application bundle generation complete. [1.665 seconds]
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.html:1:13:
+[37m      1 │ <app-header *[32mngIf[37m="!isLoginOrRegisterPage()"></app-header>
+        ╵              [32m~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:11:15:
+[37m      11 │   templateUrl: [32m'./app.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.html:5:13:
+[37m      5 │ <app-footer *[32mngIf[37m="!isLoginOrRegisterPage()"></app-footer>
+        ╵              [32m~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:11:15:
+[37m      11 │   templateUrl: [32m'./app.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:4:11:
+[37m      4 │       <li *[32mngIf[37m="isLoggedIn()"><a routerLink="/about">About</a></li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:5:11:
+[37m      5 │       <li *[32mngIf[37m="isLoggedIn()"><a routerLink="/tools">Tools</a></li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:6:11:
+[37m      6 │       <li *[32mngIf[37m="isLoggedIn()" (click)="logout()">Logout</li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
 
 Watch mode enabled. Watching for file changes...
 NOTE: Raw file sizes do not reflect development server per-request transformations.
@@ -15,24 +80,276 @@ NOTE: Raw file sizes do not reflect development server per-request transformatio
   ➜  press h + enter to show help
 ❯ Changes detected. Rebuilding...
 ✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.385 seconds]
 
-No output file changes.
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
 
-Application bundle generation complete. [0.415 seconds]
+    src/app/app.component.html:1:13:
+[37m      1 │ <app-header *[32mngIf[37m="!isLoginOrRegisterPage()"></app-header>
+        ╵              [32m~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:11:15:
+[37m      11 │   templateUrl: [32m'./app.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.html:5:13:
+[37m      5 │ <app-footer *[32mngIf[37m="!isLoginOrRegisterPage()"></app-footer>
+        ╵              [32m~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:11:15:
+[37m      11 │   templateUrl: [32m'./app.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:4:11:
+[37m      4 │       <li *[32mngIf[37m="isLoggedIn()"><a routerLink="/about">About</a></li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:5:11:
+[37m      5 │       <li *[32mngIf[37m="isLoggedIn()"><a routerLink="/tools">Tools</a></li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:6:11:
+[37m      6 │       <li *[32mngIf[37m="isLoggedIn()" (click)="logout()">Logout</li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:25:12:
+[37m      25 │       <div *[32mngIf[37m="loginErrorMessage" class="error-message">
+         ╵             [32m~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:81:12:
+[37m      81 │       <div *[32mngIf[37m="errorMessage" class="error-message">
+         ╵             [32m~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:11:8:
+[37m      11 │         [32m[(ngModel)]="loginEmail"[37m
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:20:8:
+[37m      20 │         [32m[(ngModel)]="loginPassword"[37m
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:40:8:
+[37m      40 │         [32m[(ngModel)]="firstName"[37m
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:49:8:
+[37m      49 │         [32m[(ngModel)]="lastName"[37m
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:58:8:
+[37m      58 │         [32m[(ngModel)]="email"[37m
+         ╵         [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:67:8:
+[37m      67 │         [32m[(ngModel)]="password"[37m
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:76:8:
+[37m      76 │         [32m[(ngModel)]="confirmPassword"[37m
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG9: Property 'errorMessage' does not exist on type 'WelcomeComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/welcome/welcome.component.html:82:11:
+[37m      82 │         {{ [32merrorMessage[37m }}
+         ╵            [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WelcomeComponent.
+
+    src/app/welcome/welcome.component.ts:7:15:
+[37m      7 │   templateUrl: [32m'./welcome.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
 
 ❯ Changes detected. Rebuilding...
 ✔ Changes detected. Rebuilding...
-Initial chunk files | Names | Raw size
-main.js             | main  | 42.18 kB | 
+Initial chunk files | Names         |  Raw size
+polyfills.js        | polyfills     |  90.20 kB | 
+main.js             | main          |  39.97 kB | 
+styles.css          | styles        |   1.29 kB | 
 
-Application bundle generation complete. [0.138 seconds]
+                    | Initial total | 131.46 kB
 
-Page reload sent to client(s).
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
+Application bundle generation complete. [0.346 seconds]
 
-Component stylesheet(s) changed.
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
 
-Application bundle generation complete. [0.017 seconds]
+    src/app/app.component.html:1:13:
+[37m      1 │ <app-header *[32mngIf[37m="!isLoginOrRegisterPage()"></app-header>
+        ╵              [32m~~~~[0m
 
-HMR update sent to client(s).
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:11:15:
+[37m      11 │   templateUrl: [32m'./app.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.html:5:13:
+[37m      5 │ <app-footer *[32mngIf[37m="!isLoginOrRegisterPage()"></app-footer>
+        ╵              [32m~~~~[0m
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:11:15:
+[37m      11 │   templateUrl: [32m'./app.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:4:11:
+[37m      4 │       <li *[32mngIf[37m="isLoggedIn()"><a routerLink="/about">About</a></li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:5:11:
+[37m      5 │       <li *[32mngIf[37m="isLoggedIn()"><a routerLink="/tools">Tools</a></li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/header/header.component.html:6:11:
+[37m      6 │       <li *[32mngIf[37m="isLoggedIn()" (click)="logout()">Logout</li>
+        ╵            [32m~~~~[0m
+
+  Error occurs in the template of component HeaderComponent.
+
+    src/app/header/header.component.ts:5:15:
+[37m      5 │   templateUrl: [32m'./header.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+

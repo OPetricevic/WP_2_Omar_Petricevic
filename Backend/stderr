@@ -54,3 +54,35 @@
 [08-Jan-2025 22:18:55 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
 [08-Jan-2025 22:18:55 Europe/Sarajevo] Database `wp_project` ensured to exist.
 [08-Jan-2025 22:18:55 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[09-Jan-2025 10:32:26 Europe/Sarajevo] Request: POST /auth/login
+[09-Jan-2025 10:32:26 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[09-Jan-2025 10:32:26 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[09-Jan-2025 10:32:26 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[09-Jan-2025 10:32:26 Europe/Sarajevo] JWT token stored: {"uuid":"7f649d7b-f358-4d12-9575-1e18186ef05e","user_uuid":"ed47413a-f662-4535-a813-32f2c8fce975","user_email":"omarep33@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiZWQ0NzQxM2EtZjY2Mi00NTM1LWE4MTMtMzJmMmM4ZmNlOTc1Iiwicm9sZSI6MiwiaWF0IjoxNzM2NDE1MTQ2LCJleHAiOjE3MzY0NTExNDZ9.8VtrZIF3d6-ti-n4WUi8IugQNPekstkFLtB_YCIzWWQ","expires_at":"2025-01-09 20:32:26","created_at":"2025-01-09 10:32:26"}
+[09-Jan-2025 10:32:46 Europe/Sarajevo] Request: POST /auth/login
+[09-Jan-2025 10:32:46 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[09-Jan-2025 10:32:46 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[09-Jan-2025 10:32:46 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[09-Jan-2025 10:33:05 Europe/Sarajevo] Request: POST /auth/login
+[09-Jan-2025 10:33:05 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[09-Jan-2025 10:33:05 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[09-Jan-2025 10:33:05 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[09-Jan-2025 10:43:21 Europe/Sarajevo] Request: POST /auth/login
+[09-Jan-2025 10:43:21 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[09-Jan-2025 10:43:21 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[09-Jan-2025 10:43:21 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Request: POST /auth/register
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Connected to MySQL server (without database) successfully.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Database `wp_project` ensured to exist.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Connected to the database `wp_project` successfully.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Starting user registration: {"first_name":"Tester","last_name":"Testeer","username":"Testeee","email":"Testee@gmail.com","password":"securePassword123","confirm_password":"securePassword123","date_of_birth":"1999-5-15"}
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Generated UUID for user: 5b1147e3-412b-4ee4-9a88-5fe006b0006f
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Attempting to insert user: {"uuid":"5b1147e3-412b-4ee4-9a88-5fe006b0006f","first_name":"Tester","last_name":"Testeer","username":"Testeee","email":"Testee@gmail.com","date_of_birth":"1999-5-15","role":1,"created_at":"2025-01-09 10:44:14"}
+[09-Jan-2025 10:44:14 Europe/Sarajevo] User successfully inserted.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] User created successfully: 5b1147e3-412b-4ee4-9a88-5fe006b0006f
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Password hashed successfully.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Password hash stored: {"uuid":"f314b8e7-6585-4f35-8c9b-921bcbbd8c45","user_uuid":"5b1147e3-412b-4ee4-9a88-5fe006b0006f","password_hash":"$2y$10$QT7XhNV0YxKK8k4ucuWq2ubxKE2h\/LQSyv4Ny5LxPgItwQ7LtuqoG","created_at":"2025-01-09 10:44:14"}
+[09-Jan-2025 10:44:14 Europe/Sarajevo] Password hash stored successfully.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] JWT generated successfully.
+[09-Jan-2025 10:44:14 Europe/Sarajevo] JWT token stored: {"uuid":"efa5fdd1-b7eb-4c76-86ad-6f0159b0c14d","user_uuid":"5b1147e3-412b-4ee4-9a88-5fe006b0006f","user_email":"Testee@gmail.com","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNWIxMTQ3ZTMtNDEyYi00ZWU0LTlhODgtNWZlMDA2YjAwMDZmIiwicm9sZSI6MSwiaWF0IjoxNzM2NDE1ODU0LCJleHAiOjE3MzY0NTE4NTR9.aGJKQoQkr-jWt-xaoYJDsZ7ekLI1rwicGE6UM1b-pgw","expires_at":"2025-01-09 20:44:14","created_at":"2025-01-09 10:44:14"}
+[09-Jan-2025 10:44:14 Europe/Sarajevo] JWT token stored successfully.

@@ -11,4 +11,11 @@ import { FooterComponent } from './footer/footer.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  isLoginOrRegisterPage(): boolean {
+    const route = window.location.pathname;
+    return route === '/login' || route === '/register';
+  }
+
+
+}

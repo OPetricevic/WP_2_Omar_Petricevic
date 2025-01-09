@@ -1,0 +1,87 @@
+<div class="welcome-container">
+  <!-- Login Kutija -->
+  <div class="welcome-box">
+    <h1>Welcome to KliXo</h1>
+    <p>Your one-stop platform for news and updates.</p>
+    <form (ngSubmit)="onLogin()">
+      <label for="loginEmail">Email:</label>
+      <input
+        id="loginEmail"
+        type="email"
+        [(ngModel)]="loginEmail"
+        name="loginEmail"
+        placeholder="Enter your email"
+        required
+      />
+      <label for="loginPassword">Password:</label>
+      <input
+        id="loginPassword"
+        type="password"
+        [(ngModel)]="loginPassword"
+        name="loginPassword"
+        placeholder="Enter your password"
+        required
+      />
+      <div *ngIf="loginErrorMessage" class="error-message">
+        {{ loginErrorMessage }}
+      </div>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <!-- Register Kutija -->
+  <div class="welcome-box">
+    <h2>Register</h2>
+    <form (ngSubmit)="onRegister()">
+      <label for="firstName">First Name:</label>
+      <input
+        id="firstName"
+        type="text"
+        [(ngModel)]="firstName"
+        name="firstName"
+        placeholder="Enter your first name"
+        required
+      />
+      <label for="lastName">Last Name:</label>
+      <input
+        id="lastName"
+        type="text"
+        [(ngModel)]="lastName"
+        name="lastName"
+        placeholder="Enter your last name"
+        required
+      />
+      <label for="email">Email:</label>
+      <input
+        id="email"
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+      <label for="password">Password:</label>
+      <input
+        id="password"
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        id="confirmPassword"
+        type="password"
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+        placeholder="Re-enter your password"
+        required
+      />
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
