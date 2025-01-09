@@ -1,0 +1,56 @@
+<section class="news-container">
+  <h2>Manage News Images</h2>
+
+  <!-- Filter Options -->
+  <div class="filters">
+    <div class="filter-item">
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter" (change)="filterByCategory($event)">
+        <option value="all">All</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="authorFilter">Author:</label>
+      <select id="authorFilter" (change)="filterByAuthor($event)">
+        <option value="all">All</option>
+        <option *ngFor="let author of authors" [value]="author">{{ author }}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- News Table -->
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let news of filteredNews">
+        <td>{{ news.title }}</td>
+        <td>{{ news.author }}</td>
+        <td>{{ news.category }}</td>
+        <td>
+          <button class="btn-add-image" (click)="openImageUploadModal(news.id)">Add Image</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Modal for Image Upload -->
+<div class="modal" *ngIf="showImageUploadModal">
+  <div class="modal-content">
+    <h3>Upload Image</h3>
+    <input type="file" (change)="handleImageUpload($event)" />
+    <div class="modal-buttons">
+      <button class="btn-upload" (click)="uploadImage()">Upload</button>
+      <button class="btn-cancel" (click)="closeImageUploadModal()">Cancel</button>
+    </div>
+  </div>
+</div>

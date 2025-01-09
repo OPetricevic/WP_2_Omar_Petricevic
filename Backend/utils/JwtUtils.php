@@ -3,7 +3,6 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-
 class JwtUtils {
     private static $secretKey;
     private static $algorithm = 'HS256';
@@ -30,7 +29,7 @@ class JwtUtils {
      */
     public static function generateToken(array $data): string {
         $issuedAt = time();
-        $expiration = $issuedAt + 36000; // Token is valid for 1 hour
+        $expiration = $issuedAt + 36000; // Token is valid for 10 hours
 
         $payload = array_merge($data, [
             'iat' => $issuedAt,
@@ -48,15 +47,26 @@ class JwtUtils {
      */
     public static function validateToken(string $token): ?object {
         try {
-            error_log("Validating token: $token");
-            error_log("Using secret key: " . self::$secretKey);
             $decoded = JWT::decode($token, new Key(self::$secretKey, self::$algorithm));
-            error_log("Decoded token: " . json_encode($decoded));
             return $decoded;
         } catch (Exception $e) {
             error_log("JWT Validation Error: " . $e->getMessage());
             return null;
         }
+    }
+
+    /**
+     * Generates a new JWT token for a user.
+     *
+     * @param string $userUuid User UUID.
+     * @param int $role User role.
+     * @return string New JWT token.
+     */
+    public static function generateJwtToken(string $userUuid, int $role): string {
+        return self::generateToken([
+            'uuid' => $userUuid,
+            'role' => $role
+        ]);
     }
 }
 

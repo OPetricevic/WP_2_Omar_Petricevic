@@ -1,71 +1,48 @@
-/* Globalni stilovi za header */
 header {
-  background: linear-gradient(90deg, #34495e, #2c3e50); /* Suptilniji tamnoplavi gradient */
+  background-color: #2c3e50;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  color: #ecf0f1;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Stilovi za navigaciju */
 .minimal-nav {
   display: flex;
-  justify-content: space-between; /* Razmak između levog i desnog dela */
-  align-items: center; /* Vertikalno poravnanje elemenata */
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Levi deo navigacije */
-.nav-left ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
+.nav-left ul, .nav-right ul {
+  list-style-type: none;
   padding: 0;
-}
-
-.nav-left li {
-  margin: 0 15px;
-}
-
-/* Desni deo navigacije */
-.nav-right ul {
-  display: flex;
-  list-style: none;
   margin: 0;
-  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
-.nav-right li {
-  margin-left: auto; /* Gura "Logout" na desnu stranu */
+.nav-left li, .nav-right li {
+  display: inline;
 }
 
-/* Stilovi za linkove */
-.minimal-nav a {
+.nav-left a, .nav-right a {
+  color: #ecf0f1;
   text-decoration: none;
-  font-size: 1rem;
-  color: #bdc3c7; /* Svijetla siva boja za linkove */
-  position: relative;
-  transition: color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* Hover efekt sa animiranim podcrtavanjem */
-.minimal-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #e67e22; /* Suptilna zelena nijansa */
-  left: 50%;
-  bottom: -5px;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+.nav-left a:hover, .nav-right a:hover {
+  background-color: #e67e22;
+  color: #ffffff;
 }
 
-.minimal-nav a:hover::after {
-  width: 100%;
+.logout a {
+  background-color: #e74c3c;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
-.minimal-nav a:hover {
-  color: #e67e22; /* Promena boje na hover - zelena nijansa */
+.logout a:hover {
+  background-color: #c0392b;
 }
-

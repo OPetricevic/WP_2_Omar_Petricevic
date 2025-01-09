@@ -18,26 +18,47 @@ class RoleService {
             if (!$this->userModel->existsByUuid($userUuid)) {
                 return ['status' => 404, 'message' => 'User not found.'];
             }
-
-            // Provjera da li role postoji u `role_permissions` tabeli
+    
+            // Provjera da li role postoji
             if (!$this->roleExists($newRole)) {
                 return ['status' => 400, 'message' => 'Invalid role specified.'];
             }
-
+    
             // Ažuriranje role korisnika
             $this->userModel->updateUserRole($userUuid, $newRole);
-            return ['status' => 200, 'message' => 'User role updated successfully.'];
+    
+            // Generiraj novi JWT token s ažuriranom ulogom
+            $user = $this->userModel->getUserByUuid($userUuid); // Pretpostavljam da vraća korisnika
+            $newToken = $this->generateJwtToken($user); // Funkcija za generiranje JWT tokena
+    
+            return [
+                'status' => 200,
+                'message' => 'User role updated successfully.',
+                'token' => $newToken // Vraćamo novi token klijentu
+            ];
         } catch (Exception $e) {
             error_log("Error in changeRole: " . $e->getMessage());
             return ['status' => 500, 'message' => 'Internal server error.'];
         }
     }
+    
 
     private function roleExists($roleId) {
         $stmt = $this->conn->prepare("SELECT COUNT(*) FROM role_permissions WHERE role_id = :roleId");
         $stmt->bindParam(':roleId', $roleId, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchColumn() > 0;
+    }
+    
+    public function getRequestByUuid($requestUuid) {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM role_permission_requests WHERE uuid = :uuid");
+            $stmt->execute([':uuid' => $requestUuid]);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (Exception $e) {
+            error_log("Error in getRequestByUuid: " . $e->getMessage());
+            throw $e;
+        }
     }
     
     

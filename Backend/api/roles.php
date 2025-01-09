@@ -116,22 +116,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/roles
 
 // Endpoint for reviewing requests (approve/reject)
 if ($_SERVER['REQUEST_METHOD'] === 'PATCH' && $_SERVER['REQUEST_URI'] === '/roles/review-request') {
-    // Validacija JWT tokena
     $decodedToken = $authMiddleware->requireAuth();
-
-    // Provjera uloge
-    $roleMiddleware->requireRole($decodedToken, [3]);
+    $roleMiddleware->requireRole($decodedToken, [3]); // Admin only
 
     $data = json_decode(file_get_contents('php://input'), true);
 
-    // Provjera potrebnih polja
     if (empty($data['request_uuid']) || empty($data['action'])) {
         http_response_code(400);
         echo json_encode(['message' => 'Missing required fields: request_uuid or action']);
         exit;
     }
 
-    // Validacija tipa za `action`
     $validActions = ['approve', 'reject'];
     if (!in_array($data['action'], $validActions)) {
         http_response_code(400);
@@ -141,17 +136,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH' && $_SERVER['REQUEST_URI'] === '/role
 
     try {
         $response = $roleService->reviewRoleChangeRequest($data['request_uuid'], $data['action']);
-        http_response_code($response['status']);
-        echo json_encode($response, JSON_PRETTY_PRINT);
+
+        if ($data['action'] === 'approve') {
+            $request = $roleService->getRequestByUuid($data['request_uuid']); // Fetch the request
+            $newToken = JwtUtils::generateJwtToken($request['user_uuid'], $request['requested_role']);
+
+            http_response_code(200);
+            echo json_encode([
+                'status' => 200,
+                'message' => 'Role change request approved.',
+                'token' => $newToken // Return the new token
+            ]);
+        } else {
+            http_response_code(200);
+            echo json_encode(['status' => 200, 'message' => 'Role change request rejected.']);
+        }
     } catch (Exception $e) {
         http_response_code(500);
-        echo json_encode([
-            'status' => 500,
-            'message' => 'Internal server error.',
-            'error' => $e->getMessage()
-        ], JSON_PRETTY_PRINT);
+        echo json_encode(['status' => 500, 'message' => 'Internal server error.', 'error' => $e->getMessage()]);
     }
-
     exit;
 }
 

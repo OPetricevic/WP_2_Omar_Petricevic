@@ -1,5 +1,5 @@
 <section class="profile-container">
-  <div *ngIf="user" class="profile-card">
+  <div class="profile-card">
     <img
       *ngIf="user.imageUrl; else noImage"
       [src]="user.imageUrl"
@@ -14,45 +14,44 @@
     <p><strong>Email:</strong> {{ user.email }}</p>
     <p><strong>Role:</strong> {{ user.roleName }}</p>
 
-    <button (click)="uploadImage()">Add/Update Profile Image</button>
-    <button (click)="editProfile()">Edit Profile</button>
-    <button (click)="confirmDelete()">Delete Account</button>
-    <button (click)="requestRoleChange()">Request Role Change</button>
-    <button (click)="requestPasswordReset()">Request Password Reset</button>
+    <div class="profile-actions">
+      <button (click)="uploadImage()">Add/Update Profile Image</button>
+      <button (click)="editProfile()">Edit Profile</button>
+      <button (click)="confirmDelete()">Delete Account</button>
+      <button (click)="requestRoleChange()">Request Role Change</button>
+      <button (click)="requestPasswordReset()">Request Password Reset</button>
+    </div>
   </div>
 
   <!-- Admin Panel: Role Change Requests -->
   <div *ngIf="user.role === 3" class="admin-requests">
     <h2>Role Change Requests</h2>
-    <table>
+    <table class="styled-table">
       <thead>
         <tr>
+          <th>Request UUID</th>
           <th>User UUID</th>
           <th>Requested Role</th>
           <th>Status</th>
+          <th>Created At</th>
+          <th>Updated At</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let request of roleChangeRequests">
+          <td>{{ request.uuid }}</td>
           <td>{{ request.user_uuid }}</td>
           <td>{{ getRoleName(request.requested_role) }}</td>
           <td>{{ request.status }}</td>
+          <td>{{ request.created_at | date: 'medium' }}</td>
+          <td>{{ request.updated_at | date: 'medium' }}</td>
           <td>
-            <button (click)="reviewRequest(request.uuid, 'approved')">Approve</button>
-            <button (click)="reviewRequest(request.uuid, 'rejected')">Reject</button>
+            <button class="btn-approve" (click)="reviewRequest(request.uuid, 'approve')">Approve</button>
+            <button class="btn-reject" (click)="reviewRequest(request.uuid, 'reject')">Reject</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </section>
-
-<!-- Popup za potvrdu brisanja -->
-<div class="popup-overlay" *ngIf="showDeleteConfirmation">
-  <div class="popup">
-    <p>Are you sure you want to delete your account? This action cannot be undone.</p>
-    <button (click)="deleteAccount()">Yes, Delete</button>
-    <button (click)="showDeleteConfirmation = false">Cancel</button>
-  </div>
-</div>

@@ -45,8 +45,12 @@ export class ProfileComponent implements OnInit {
               ? "Admin"
               : "Unknown Role";
   
+          // Učitavanje slike nakon uspješnog dohvaćanja korisničkih podataka
+          this.fetchUserImage();
+  
+          // Ako je korisnik admin, dohvaćamo zahtjeve za promjenu role
           if (this.user.role === 3) {
-            this.fetchRoleChangeRequests(); // Fetch role requests only if Admin
+            this.fetchRoleChangeRequests();
           }
         },
         error: (err) => {
@@ -57,6 +61,7 @@ export class ProfileComponent implements OnInit {
         },
       });
   }
+  
   
 
   fetchUserImage(): void {
@@ -132,33 +137,56 @@ export class ProfileComponent implements OnInit {
   editProfile(): void {
     const updatedUsername = prompt('Enter new username:', this.user.username);
     const updatedEmail = prompt('Enter new email:', this.user.email);
-
-    if (updatedUsername && updatedEmail) {
-      const data = {
-        username: updatedUsername,
-        email: updatedEmail,
-      };
-
-      const token = localStorage.getItem('token');
-
-      this.http.patch('http://localhost:8000/users/me', data, {
-        headers: { Authorization: `Bearer ${token}` },
-      }).subscribe({
-        next: () => {
-          alert('Profile updated successfully!');
-          this.fetchUserProfile();
-        },
-        error: (err) => {
-          if (err.status === 401) {
-            alert('Unauthorized: Please log in again.');
-            this.router.navigate(['/login']);
-          } else {
-            alert('An error occurred while updating the profile.');
-          }
-        },
-      });
+  
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Unauthorized: Please log in again.');
+      this.router.navigate(['/login']);
+      return;
+    }
+  
+    const headers = { Authorization: `Bearer ${token}` };
+  
+    // Provjeravamo da li su vrijednosti izmijenjene prije slanja zahtjeva
+    if (updatedUsername && updatedUsername !== this.user.username) {
+      const usernameData = { username: updatedUsername };
+      this.http
+        .patch('http://localhost:8000/users/me', usernameData, { headers })
+        .subscribe({
+          next: () => {
+            alert('Username updated successfully!');
+            this.fetchUserProfile();
+          },
+          error: (err) => {
+            if (err.status === 409) {
+              alert('Username is already in use.');
+            } else {
+              alert('An error occurred while updating the username.');
+            }
+          },
+        });
+    }
+  
+    if (updatedEmail && updatedEmail !== this.user.email) {
+      const emailData = { email: updatedEmail };
+      this.http
+        .patch('http://localhost:8000/users/me', emailData, { headers })
+        .subscribe({
+          next: () => {
+            alert('Email updated successfully!');
+            this.fetchUserProfile();
+          },
+          error: (err) => {
+            if (err.status === 409) {
+              alert('Email is already in use.');
+            } else {
+              alert('An error occurred while updating the email.');
+            }
+          },
+        });
     }
   }
+  
 
   confirmDelete(): void {
     this.showDeleteConfirmation = true;
@@ -305,15 +333,22 @@ export class ProfileComponent implements OnInit {
   //Admin dio ako je osoba admin:
   fetchRoleChangeRequests(): void {
     const token = localStorage.getItem("token");
+    console.log("Token:", token);
+    if (!token) {
+      alert("Unauthorized: Please log in again.");
+      this.router.navigate(["/login"]);
+      return;
+    }
+  
     this.http.get("http://localhost:8000/roles/requests", {
       headers: { Authorization: `Bearer ${token}` },
     }).subscribe({
       next: (response: any) => {
-        this.roleChangeRequests = response; // Store role change requests
+        this.roleChangeRequests = response;
       },
       error: (err) => {
         if (err.status === 403) {
-          console.log("Forbidden: User does not have access.");
+          alert("Access forbidden: You are not authorized to view this resource.");
         } else {
           console.error("Error fetching role change requests:", err);
         }
@@ -322,21 +357,32 @@ export class ProfileComponent implements OnInit {
   }
   
   reviewRequest(uuid: string, action: string): void {
-    const token = localStorage.getItem("token");
-    const requestData = { request_uuid: uuid, status: action };
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Unauthorized: Please log in again.');
+      this.router.navigate(['/']);
+      return;
+    }
   
-    this.http.post("http://localhost:8000/roles/review-request", requestData, {
+    const requestData = { request_uuid: uuid, action };
+  
+    this.http.patch('http://localhost:8000/roles/review-request', requestData, {
       headers: { Authorization: `Bearer ${token}` },
     }).subscribe({
-      next: () => {
-        alert(`Request ${action} successfully.`);
-        this.fetchRoleChangeRequests(); // Refresh the list
+      next: (response: any) => {
+        // Generisani token je samo za korisnika kome je promenjena uloga
+        console.log('Generated token for user:', response.token); // Ovo možete koristiti za testiranje ili logovanje
+  
+        alert(response.message);
+        this.fetchRoleChangeRequests(); // Osvježavanje liste zahteva za promenu uloge
       },
       error: (err) => {
-        console.error("Error reviewing request:", err);
+        console.error('Error reviewing request:', err);
+        alert(err.error?.message || 'An error occurred.');
       },
     });
   }
+  
   
   getRoleName(role: number): string {
     return role === 1 ? "User" : role === 2 ? "Creator" : role === 3 ? "Admin" : "Unknown";

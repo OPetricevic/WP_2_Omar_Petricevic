@@ -2,14 +2,20 @@
   <nav class="minimal-nav">
     <div class="nav-left">
       <ul>
-        <li *ngIf="isLoggedIn()"><a routerLink="/news">News</a></li>
-        <li *ngIf="isLoggedIn()"><a routerLink="/tools">Tools</a></li>
+        <li *ngIf="isLoggedIn()">Welcome, {{ userRole }}</li>
+        <li *ngIf="isLoggedIn()">
+          <a (click)="navigateToNews()">News</a>
+        </li>
+        <li *ngIf="isLoggedIn() && (userRole === 'Creator' || userRole === 'Admin')">
+          <a (click)="navigateToTools()" *ngIf="userRole === 'Creator' || userRole === 'Admin'">Tools</a>
+        </li>
       </ul>
     </div>
     <div class="nav-right">
       <ul>
-        <li *ngIf="isLoggedIn()"><a routerLink="/profile">Profile</a></li>
         <li *ngIf="isLoggedIn()">
+          <a (click)="navigateToProfile()" *ngIf="isLoggedIn()">Profile</a></li>
+        <li *ngIf="isLoggedIn()" class="logout">
           <a href="#" (click)="logout()">Logout</a>
         </li>
       </ul>
