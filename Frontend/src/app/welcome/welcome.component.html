@@ -25,8 +25,10 @@
       <div *ngIf="loginErrorMessage" class="error-message">
         {{ loginErrorMessage }}
       </div>
-      <button type="submit">Sign In</button>
+      <button type="submit" class="sign-in-btn">Sign In</button>
     </form>
+    <!-- Link za reset lozinke -->
+    <a class="forgot-password-link" (click)="requestPasswordReset()">Forgot your password?</a>
   </div>
 
   <!-- Register Kutija -->
@@ -49,6 +51,15 @@
         [(ngModel)]="lastName"
         name="lastName"
         placeholder="Enter your last name"
+        required
+      />
+      <label for="username">Username:</label>
+      <input
+        id="username"
+        type="text"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="Enter your username"
         required
       />
       <label for="email">Email:</label>
@@ -78,10 +89,18 @@
         placeholder="Re-enter your password"
         required
       />
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input
+        id="dateOfBirth"
+        type="date"
+        [(ngModel)]="dateOfBirth"
+        name="dateOfBirth"
+        required
+      />
       <div *ngIf="errorMessage" class="error-message">
         {{ errorMessage }}
       </div>
-      <button type="submit">Register</button>
+      <button type="submit" class="register-btn">Register</button>
     </form>
   </div>
 </div>

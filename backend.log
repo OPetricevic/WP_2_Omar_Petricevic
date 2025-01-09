@@ -1,25 +1,100 @@
-[Thu Jan  9 10:32:23 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Thu Jan  9 10:32:26 2025] 127.0.0.1:45542 Accepted
-[Thu Jan  9 10:32:26 2025] 127.0.0.1:45542 [200]: OPTIONS /auth/login
-[Thu Jan  9 10:32:26 2025] 127.0.0.1:45542 Closing
-[Thu Jan  9 10:32:26 2025] 127.0.0.1:45546 Accepted
-[Thu Jan  9 10:32:26 2025] 127.0.0.1:45546 [200]: POST /auth/login
-[Thu Jan  9 10:32:26 2025] 127.0.0.1:45546 Closing
-[Thu Jan  9 10:32:46 2025] 127.0.0.1:39674 Accepted
-[Thu Jan  9 10:32:46 2025] 127.0.0.1:39674 [200]: OPTIONS /auth/login
-[Thu Jan  9 10:32:46 2025] 127.0.0.1:39674 Closing
-[Thu Jan  9 10:32:46 2025] 127.0.0.1:39690 Accepted
-[Thu Jan  9 10:32:46 2025] 127.0.0.1:39690 [200]: POST /auth/login
-[Thu Jan  9 10:32:46 2025] 127.0.0.1:39690 Closing
-[Thu Jan  9 10:33:05 2025] 127.0.0.1:37558 Accepted
-[Thu Jan  9 10:33:05 2025] 127.0.0.1:37558 [200]: OPTIONS /auth/login
-[Thu Jan  9 10:33:05 2025] 127.0.0.1:37558 Closing
-[Thu Jan  9 10:33:05 2025] 127.0.0.1:37562 Accepted
-[Thu Jan  9 10:33:05 2025] 127.0.0.1:37562 [200]: POST /auth/login
-[Thu Jan  9 10:33:05 2025] 127.0.0.1:37562 Closing
-[Thu Jan  9 10:43:21 2025] 127.0.0.1:37228 Accepted
-[Thu Jan  9 10:43:21 2025] 127.0.0.1:37228 [200]: POST /auth/login
-[Thu Jan  9 10:43:21 2025] 127.0.0.1:37228 Closing
-[Thu Jan  9 10:44:14 2025] 127.0.0.1:53352 Accepted
-[Thu Jan  9 10:44:14 2025] 127.0.0.1:53352 [201]: POST /auth/register
-[Thu Jan  9 10:44:14 2025] 127.0.0.1:53352 Closing
+[Thu Jan  9 16:14:22 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Thu Jan  9 16:14:36 2025] 127.0.0.1:33294 Accepted
+[Thu Jan  9 16:14:36 2025] 127.0.0.1:33294 [200]: OPTIONS /auth/login
+[Thu Jan  9 16:14:36 2025] 127.0.0.1:33294 Closing
+[Thu Jan  9 16:14:36 2025] 127.0.0.1:33306 Accepted
+[Thu Jan  9 16:14:36 2025] 127.0.0.1:33306 [404]: POST /auth/login
+[Thu Jan  9 16:14:36 2025] 127.0.0.1:33306 Closing
+[Thu Jan  9 16:14:45 2025] 127.0.0.1:33316 Accepted
+[Thu Jan  9 16:14:45 2025] 127.0.0.1:33316 [200]: OPTIONS /auth/login
+[Thu Jan  9 16:14:45 2025] 127.0.0.1:33316 Closing
+[Thu Jan  9 16:14:45 2025] 127.0.0.1:33318 Accepted
+[Thu Jan  9 16:14:45 2025] 127.0.0.1:33318 [404]: POST /auth/login
+[Thu Jan  9 16:14:45 2025] 127.0.0.1:33318 Closing
+[Thu Jan  9 16:14:55 2025] 127.0.0.1:36690 Accepted
+[Thu Jan  9 16:14:55 2025] 127.0.0.1:36690 [401]: POST /auth/login
+[Thu Jan  9 16:14:55 2025] 127.0.0.1:36690 Closing
+[Thu Jan  9 16:15:06 2025] 127.0.0.1:50984 Accepted
+[Thu Jan  9 16:15:06 2025] 127.0.0.1:50984 [200]: OPTIONS /auth/login
+[Thu Jan  9 16:15:06 2025] 127.0.0.1:50984 Closing
+[Thu Jan  9 16:15:06 2025] 127.0.0.1:51000 Accepted
+[Thu Jan  9 16:15:06 2025] 127.0.0.1:51000 [404]: POST /auth/login
+[Thu Jan  9 16:15:06 2025] 127.0.0.1:51000 Closing
+[Thu Jan  9 16:15:09 2025] 127.0.0.1:51014 Accepted
+[Thu Jan  9 16:15:09 2025] 127.0.0.1:51014 [404]: POST /auth/login
+[Thu Jan  9 16:15:09 2025] 127.0.0.1:51014 Closing
+[Thu Jan  9 16:15:17 2025] 127.0.0.1:49944 Accepted
+[Thu Jan  9 16:15:17 2025] 127.0.0.1:49944 [200]: OPTIONS /auth/login
+[Thu Jan  9 16:15:17 2025] 127.0.0.1:49944 Closing
+[Thu Jan  9 16:15:17 2025] 127.0.0.1:49952 Accepted
+[Thu Jan  9 16:15:17 2025] 127.0.0.1:49952 [404]: POST /auth/login
+[Thu Jan  9 16:15:17 2025] 127.0.0.1:49952 Closing
+[Thu Jan  9 16:15:44 2025] 127.0.0.1:40494 Accepted
+[Thu Jan  9 16:15:45 2025] 127.0.0.1:40494 [200]: POST /auth/request-password-reset
+[Thu Jan  9 16:15:45 2025] 127.0.0.1:40494 Closing
+[Thu Jan  9 16:15:59 2025] 127.0.0.1:52740 Accepted
+[Thu Jan  9 16:15:59 2025] 127.0.0.1:52740 [200]: OPTIONS /auth/reset-password
+[Thu Jan  9 16:15:59 2025] 127.0.0.1:52740 Closing
+[Thu Jan  9 16:15:59 2025] 127.0.0.1:52754 Accepted
+[Thu Jan  9 16:15:59 2025] 127.0.0.1:52754 [200]: POST /auth/reset-password
+[Thu Jan  9 16:15:59 2025] 127.0.0.1:52754 Closing
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60716 Accepted
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60716 [200]: OPTIONS /auth/login
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60716 Closing
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60728 Accepted
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60728 [200]: POST /auth/login
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60728 Closing
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60730 Accepted
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60730 [200]: GET /news
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60730 Closing
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60734 Accepted
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60734 [200]: GET /uploads/677fbf0200e42-blazingboost.png
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60744 Accepted
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60734 Closing
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60744 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 16:16:08 2025] 127.0.0.1:60744 Closing
+[Thu Jan  9 16:18:06 2025] 127.0.0.1:53608 Accepted
+[Thu Jan  9 16:18:06 2025] 127.0.0.1:53608 [200]: GET /news/e4b7c611-0741-4424-b4df-9e70c4ad7cd9
+[Thu Jan  9 16:18:06 2025] 127.0.0.1:53608 Closing
+[Thu Jan  9 16:18:08 2025] 127.0.0.1:53616 Accepted
+[Thu Jan  9 16:18:08 2025] 127.0.0.1:53616 [200]: GET /news
+[Thu Jan  9 16:18:08 2025] 127.0.0.1:53616 Closing
+[Thu Jan  9 16:18:08 2025] 127.0.0.1:53632 Accepted
+[Thu Jan  9 16:18:08 2025] 127.0.0.1:53632 [200]: GET /news/1333f671-ae8c-4341-a29d-9e046aacf4cf
+[Thu Jan  9 16:18:08 2025] 127.0.0.1:53632 Closing
+[Thu Jan  9 16:18:10 2025] 127.0.0.1:53642 Accepted
+[Thu Jan  9 16:18:10 2025] 127.0.0.1:53642 [200]: GET /news
+[Thu Jan  9 16:18:10 2025] 127.0.0.1:53642 Closing
+[Thu Jan  9 16:20:09 2025] 127.0.0.1:40104 Accepted
+[Thu Jan  9 16:20:09 2025] 127.0.0.1:40104 [200]: GET /news
+[Thu Jan  9 16:20:09 2025] 127.0.0.1:40104 Closing
+[Thu Jan  9 16:20:10 2025] 127.0.0.1:40110 Accepted
+[Thu Jan  9 16:20:10 2025] 127.0.0.1:40110 [200]: GET /uploads/677fbf0200e42-blazingboost.png
+[Thu Jan  9 16:20:10 2025] 127.0.0.1:40112 Accepted
+[Thu Jan  9 16:20:10 2025] 127.0.0.1:40110 Closing
+[Thu Jan  9 16:20:10 2025] 127.0.0.1:40112 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 16:20:10 2025] 127.0.0.1:40112 Closing
+[Thu Jan  9 16:20:27 2025] 127.0.0.1:42314 Accepted
+[Thu Jan  9 16:20:27 2025] 127.0.0.1:42314 [200]: GET /news
+[Thu Jan  9 16:20:27 2025] 127.0.0.1:42314 Closing
+[Thu Jan  9 16:20:28 2025] 127.0.0.1:42324 Accepted
+[Thu Jan  9 16:20:28 2025] 127.0.0.1:42324 [200]: GET /uploads/677fbf0200e42-blazingboost.png
+[Thu Jan  9 16:20:28 2025] 127.0.0.1:42324 Closing
+[Thu Jan  9 16:20:28 2025] 127.0.0.1:42338 Accepted
+[Thu Jan  9 16:20:28 2025] 127.0.0.1:42338 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 16:20:28 2025] 127.0.0.1:42338 Closing
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42342 Accepted
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42342 [200]: GET /news
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42342 Closing
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42344 Accepted
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42344 [200]: GET /uploads/677fbf0200e42-blazingboost.png
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42344 Closing
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42356 Accepted
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42356 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 16:20:29 2025] 127.0.0.1:42356 Closing
+[Thu Jan  9 16:22:58 2025] 127.0.0.1:49764 Accepted
+[Thu Jan  9 16:22:58 2025] 127.0.0.1:49764 [200]: OPTIONS /auth/request-password-reset
+[Thu Jan  9 16:22:58 2025] 127.0.0.1:49764 Closing
+[Thu Jan  9 16:22:58 2025] 127.0.0.1:49778 Accepted
+[Thu Jan  9 16:22:59 2025] 127.0.0.1:49778 [200]: POST /auth/request-password-reset
+[Thu Jan  9 16:22:59 2025] 127.0.0.1:49778 Closing

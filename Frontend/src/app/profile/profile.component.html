@@ -1,0 +1,32 @@
+<section class="profile-container">
+  <div *ngIf="user" class="profile-card">
+    <img
+      *ngIf="user.imageUrl; else noImage"
+      [src]="user.imageUrl"
+      alt="Profile Image"
+      class="profile-image"
+    />
+    <ng-template #noImage>No profile image available</ng-template>
+    <h2>Profile</h2>
+    <p><strong>First Name:</strong> {{ user.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Role:</strong> {{ user.roleName }}</p>
+
+    <button (click)="uploadImage()">Add/Update Profile Image</button>
+    <button (click)="editProfile()">Edit Profile</button>
+    <button (click)="confirmDelete()">Delete Account</button>
+    <button (click)="requestRoleChange()">Request Role Change</button>
+    <button (click)="requestPasswordReset()">Request Password Reset</button>
+  </div>
+</section>
+
+<!-- Popup za potvrdu brisanja -->
+<div class="popup-overlay" *ngIf="showDeleteConfirmation">
+  <div class="popup">
+    <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+    <button (click)="deleteAccount()">Yes, Delete</button>
+    <button (click)="showDeleteConfirmation = false">Cancel</button>
+  </div>
+</div>

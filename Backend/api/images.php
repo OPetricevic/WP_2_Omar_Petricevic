@@ -147,6 +147,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['uuid'])) {
     exit;
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && preg_match('/^\/images\/module\/([^\/]+)$/', $requestUri, $matches)) {
+    $moduleUuid = $matches[1];
+    try {
+        $image = $imageService->getImageByModuleUuid($moduleUuid);
+        if (!$image) {
+            http_response_code(404);
+            echo json_encode(['message' => 'Image not found']);
+            exit;
+        }
+
+        http_response_code(200);
+        echo json_encode($image, JSON_PRETTY_PRINT);
+    } catch (Exception $e) {
+        http_response_code(500);
+        echo json_encode([
+            'message' => 'Internal server error.',
+            'error' => $e->getMessage()
+        ], JSON_PRETTY_PRINT);
+    }
+    exit;
+}
+
 
 // If route is not found
 error_log("Route not found.");

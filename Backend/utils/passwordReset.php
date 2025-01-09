@@ -34,7 +34,7 @@ function sendPasswordResetEmail($email, $resetToken) {
         $mail->Body = "
         <p>We received a password reset request for your account.</p>
         <p>If you made this request, click the link below to reset your password:</p>
-        <a href='http://localhost:8000/auth/reset-password?token=$resetToken'>Reset Password</a>
+        <a href='http://localhost:4200/reset-password?token=$resetToken'>Reset Password</a>
         <p>If you did not request this, you can safely ignore this email.</p>
     ";    
 

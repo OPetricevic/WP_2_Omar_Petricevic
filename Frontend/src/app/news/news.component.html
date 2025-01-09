@@ -1,0 +1,41 @@
+<section class="news-container-wrapper">
+  <!-- Filter sekcija -->
+  <div class="filters-container">
+    <select [(ngModel)]="selectedCategory" (change)="filterNews()">
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (input)="filterNews()"
+      placeholder="Search news..."
+    />
+  </div>
+
+  <!-- Poruka kada nema rezultata -->
+  <div *ngIf="filteredNews.length === 0" class="no-news-message">
+    No news found for the selected category and search query.
+  </div>
+
+  <!-- Prikaz vijesti u mreži -->
+  <div class="news-grid">
+    <div
+      *ngFor="let item of filteredNews"
+      class="news-card"
+      (click)="viewNewsDetails(item.uuid)"
+      style="cursor: pointer;"
+    >
+      <img
+        *ngIf="item.image?.url"
+        [src]="item.image.url"
+        [alt]="item.image.description || 'News Image'"
+        class="news-image"
+      />
+      <h3>{{ item.title }}</h3>
+      <p>
+        {{ item.body.length > 100 ? (item.body | slice: 0:100) + '...' : item.body }}
+      </p>
+      <span>{{ item.category }} | {{ item.created_at | date: 'short' }}</span>
+    </div>
+  </div>
+</section>

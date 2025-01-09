@@ -152,6 +152,20 @@ class Image {
         }
     }
 
+    public function getImageByModuleUuid($moduleUuid) {
+        try {
+            $stmt = $this->conn->prepare("SELECT * FROM system_images WHERE module_uuid = :module_uuid");
+            $stmt->bindParam(':module_uuid', $moduleUuid);
+            $stmt->execute();
+    
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error fetching image by module_uuid $moduleUuid: " . $e->getMessage());
+            throw $e;
+        }
+    }
+
+
     public function deleteImage($uuid) {
         try {
             $stmt = $this->conn->prepare("DELETE FROM system_images WHERE uuid = :uuid");

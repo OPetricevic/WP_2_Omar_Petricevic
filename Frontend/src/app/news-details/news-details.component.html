@@ -1,0 +1,15 @@
+<section class="news-details-container">
+  <div *ngIf="news">
+    <img
+      *ngIf="news.image?.url"
+      [src]="news.image.url"
+      [alt]="news.image.description || 'News Image'"
+      class="news-details-image"
+    />
+    <h1>{{ news.title }}</h1>
+    <p>{{ news.body }}</p>
+    <span>Category: {{ news.category }}</span>
+    <br />
+    <span>Created At: {{ news.created_at | date: 'short' }}</span>
+  </div>
+</section>

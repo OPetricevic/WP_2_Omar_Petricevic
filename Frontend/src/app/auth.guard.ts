@@ -15,4 +15,11 @@ export class AuthGuard implements CanActivate {
     }
     return true;
   }
+  
+
+  isLoggedIn(): boolean {
+    const token = localStorage.getItem('token');
+    return !!token; // Vraća true ako postoji token
+  }
+  
 }

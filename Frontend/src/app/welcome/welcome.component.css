@@ -6,9 +6,8 @@
   gap: 40px;
 }
 
-
 .welcome-box {
-  width: 400px; /* Ista širina za obe kutije */
+  width: 400px; /* Ista širina za obje kutije */
   padding: 30px;
   background: #2c3e50;
   border-radius: 10px;
@@ -22,8 +21,8 @@ form {
   gap: 15px;
 }
 
-input {
-  width: 100%;
+input, button {
+  width: 100%; /* Osigurava da su dugmad i inputi iste širine */
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -41,12 +40,10 @@ button {
   background-color: #e67e22;
   color: white;
   border: none;
-  padding: 12px 15px;
-  border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   transition: background 0.3s ease;
+  cursor: pointer;
 }
 
 button:hover {
@@ -63,3 +60,18 @@ h1, h2 {
   font-size: 14px;
   text-align: center;
 }
+
+.forgot-password-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #7f8c8d; /* Suptilna boja */
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #e67e22; /* Narančasta boja na hover */
+}
+

@@ -83,6 +83,10 @@ class ImageService {
         return $this->imageModel->getImageByUuid($uuid);
     }
 
+    public function getImageByModuleUuid($moduleUuid) {
+        return $this->imageModel->getImageByModuleUuid($moduleUuid);
+    }    
+
     public function updateImageDescription($uuid, $description) {
         try {
             $this->imageModel->updateImageDescription($uuid, $description);

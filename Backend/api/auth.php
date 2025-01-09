@@ -80,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/
 }
 
 // Password Request: Send reset email
-// Password Request: Send reset email
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/auth/request-password-reset') {
     $email = json_decode(file_get_contents('php://input'), true)['email'];
 

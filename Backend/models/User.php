@@ -174,7 +174,18 @@ class User {
     }
     
     public function getUserByUuid($uuid) {
-        $stmt = $this->conn->prepare("SELECT uuid, first_name, last_name, username, email FROM users WHERE uuid = :uuid");
+        $stmt = $this->conn->prepare("
+            SELECT 
+                uuid, 
+                first_name, 
+                last_name, 
+                username, 
+                email, 
+                date_of_birth, 
+                role 
+            FROM users 
+            WHERE uuid = :uuid
+        ");
         $stmt->execute([':uuid' => $uuid]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }

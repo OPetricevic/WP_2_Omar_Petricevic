@@ -1,0 +1,71 @@
+.profile-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ecf0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-image {
+    max-width: 150px; /* Maksimalna širina slike */
+    max-height: 150px; /* Maksimalna visina slike */
+    border-radius: 50%; /* Zaobljeni rubovi za profil sliku */
+    object-fit: cover; /* Prilagodba proporcija bez deformacije */
+    margin: 0 auto 20px; /* Centriranje slike i razmak ispod */
+    display: block; /* Osigurava centriranje slike unutar kontejnera */
+  }
+  
+
+  
+  .profile-details p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #e67e22;
+  }
+  
+  button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d35400;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  .popup button {
+    margin: 10px 5px;
+  }
+  

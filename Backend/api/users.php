@@ -17,6 +17,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === '/users/
             echo json_encode(['message' => 'User not found']);
             exit;
         }
+
+        // Mapiranje role
+        $roles = [
+            1 => 'User',
+            2 => 'Creator',
+            3 => 'Admin'
+        ];
+        $user['role_name'] = $roles[$user['role']] ?? 'Unknown';
+
         http_response_code(200);
         echo json_encode($user, JSON_PRETTY_PRINT);
     } catch (Exception $e) {

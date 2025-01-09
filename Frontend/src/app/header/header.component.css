@@ -1,53 +1,71 @@
 /* Globalni stilovi za header */
 header {
-    background: linear-gradient(90deg, #34495e, #2c3e50); /* Suptilniji tamnoplavi gradient */
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  /* Stilovi za navigaciju */
-  .minimal-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .minimal-nav li {
-    margin: 0 15px;
-  }
-  
-  /* Stilovi za linkove */
-  .minimal-nav a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #bdc3c7; /* Svijetla siva boja za linkove */
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  /* Hover efekt sa animiranim podcrtavanjem */
-  .minimal-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #e67e22; /* Suptilna zelena nijansa */
-    left: 50%;
-    bottom: -5px;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-  }
-  
-  .minimal-nav a:hover::after {
-    width: 100%;
-  }
-  
-  .minimal-nav a:hover {
-    color: #e67e22; /* Promena boje na hover - zelena nijansa */
-  }
-  
+  background: linear-gradient(90deg, #34495e, #2c3e50); /* Suptilniji tamnoplavi gradient */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Stilovi za navigaciju */
+.minimal-nav {
+  display: flex;
+  justify-content: space-between; /* Razmak između levog i desnog dela */
+  align-items: center; /* Vertikalno poravnanje elemenata */
+}
+
+/* Levi deo navigacije */
+.nav-left ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left li {
+  margin: 0 15px;
+}
+
+/* Desni deo navigacije */
+.nav-right ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right li {
+  margin-left: auto; /* Gura "Logout" na desnu stranu */
+}
+
+/* Stilovi za linkove */
+.minimal-nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #bdc3c7; /* Svijetla siva boja za linkove */
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover efekt sa animiranim podcrtavanjem */
+.minimal-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #e67e22; /* Suptilna zelena nijansa */
+  left: 50%;
+  bottom: -5px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.minimal-nav a:hover::after {
+  width: 100%;
+}
+
+.minimal-nav a:hover {
+  color: #e67e22; /* Promena boje na hover - zelena nijansa */
+}
+

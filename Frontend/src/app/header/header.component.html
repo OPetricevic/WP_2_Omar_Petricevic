@@ -1,9 +1,18 @@
 <header>
   <nav class="minimal-nav">
-    <ul>
-      <li *ngIf="isLoggedIn()"><a routerLink="/about">About</a></li>
-      <li *ngIf="isLoggedIn()"><a routerLink="/tools">Tools</a></li>
-      <li *ngIf="isLoggedIn()" (click)="logout()">Logout</li>
-    </ul>
+    <div class="nav-left">
+      <ul>
+        <li *ngIf="isLoggedIn()"><a routerLink="/news">News</a></li>
+        <li *ngIf="isLoggedIn()"><a routerLink="/tools">Tools</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li *ngIf="isLoggedIn()"><a routerLink="/profile">Profile</a></li>
+        <li *ngIf="isLoggedIn()">
+          <a href="#" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
