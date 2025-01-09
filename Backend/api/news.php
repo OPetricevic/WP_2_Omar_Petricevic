@@ -87,30 +87,83 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SERVER['REQUEST_URI'] === '/news'
 }
 
 
+// Endpoint for updating news
+if ($_SERVER['REQUEST_METHOD'] === 'PATCH' && isset($_GET['uuid'])) {
+    error_log("PATCH /news endpoint hit.");
+
+    // Middleware for authentication
+    $authMiddleware = new AuthMiddleware();
+    $decodedToken = $authMiddleware->requireAuth();
+
+    // Middleware for role checks
+    $roleMiddleware = new RoleMiddleware();
+    $roleMiddleware->requireRole($decodedToken, [2]);
+
+    $uuid = $_GET['uuid'];
+    $input = json_decode(file_get_contents('php://input'), true);
+    error_log("Request payload: " . json_encode($input));
+
+    $allowedCategories = ['Technology', 'Sports', 'Lifestyle', 'Business', 'Entertainment'];
+    if (!in_array($input['category'], $allowedCategories)) {
+        http_response_code(400);
+        echo json_encode(['message' => 'Invalid category.']);
+        exit;
+    }
+
+    // Validate input
+    if (empty($input['title']) || empty($input['body']) || empty($input['category'])) {
+        error_log("Validation failed: Missing title, body, or category.");
+        http_response_code(400);
+        echo json_encode(['message' => 'Title, body, and category are required.']);
+        exit;
+    }
+
+    // Call the NewsService to update the news
+    $newsService = new NewsService();
+    $response = $newsService->updateNews($uuid, $input['title'], $input['body'], $input['category']);
+
+    http_response_code($response['status']);
+    echo json_encode(['message' => $response['message']]);
+    exit;
+}
+
 
 
 // DELETE: Obriši vijest po UUID-u (samo kreatori)
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && preg_match('/^\/news\/([^\/]+)$/', $_SERVER['REQUEST_URI'], $matches)) {
     $newsUuid = $matches[1];
+
+    // Middleware za autentifikaciju
+    $authMiddleware = new AuthMiddleware();
     $decodedToken = $authMiddleware->requireAuth(); // Validacija JWT
-    $roleMiddleware->requireRole($decodedToken, [2]); // Samo kreatori (role 2)
+
+    // Middleware za provjeru role
+    $roleMiddleware = new RoleMiddleware();
+    $roleMiddleware->requireRole($decodedToken, [2, 3]); // Samo kreatori (2) i admini (3)
 
     try {
-        $response = $newsService->deleteNews($newsUuid, $decodedToken->uuid);
+        // Provjera da li UUID postoji
+        if (empty($newsUuid)) {
+            http_response_code(400);
+            echo json_encode(['message' => 'UUID is required.']);
+            exit;
+        }
+
+        // Kreiramo instancu servisa
+        $newsService = new NewsService();
+        $response = $newsService->deleteNews($newsUuid, $decodedToken);
+
+        // Vraćamo status
         http_response_code($response['status']);
         echo json_encode($response, JSON_PRETTY_PRINT);
     } catch (Exception $e) {
+        error_log("Error while deleting news: " . $e->getMessage());
         http_response_code(500);
-        echo json_encode([
-            'status' => 500,
-            'message' => 'Internal server error.',
-            'error' => $e->getMessage()
-        ], JSON_PRETTY_PRINT);
+        echo json_encode(['message' => 'Internal server error.']);
     }
 
     exit;
 }
-
 
 
 // Ako ruta nije pronađena

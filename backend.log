@@ -1,4 +1,337 @@
-[Thu Jan  9 19:54:59 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Thu Jan  9 19:55:10 2025] 127.0.0.1:35900 Accepted
-[Thu Jan  9 19:55:10 2025] 127.0.0.1:35900 [200]: GET /news
-[Thu Jan  9 19:55:10 2025] 127.0.0.1:35900 Closing
+[Thu Jan  9 22:14:28 2025] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Thu Jan  9 22:14:34 2025] 127.0.0.1:48324 Accepted
+[Thu Jan  9 22:14:34 2025] 127.0.0.1:48324 [204]: OPTIONS /news/75dcfec3-3a3e-4848-afcb-b85c988e66cf
+[Thu Jan  9 22:14:34 2025] 127.0.0.1:48324 Closing
+[Thu Jan  9 22:14:34 2025] 127.0.0.1:48328 Accepted
+[Thu Jan  9 22:14:34 2025] 127.0.0.1:48328 [200]: DELETE /news/75dcfec3-3a3e-4848-afcb-b85c988e66cf
+[Thu Jan  9 22:14:34 2025] 127.0.0.1:48328 Closing
+[Thu Jan  9 22:14:35 2025] 127.0.0.1:48338 Accepted
+[Thu Jan  9 22:14:35 2025] 127.0.0.1:48338 [204]: OPTIONS /news
+[Thu Jan  9 22:14:35 2025] 127.0.0.1:48338 Closing
+[Thu Jan  9 22:14:35 2025] 127.0.0.1:48346 Accepted
+[Thu Jan  9 22:14:35 2025] 127.0.0.1:48346 [200]: GET /news
+[Thu Jan  9 22:14:35 2025] 127.0.0.1:48346 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48356 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48356 [204]: OPTIONS /news
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48356 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48372 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48372 [200]: GET /news
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48372 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48378 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48378 [200]: GET /uploads/678037b773f47-c.png
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48378 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48380 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48380 [404]: GET /uploads/6780349ad1183-git.png - No such file or directory
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48380 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48390 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48390 [200]: GET /uploads/6780347c479c5-csharp.png
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48390 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48406 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48406 [200]: GET /uploads/67803492173e1-firebase.png
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48406 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48418 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48418 [200]: GET /uploads/67803c0fa890b-angular.png
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48418 Closing
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48422 Accepted
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48422 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 22:14:36 2025] 127.0.0.1:48422 Closing
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48424 Accepted
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48424 [200]: GET /news
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48424 Closing
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48426 Accepted
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48432 Accepted
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48446 Accepted
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48450 Accepted
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48452 Accepted
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48454 Accepted
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48426 [200]: GET /uploads/678037b773f47-c.png
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48432 [200]: GET /uploads/6780347c479c5-csharp.png
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48446 [200]: GET /uploads/67803492173e1-firebase.png
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48426 Closing
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48432 Closing
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48446 Closing
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48450 [200]: GET /uploads/67803c0fa890b-angular.png
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48450 Closing
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48452 [404]: GET /uploads/6780349ad1183-git.png - No such file or directory
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48452 Closing
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48454 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 22:14:37 2025] 127.0.0.1:48454 Closing
+[Thu Jan  9 22:14:40 2025] 127.0.0.1:48458 Accepted
+[Thu Jan  9 22:14:40 2025] 127.0.0.1:48458 [204]: OPTIONS /news/65112ae6-641a-4238-9d50-8281c020783f
+[Thu Jan  9 22:14:40 2025] 127.0.0.1:48458 Closing
+[Thu Jan  9 22:14:40 2025] 127.0.0.1:48464 Accepted
+[Thu Jan  9 22:14:40 2025] 127.0.0.1:48464 [200]: DELETE /news/65112ae6-641a-4238-9d50-8281c020783f
+[Thu Jan  9 22:14:40 2025] 127.0.0.1:48464 Closing
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48466 Accepted
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48466 [204]: OPTIONS /news
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48466 Closing
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48482 Accepted
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48482 [200]: GET /news
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48482 Closing
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48484 Accepted
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48484 [404]: GET /uploads/6780349ad1183-git.png - No such file or directory
+[Thu Jan  9 22:14:41 2025] 127.0.0.1:48484 Closing
+[Thu Jan  9 22:14:43 2025] 127.0.0.1:46860 Accepted
+[Thu Jan  9 22:14:43 2025] 127.0.0.1:46860 [204]: OPTIONS /news/6cbd6882-3fb7-4411-84cb-8136f0acd072
+[Thu Jan  9 22:14:43 2025] 127.0.0.1:46860 Closing
+[Thu Jan  9 22:14:43 2025] 127.0.0.1:46866 Accepted
+[Thu Jan  9 22:14:43 2025] 127.0.0.1:46866 [200]: DELETE /news/6cbd6882-3fb7-4411-84cb-8136f0acd072
+[Thu Jan  9 22:14:43 2025] 127.0.0.1:46866 Closing
+[Thu Jan  9 22:14:44 2025] 127.0.0.1:46868 Accepted
+[Thu Jan  9 22:14:44 2025] 127.0.0.1:46868 [200]: GET /news
+[Thu Jan  9 22:14:44 2025] 127.0.0.1:46868 Closing
+[Thu Jan  9 22:14:44 2025] 127.0.0.1:46874 Accepted
+[Thu Jan  9 22:14:44 2025] 127.0.0.1:46874 [404]: GET /uploads/6780349ad1183-git.png - No such file or directory
+[Thu Jan  9 22:14:44 2025] 127.0.0.1:46874 Closing
+[Thu Jan  9 22:14:46 2025] 127.0.0.1:46882 Accepted
+[Thu Jan  9 22:14:46 2025] 127.0.0.1:46882 [204]: OPTIONS /images
+[Thu Jan  9 22:14:46 2025] 127.0.0.1:46882 Closing
+[Thu Jan  9 22:14:46 2025] 127.0.0.1:46894 Accepted
+[Thu Jan  9 22:14:46 2025] 127.0.0.1:46894 [201]: POST /images
+[Thu Jan  9 22:14:46 2025] 127.0.0.1:46894 Closing
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46900 Accepted
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46900 [204]: OPTIONS /news
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46900 Closing
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46910 Accepted
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46910 [200]: GET /news
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46910 Closing
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46914 Accepted
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46914 [200]: GET /uploads/67803c46f02d6-database.png
+[Thu Jan  9 22:14:47 2025] 127.0.0.1:46914 Closing
+[Thu Jan  9 22:14:50 2025] 127.0.0.1:46922 Accepted
+[Thu Jan  9 22:14:50 2025] 127.0.0.1:46922 [200]: GET /news
+[Thu Jan  9 22:14:50 2025] 127.0.0.1:46922 Closing
+[Thu Jan  9 22:15:13 2025] 127.0.0.1:59740 Accepted
+[Thu Jan  9 22:15:13 2025] 127.0.0.1:59740 [204]: OPTIONS /news
+[Thu Jan  9 22:15:13 2025] 127.0.0.1:59740 Closing
+[Thu Jan  9 22:15:13 2025] 127.0.0.1:59748 Accepted
+[Thu Jan  9 22:15:13 2025] 127.0.0.1:59748 [200]: GET /news
+[Thu Jan  9 22:15:13 2025] 127.0.0.1:59748 Closing
+[Thu Jan  9 22:17:46 2025] 127.0.0.1:49556 Accepted
+[Thu Jan  9 22:17:46 2025] 127.0.0.1:49556 [200]: GET /news
+[Thu Jan  9 22:17:46 2025] 127.0.0.1:49556 Closing
+[Thu Jan  9 22:17:47 2025] 127.0.0.1:49558 Accepted
+[Thu Jan  9 22:17:47 2025] 127.0.0.1:49558 [204]: OPTIONS /news
+[Thu Jan  9 22:17:47 2025] 127.0.0.1:49558 Closing
+[Thu Jan  9 22:17:47 2025] 127.0.0.1:49570 Accepted
+[Thu Jan  9 22:17:47 2025] 127.0.0.1:49570 [200]: GET /news
+[Thu Jan  9 22:17:47 2025] 127.0.0.1:49570 Closing
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49576 Accepted
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49576 [200]: GET /news
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49576 Closing
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49590 Accepted
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49590 [200]: GET /uploads/678037b773f47-c.png
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49590 Closing
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49594 Accepted
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49598 Accepted
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49594 [200]: GET /uploads/6780347c479c5-csharp.png
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49594 Closing
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49598 [200]: GET /uploads/67803492173e1-firebase.png
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49598 Closing
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49600 Accepted
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49608 Accepted
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49600 [200]: GET /uploads/67803c46f02d6-database.png
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49600 Closing
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49608 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 22:17:50 2025] 127.0.0.1:49608 Closing
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35196 Accepted
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35196 [204]: OPTIONS /news
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35196 Closing
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35208 Accepted
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35208 [200]: GET /news
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35208 Closing
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35214 Accepted
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35214 [200]: GET /uploads/678037b773f47-c.png
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35214 Closing
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35230 Accepted
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35230 [200]: GET /uploads/6780347c479c5-csharp.png
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35230 Closing
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35234 Accepted
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35244 Accepted
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35234 [200]: GET /uploads/67803492173e1-firebase.png
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35258 Accepted
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35234 Closing
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35244 [200]: GET /uploads/67803c46f02d6-database.png
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35244 Closing
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35258 [200]: GET /uploads/677fbf1e792cf-cpp.png
+[Thu Jan  9 22:17:59 2025] 127.0.0.1:35258 Closing
+[Thu Jan  9 22:18:01 2025] 127.0.0.1:35274 Accepted
+[Thu Jan  9 22:18:01 2025] 127.0.0.1:35274 [200]: GET /news
+[Thu Jan  9 22:18:01 2025] 127.0.0.1:35274 Closing
+[Thu Jan  9 22:18:15 2025] 127.0.0.1:47450 Accepted
+[Thu Jan  9 22:18:15 2025] 127.0.0.1:47450 [204]: OPTIONS /news
+[Thu Jan  9 22:18:15 2025] 127.0.0.1:47450 Closing
+[Thu Jan  9 22:18:15 2025] 127.0.0.1:47462 Accepted
+[Thu Jan  9 22:18:15 2025] 127.0.0.1:47462 [200]: GET /news
+[Thu Jan  9 22:18:15 2025] 127.0.0.1:47462 Closing
+[Thu Jan  9 22:19:11 2025] 127.0.0.1:35394 Accepted
+[Thu Jan  9 22:19:11 2025] 127.0.0.1:35394 [200]: GET /news
+[Thu Jan  9 22:19:11 2025] 127.0.0.1:35394 Closing
+[Thu Jan  9 22:19:30 2025] 127.0.0.1:40254 Accepted
+[Thu Jan  9 22:19:30 2025] 127.0.0.1:40254 [204]: OPTIONS /news
+[Thu Jan  9 22:19:30 2025] 127.0.0.1:40254 Closing
+[Thu Jan  9 22:19:30 2025] 127.0.0.1:40266 Accepted
+[Thu Jan  9 22:19:30 2025] 127.0.0.1:40266 [200]: GET /news
+[Thu Jan  9 22:19:30 2025] 127.0.0.1:40266 Closing
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52488 Accepted
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52488 [204]: OPTIONS /users/me
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52488 Closing
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52500 Accepted
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52500 [200]: GET /users/me
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52500 Closing
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52512 Accepted
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52512 [204]: OPTIONS /images/module/352bf85f-028e-4447-8630-5cdeb3f41688
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52512 Closing
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52516 Accepted
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52516 [204]: OPTIONS /roles/requests
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52516 Closing
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52530 Accepted
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52534 Accepted
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52530 [200]: GET /images/module/352bf85f-028e-4447-8630-5cdeb3f41688
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52530 Closing
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52534 [200]: GET /roles/requests
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52534 Closing
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52538 Accepted
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52538 [200]: GET /uploads/678002b4f3c92-Omar.jpeg
+[Thu Jan  9 22:19:51 2025] 127.0.0.1:52538 Closing
+[Thu Jan  9 22:20:01 2025] 127.0.0.1:33502 Accepted
+[Thu Jan  9 22:20:01 2025] 127.0.0.1:33502 [204]: OPTIONS /roles/review-request
+[Thu Jan  9 22:20:01 2025] 127.0.0.1:33502 Closing
+[Thu Jan  9 22:20:01 2025] 127.0.0.1:33514 Accepted
+[Thu Jan  9 22:20:01 2025] 127.0.0.1:33514 [200]: PATCH /roles/review-request
+[Thu Jan  9 22:20:01 2025] 127.0.0.1:33514 Closing
+[Thu Jan  9 22:20:02 2025] 127.0.0.1:33520 Accepted
+[Thu Jan  9 22:20:02 2025] 127.0.0.1:33520 [204]: OPTIONS /roles/requests
+[Thu Jan  9 22:20:02 2025] 127.0.0.1:33520 Closing
+[Thu Jan  9 22:20:02 2025] 127.0.0.1:33528 Accepted
+[Thu Jan  9 22:20:02 2025] 127.0.0.1:33528 [200]: GET /roles/requests
+[Thu Jan  9 22:20:02 2025] 127.0.0.1:33528 Closing
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37814 Accepted
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37814 [204]: OPTIONS /auth/register
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37814 Closing
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37820 Accepted
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37820 [201]: POST /auth/register
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37820 Closing
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37828 Accepted
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37828 [200]: GET /news
+[Thu Jan  9 22:20:36 2025] 127.0.0.1:37828 Closing
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37838 Accepted
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37838 [204]: OPTIONS /users/me
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37838 Closing
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37842 Accepted
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37842 [200]: GET /users/me
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37842 Closing
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37852 Accepted
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37852 [204]: OPTIONS /images/module/4921bfc3-3914-4279-a2f0-f78b06dfa09d
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37852 Closing
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37864 Accepted
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37864 [404]: GET /images/module/4921bfc3-3914-4279-a2f0-f78b06dfa09d
+[Thu Jan  9 22:20:38 2025] 127.0.0.1:37864 Closing
+[Thu Jan  9 22:20:42 2025] 127.0.0.1:37866 Accepted
+[Thu Jan  9 22:20:42 2025] 127.0.0.1:37866 [204]: OPTIONS /images
+[Thu Jan  9 22:20:42 2025] 127.0.0.1:37866 Closing
+[Thu Jan  9 22:20:42 2025] 127.0.0.1:37880 Accepted
+[Thu Jan  9 22:20:42 2025] 127.0.0.1:37880 [201]: POST /images
+[Thu Jan  9 22:20:42 2025] 127.0.0.1:37880 Closing
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37884 Accepted
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37884 [204]: OPTIONS /images/module/4921bfc3-3914-4279-a2f0-f78b06dfa09d
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37884 Closing
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37898 Accepted
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37898 [200]: GET /images/module/4921bfc3-3914-4279-a2f0-f78b06dfa09d
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37898 Closing
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37906 Accepted
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37906 [200]: GET /uploads/67803daa8cd5b-dev.png
+[Thu Jan  9 22:20:43 2025] 127.0.0.1:37906 Closing
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35156 Accepted
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35156 [204]: OPTIONS /users/me
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35156 Closing
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35168 Accepted
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35168 [204]: OPTIONS /users/me
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35168 Closing
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35184 Accepted
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35184 [200]: PATCH /users/me
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35184 Closing
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35186 Accepted
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35186 [200]: PATCH /users/me
+[Thu Jan  9 22:20:50 2025] 127.0.0.1:35186 Closing
+[Thu Jan  9 22:20:51 2025] 127.0.0.1:35192 Accepted
+[Thu Jan  9 22:20:51 2025] 127.0.0.1:35192 [200]: GET /users/me
+[Thu Jan  9 22:20:51 2025] 127.0.0.1:35192 Closing
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35200 Accepted
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35200 [200]: GET /users/me
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35200 Closing
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35210 Accepted
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35210 [204]: OPTIONS /images/module/4921bfc3-3914-4279-a2f0-f78b06dfa09d
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35210 Closing
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35214 Accepted
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35214 [200]: GET /images/module/4921bfc3-3914-4279-a2f0-f78b06dfa09d
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35214 Closing
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35228 Accepted
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35228 [200]: GET /images/module/4921bfc3-3914-4279-a2f0-f78b06dfa09d
+[Thu Jan  9 22:20:52 2025] 127.0.0.1:35228 Closing
+[Thu Jan  9 22:20:56 2025] 127.0.0.1:48252 Accepted
+[Thu Jan  9 22:20:56 2025] 127.0.0.1:48252 [204]: OPTIONS /roles/request-change
+[Thu Jan  9 22:20:56 2025] 127.0.0.1:48252 Closing
+[Thu Jan  9 22:20:56 2025] 127.0.0.1:48266 Accepted
+[Thu Jan  9 22:20:56 2025] 127.0.0.1:48266 [201]: POST /roles/request-change
+[Thu Jan  9 22:20:56 2025] 127.0.0.1:48266 Closing
+[Thu Jan  9 22:21:13 2025] 127.0.0.1:54472 Accepted
+[Thu Jan  9 22:21:13 2025] 127.0.0.1:54472 [200]: GET /news
+[Thu Jan  9 22:21:13 2025] 127.0.0.1:54472 Closing
+[Thu Jan  9 22:21:14 2025] 127.0.0.1:46728 Accepted
+[Thu Jan  9 22:21:14 2025] 127.0.0.1:46728 [200]: GET /news/5c4782b5-66aa-44f2-952d-a99a3f2f31f5
+[Thu Jan  9 22:21:14 2025] 127.0.0.1:46728 Closing
+[Thu Jan  9 22:21:15 2025] 127.0.0.1:46732 Accepted
+[Thu Jan  9 22:21:15 2025] 127.0.0.1:46732 [200]: GET /news
+[Thu Jan  9 22:21:15 2025] 127.0.0.1:46732 Closing
+[Thu Jan  9 22:21:16 2025] 127.0.0.1:46746 Accepted
+[Thu Jan  9 22:21:16 2025] 127.0.0.1:46746 [200]: GET /news/e4b7c611-0741-4424-b4df-9e70c4ad7cd9
+[Thu Jan  9 22:21:16 2025] 127.0.0.1:46746 Closing
+[Thu Jan  9 22:21:17 2025] 127.0.0.1:46754 Accepted
+[Thu Jan  9 22:21:17 2025] 127.0.0.1:46754 [200]: GET /news
+[Thu Jan  9 22:21:17 2025] 127.0.0.1:46754 Closing
+[Thu Jan  9 22:21:18 2025] 127.0.0.1:46756 Accepted
+[Thu Jan  9 22:21:18 2025] 127.0.0.1:46756 [200]: GET /news/bdf94a27-c656-463a-8e27-6ca85fa2d71f
+[Thu Jan  9 22:21:18 2025] 127.0.0.1:46756 Closing
+[Thu Jan  9 22:21:19 2025] 127.0.0.1:46770 Accepted
+[Thu Jan  9 22:21:19 2025] 127.0.0.1:46770 [200]: GET /news
+[Thu Jan  9 22:21:19 2025] 127.0.0.1:46770 Closing
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45802 Accepted
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45802 [204]: OPTIONS /auth/login
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45802 Closing
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45812 Accepted
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45812 [200]: POST /auth/login
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45812 Closing
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45822 Accepted
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45822 [200]: GET /news
+[Thu Jan  9 22:21:56 2025] 127.0.0.1:45822 Closing
+[Thu Jan  9 22:22:02 2025] 127.0.0.1:45832 Accepted
+[Thu Jan  9 22:22:02 2025] 127.0.0.1:45832 [200]: GET /news/44d6da91-0cf1-4cca-bab3-8b8edca62e31
+[Thu Jan  9 22:22:02 2025] 127.0.0.1:45832 Closing
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55264 Accepted
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55264 [204]: OPTIONS /users/me
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55264 Closing
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55270 Accepted
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55270 [200]: GET /users/me
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55270 Closing
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55272 Accepted
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55272 [204]: OPTIONS /images/module/352bf85f-028e-4447-8630-5cdeb3f41688
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55272 Closing
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55288 Accepted
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55288 [204]: OPTIONS /roles/requests
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55288 Closing
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55300 Accepted
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55300 [200]: GET /images/module/352bf85f-028e-4447-8630-5cdeb3f41688
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55300 Closing
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55316 Accepted
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55316 [200]: GET /roles/requests
+[Thu Jan  9 22:22:08 2025] 127.0.0.1:55316 Closing
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35668 Accepted
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35668 [200]: GET /news
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35668 Closing
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35676 Accepted
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35676 [204]: OPTIONS /news
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35676 Closing
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35686 Accepted
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35686 [200]: GET /news
+[Thu Jan  9 22:22:22 2025] 127.0.0.1:35686 Closing

@@ -108,6 +108,26 @@ class News {
         }
     }
     
+    public function updateNews($uuid, $title, $body, $category) {
+        try {
+            $stmt = $this->conn->prepare("
+                UPDATE news
+                SET title = :title, body = :body, category = :category
+                WHERE uuid = :uuid
+            ");
+            $stmt->execute([
+                ':title' => $title,
+                ':body' => $body,
+                ':category' => $category,
+                ':uuid' => $uuid
+            ]);
+            return $stmt->rowCount() > 0; // Return true if rows were updated
+        } catch (PDOException $e) {
+            error_log("Error in updateNews: " . $e->getMessage());
+            throw $e;
+        }
+    }
+    
 
     public function newsExists($uuid) {
         $stmt = $this->conn->prepare("

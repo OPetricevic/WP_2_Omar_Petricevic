@@ -1,56 +1,77 @@
 <section class="news-container">
-  <h2>Manage News Images</h2>
+  <h2>Manage News</h2>
 
-  <!-- Filter Options -->
-  <div class="filters">
-    <div class="filter-item">
-      <label for="categoryFilter">Category:</label>
-      <select id="categoryFilter" (change)="filterByCategory($event)">
-        <option value="all">All</option>
-        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
-      </select>
-    </div>
+  <!-- Create News Form -->
+  <form class="create-news-form" (submit)="createNews($event)">
+    <h3>Create News</h3>
+    <label for="newsTitle">Title:</label>
+    <input id="newsTitle" type="text" [(ngModel)]="newNews.title" name="title" required />
 
-    <div class="filter-item">
-      <label for="authorFilter">Author:</label>
-      <select id="authorFilter" (change)="filterByAuthor($event)">
-        <option value="all">All</option>
-        <option *ngFor="let author of authors" [value]="author">{{ author }}</option>
-      </select>
-    </div>
-  </div>
+    <label for="newsBody">Body:</label>
+    <textarea id="newsBody" [(ngModel)]="newNews.body" name="body" required></textarea>
+
+    <label for="newsCategory">Category:</label>
+    <select id="newsCategory" [(ngModel)]="newNews.category" name="category" required>
+      <option value="" disabled selected>Select a category</option>
+      <option *ngFor="let category of supportedCategories" [value]="category">{{ category }}</option>
+    </select>
+
+    <button type="submit" class="btn-create-news" aria-label="Create News">Create News</button>
+  </form>
 
   <!-- News Table -->
   <table class="styled-table">
     <thead>
       <tr>
         <th>Title</th>
-        <th>Author</th>
+        <th>Body</th>
         <th>Category</th>
+        <th>UUID</th>
+        <th>Image</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let news of filteredNews">
-        <td>{{ news.title }}</td>
-        <td>{{ news.author }}</td>
-        <td>{{ news.category }}</td>
         <td>
-          <button class="btn-add-image" (click)="openImageUploadModal(news.id)">Add Image</button>
+          <div *ngIf="!news.isEditing; else editTitle">{{ news.title }}</div>
+          <ng-template #editTitle>
+            <input [(ngModel)]="news.title" class="form-control" />
+          </ng-template>
+        </td>
+        <td>
+          <div *ngIf="!news.isEditing; else editBody">{{ news.body }}</div>
+          <ng-template #editBody>
+            <textarea [(ngModel)]="news.body" class="form-control"></textarea>
+          </ng-template>
+        </td>
+        <td>
+          <div *ngIf="!news.isEditing; else editCategory">{{ news.category }}</div>
+          <ng-template #editCategory>
+            <select [(ngModel)]="news.category" class="form-control">
+              <option *ngFor="let category of supportedCategories" [value]="category">
+                {{ category }}
+              </option>
+            </select>
+          </ng-template>
+        </td>
+        <td>{{ news.uuid }}</td>
+        <td>
+          <img *ngIf="news.image && news.image.url" [src]="'http://localhost:8000' + news.image.url" alt="News Image" style="width: 100px; height: 100px;" />
+          <span *ngIf="!news.image || !news.image.url">No Image</span>
+        </td>
+        <td>
+          <div *ngIf="!news.isEditing">
+            <button (click)="enableEditing(news)" class="btn btn-primary">Edit</button>
+            <button class="btn-upload" (click)="uploadImage(news.uuid)">Upload Image</button>
+            <button (click)="deleteNews(news.uuid)" class="btn btn-danger">Delete</button>
+          </div>
+          <div *ngIf="news.isEditing">
+            <button (click)="updateNews(news)" class="btn btn-success">Save</button>
+            <button (click)="cancelEditing(news)" class="btn btn-secondary">Cancel</button>
+          </div>
         </td>
       </tr>
     </tbody>
   </table>
 </section>
-
-<!-- Modal for Image Upload -->
-<div class="modal" *ngIf="showImageUploadModal">
-  <div class="modal-content">
-    <h3>Upload Image</h3>
-    <input type="file" (change)="handleImageUpload($event)" />
-    <div class="modal-buttons">
-      <button class="btn-upload" (click)="uploadImage()">Upload</button>
-      <button class="btn-cancel" (click)="closeImageUploadModal()">Cancel</button>
-    </div>
-  </div>
-</div>

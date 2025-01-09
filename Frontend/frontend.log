@@ -1,15 +1,95 @@
 ❯ Building...
 ✔ Building...
 Initial chunk files | Names         |  Raw size
+main.js             | main          |  90.31 kB | 
 polyfills.js        | polyfills     |  90.20 kB | 
-main.js             | main          |  79.17 kB | 
 styles.css          | styles        |   1.98 kB | 
 
-                    | Initial total | 171.35 kB
+                    | Initial total | 182.50 kB
 
-Application bundle generation complete. [3.589 seconds]
+Application bundle generation complete. [2.327 seconds]
 
 Watch mode enabled. Watching for file changes...
 NOTE: Raw file sizes do not reflect development server per-request transformations.
   ➜  Local:   http://localhost:4200/
   ➜  press h + enter to show help
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+
+Component stylesheet(s) changed.
+
+Application bundle generation complete. [0.009 seconds]
+
+HMR update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+
+Component stylesheet(s) changed.
+
+Application bundle generation complete. [0.007 seconds]
+
+HMR update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.658 seconds]
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Invalid ICU message. Missing '}'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/manage-news-images/manage-news-images.component.html:176:26:
+[37m      176 │ @media (max-width: 768px) [32m{[37m
+          ╵                           [32m^[0m
+
+  Error occurs in the template of component ManageNewsImagesComponent.
+
+    src/app/manage-news-images/manage-news-images.component.ts:10:15:
+[37m      10 │   templateUrl: [32m'./manage-news-images.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected character "EOF" (Do you have an unescaped "{" in your template? Use "{{ '{' }}") to escape it.)[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/manage-news-images/manage-news-images.component.html:203:0:
+[37m      203 │ [32m[37m
+          ╵ [32m^[0m
+
+  Error occurs in the template of component ManageNewsImagesComponent.
+
+    src/app/manage-news-images/manage-news-images.component.ts:10:15:
+[37m      10 │   templateUrl: [32m'./manage-news-images.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          |  90.31 kB | 
+polyfills.js        | polyfills     |  90.20 kB | 
+styles.css          | styles        |   1.98 kB | 
+
+                    | Initial total | 182.50 kB
+
+Application bundle generation complete. [0.331 seconds]
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+
+Component stylesheet(s) changed.
+
+Application bundle generation complete. [0.013 seconds]
+
+HMR update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+
+Component stylesheet(s) changed.
+
+Application bundle generation complete. [0.008 seconds]
+
+HMR update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+
+No output file changes.
+
+Application bundle generation complete. [0.307 seconds]
+
